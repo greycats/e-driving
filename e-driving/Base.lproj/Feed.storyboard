@@ -15,7 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="mzs-iy-nLR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76s-dd-90o" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Hlf-5d-ySC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.36470588235294116" green="0.36470588235294116" blue="0.36470588235294116" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="76s-dd-90o" secondAttribute="trailing" id="A7J-ag-wZC"/>
+                            <constraint firstItem="76s-dd-90o" firstAttribute="top" secondItem="mzs-iy-nLR" secondAttribute="top" id="N6P-sE-ev1"/>
+                            <constraint firstItem="76s-dd-90o" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="r4G-yw-e9O"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="mhu-P3-s0v">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="1zn-II-D1F">

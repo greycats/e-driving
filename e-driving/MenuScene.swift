@@ -24,6 +24,7 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
 			if let vc = UIStoryboard(name: identifier, bundle: nil).instantiateInitialViewController() {
 				closure(nav, vc)
 				result = vc
+				view.layoutIfNeeded()
 			}
 		}
 		dismissMenu(nil)
