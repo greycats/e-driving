@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="obL-Wt-UbZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Your Drive-->
         <scene sceneID="jaq-bf-VPI">
             <objects>
-                <viewController storyboardIdentifier="Your Drive" id="obL-Wt-UbZ" customClass="ViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Your Drive" id="obL-Wt-UbZ" customClass="VehicleViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Okq-8c-16Z"/>
                         <viewControllerLayoutGuide type="bottom" id="jMQ-g4-O5y"/>
@@ -17,9 +18,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-Pe-24n" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="585"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvL-7q-zRY" customClass="VehicleView" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="215" y="100" width="170" height="418"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcj-rh-oSl" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="215" height="85.5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="MILES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="34"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKx-Cb-vdi" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="385" y="259.5" width="215" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="key">
+                                                <string key="value">OVER
+SPEED</string>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="23"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="JUo-JR-mQv"/>
+                                    <constraint firstItem="Wcj-rh-oSl" firstAttribute="centerY" secondItem="mvL-7q-zRY" secondAttribute="centerY" multiplier="0.5" id="7aS-pW-cSL"/>
+                                    <constraint firstItem="Wcj-rh-oSl" firstAttribute="leading" secondItem="RU7-Pe-24n" secondAttribute="leading" id="Rln-Rg-rcr"/>
+                                    <constraint firstItem="mvL-7q-zRY" firstAttribute="trailing" secondItem="mKx-Cb-vdi" secondAttribute="leading" id="Zd2-zk-Pk7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mKx-Cb-vdi" secondAttribute="trailing" id="ad7-qo-7w4"/>
+                                    <constraint firstItem="mvL-7q-zRY" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="top" constant="100" id="jS3-wQ-8tj"/>
+                                    <constraint firstAttribute="bottom" secondItem="mvL-7q-zRY" secondAttribute="bottom" constant="67" id="pjp-Ep-KZG"/>
+                                    <constraint firstItem="mvL-7q-zRY" firstAttribute="leading" secondItem="Wcj-rh-oSl" secondAttribute="trailing" id="taT-k0-o6q"/>
+                                    <constraint firstItem="mvL-7q-zRY" firstAttribute="centerX" secondItem="RU7-Pe-24n" secondAttribute="centerX" id="uQ2-5w-4kx"/>
+                                    <constraint firstItem="mKx-Cb-vdi" firstAttribute="centerY" secondItem="mvL-7q-zRY" secondAttribute="centerY" id="yzP-De-Yhn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -28,7 +59,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="DvD-EO-n1y"/>
                             <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="Gf4-Ce-d9M" secondAttribute="leading" id="FJF-qH-gQV"/>
