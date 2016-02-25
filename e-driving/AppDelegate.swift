@@ -15,11 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		BITHockeyManager.sharedHockeyManager().configureWithIdentifier("0656d054f006426783308c0906e789d6")
-		// Do some additional configuration if needed here
-		BITHockeyManager.sharedHockeyManager().startManager()
-		BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
 		customizeAppearance()
+		if TARGET_IPHONE_SIMULATOR == 0 {
+			BITHockeyManager.sharedHockeyManager().configureWithIdentifier("0656d054f006426783308c0906e789d6")
+			// Do some additional configuration if needed here
+			BITHockeyManager.sharedHockeyManager().startManager()
+			BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+		}
 		return true
 	}
 
