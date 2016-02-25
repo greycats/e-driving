@@ -84,7 +84,7 @@ class MenuViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 
 	let menu = TableViewDataNib<String, MenuCell>(title: nil)
-		.onRender { $0.nameLabel.text = $1 }
+		.onRender { $0.nameLabel.text = $1.uppercaseString }
 
 	var rootViewController: RootViewController? {
 		return parentViewController as? RootViewController

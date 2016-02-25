@@ -15,7 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="Gf4-Ce-d9M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-Pe-24n" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JUo-JR-mQv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="DvD-EO-n1y"/>
+                            <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="Gf4-Ce-d9M" secondAttribute="leading" id="FJF-qH-gQV"/>
+                            <constraint firstItem="RU7-Pe-24n" firstAttribute="top" secondItem="Gf4-Ce-d9M" secondAttribute="top" id="SnR-Kq-UGh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Drive" id="PFD-5y-Exz" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="UR5-1U-ybs">
@@ -24,6 +42,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nj0-EW-0Vz" sceneMemberID="firstResponder"/>
             </objects>
