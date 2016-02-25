@@ -17,6 +17,10 @@
 		B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8D1C7EE6E300F04AC3 /* BebasNeueLight.otf */; };
 		B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8E1C7EE6E300F04AC3 /* BebasNeueRegular.otf */; };
 		B5307F941C7EE6E300F04AC3 /* BebasNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8F1C7EE6E300F04AC3 /* BebasNeue-Thin.otf */; };
+		B5307F961C7EF10E00F04AC3 /* IndexLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F951C7EF10E00F04AC3 /* IndexLabel.xib */; };
+		B5307F981C7EF72400F04AC3 /* Button.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F971C7EF72400F04AC3 /* Button.xib */; };
+		B5307F9A1C7EFB5900F04AC3 /* VehicleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F991C7EFB5900F04AC3 /* VehicleView.xib */; };
+		B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */; };
 		C1CAC8837F7630815E9A39A0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4040FFF439FA729D207C8 /* Pods.framework */; };
 		CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */; };
 		CF56A2301C7EC956002F9F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22F1C7EC956002F9F5B /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 		B5307F8D1C7EE6E300F04AC3 /* BebasNeueLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueLight.otf; sourceTree = "<group>"; };
 		B5307F8E1C7EE6E300F04AC3 /* BebasNeueRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueRegular.otf; sourceTree = "<group>"; };
 		B5307F8F1C7EE6E300F04AC3 /* BebasNeue-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.otf"; sourceTree = "<group>"; };
+		B5307F951C7EF10E00F04AC3 /* IndexLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexLabel.xib; sourceTree = "<group>"; };
+		B5307F971C7EF72400F04AC3 /* Button.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Button.xib; sourceTree = "<group>"; };
+		B5307F991C7EFB5900F04AC3 /* VehicleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleView.xib; sourceTree = "<group>"; };
+		B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabel.xib; sourceTree = "<group>"; };
 		BFB4040FFF439FA729D207C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C969E93E25491B4E8787ABDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF56A22A1C7EC956002F9F5B /* e-driving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-driving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +157,10 @@
 				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
 				CF56A2391C7EC956002F9F5B /* Info.plist */,
+				B5307F951C7EF10E00F04AC3 /* IndexLabel.xib */,
+				B5307F971C7EF72400F04AC3 /* Button.xib */,
+				B5307F991C7EFB5900F04AC3 /* VehicleView.xib */,
+				B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */,
 			);
 			path = "e-driving";
 			sourceTree = "<group>";
@@ -218,6 +230,7 @@
 			files = (
 				B5307F911C7EE6E300F04AC3 /* BebasNeueBook.otf in Resources */,
 				B5307F881C7EE6CB00F04AC3 /* SFUIText-Medium.otf in Resources */,
+				B5307F961C7EF10E00F04AC3 /* IndexLabel.xib in Resources */,
 				B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */,
 				B5307F891C7EE6CB00F04AC3 /* SFUIText-Regular.otf in Resources */,
 				B5307F941C7EE6E300F04AC3 /* BebasNeue-Thin.otf in Resources */,
@@ -226,12 +239,15 @@
 				CF56A2521C7ED67F002F9F5B /* Feed.storyboard in Resources */,
 				CF56A2451C7ED006002F9F5B /* MenuCell.xib in Resources */,
 				B5307F8A1C7EE6CB00F04AC3 /* SFUIText-Semibold.otf in Resources */,
+				B5307F981C7EF72400F04AC3 /* Button.xib in Resources */,
 				CF56A2411C7ECC0C002F9F5B /* Menu.storyboard in Resources */,
+				B5307F9A1C7EFB5900F04AC3 /* VehicleView.xib in Resources */,
 				B5307F861C7EE6CB00F04AC3 /* SFUIText-Bold.otf in Resources */,
 				CF56A24B1C7ED64B002F9F5B /* Car Performance.storyboard in Resources */,
 				B5307F871C7EE6CB00F04AC3 /* SFUIText-Light.otf in Resources */,
 				B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */,
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
+				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
 				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
 				CF56A2481C7ED633002F9F5B /* Your Drive.storyboard in Resources */,
 			);
