@@ -24,16 +24,16 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BebasNeue Bold.otf</string>
-		<string>BebasNeue Book.otf</string>
-		<string>BebasNeue Light.otf</string>
-		<string>BebasNeue Regular.otf</string>
-		<string>BebasNeue Thin.otf</string>
-		<string>SF-UI-Text-Bold.otf</string>
-		<string>SF-UI-Text-Light.otf</string>
-		<string>SF-UI-Text-Medium.otf</string>
-		<string>SF-UI-Text-Regular.otf</string>
-		<string>SF-UI-Text-Semibold.otf</string>
+		<string>BebasNeue-Thin.otf</string>
+		<string>BebasNeueBold.otf</string>
+		<string>BebasNeueBook.otf</string>
+		<string>BebasNeueLight.otf</string>
+		<string>BebasNeueRegular.otf</string>
+		<string>SFUIText-Bold.otf</string>
+		<string>SFUIText-Light.otf</string>
+		<string>SFUIText-Medium.otf</string>
+		<string>SFUIText-Regular.otf</string>
+		<string>SFUIText-Semibold.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

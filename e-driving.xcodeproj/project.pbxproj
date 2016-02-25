@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5307F861C7EE6CB00F04AC3 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F811C7EE6CB00F04AC3 /* SF-UI-Text-Bold.otf */; };
-		B5307F871C7EE6CB00F04AC3 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F821C7EE6CB00F04AC3 /* SF-UI-Text-Light.otf */; };
-		B5307F881C7EE6CB00F04AC3 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F831C7EE6CB00F04AC3 /* SF-UI-Text-Medium.otf */; };
-		B5307F891C7EE6CB00F04AC3 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F841C7EE6CB00F04AC3 /* SF-UI-Text-Regular.otf */; };
-		B5307F8A1C7EE6CB00F04AC3 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F851C7EE6CB00F04AC3 /* SF-UI-Text-Semibold.otf */; };
-		B5307F901C7EE6E300F04AC3 /* BebasNeue Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8B1C7EE6E300F04AC3 /* BebasNeue Bold.otf */; };
-		B5307F911C7EE6E300F04AC3 /* BebasNeue Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8C1C7EE6E300F04AC3 /* BebasNeue Book.otf */; };
-		B5307F921C7EE6E300F04AC3 /* BebasNeue Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8D1C7EE6E300F04AC3 /* BebasNeue Light.otf */; };
-		B5307F931C7EE6E300F04AC3 /* BebasNeue Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8E1C7EE6E300F04AC3 /* BebasNeue Regular.otf */; };
-		B5307F941C7EE6E300F04AC3 /* BebasNeue Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8F1C7EE6E300F04AC3 /* BebasNeue Thin.otf */; };
+		B5307F861C7EE6CB00F04AC3 /* SFUIText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F811C7EE6CB00F04AC3 /* SFUIText-Bold.otf */; };
+		B5307F871C7EE6CB00F04AC3 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F821C7EE6CB00F04AC3 /* SFUIText-Light.otf */; };
+		B5307F881C7EE6CB00F04AC3 /* SFUIText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F831C7EE6CB00F04AC3 /* SFUIText-Medium.otf */; };
+		B5307F891C7EE6CB00F04AC3 /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F841C7EE6CB00F04AC3 /* SFUIText-Regular.otf */; };
+		B5307F8A1C7EE6CB00F04AC3 /* SFUIText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F851C7EE6CB00F04AC3 /* SFUIText-Semibold.otf */; };
+		B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8B1C7EE6E300F04AC3 /* BebasNeueBold.otf */; };
+		B5307F911C7EE6E300F04AC3 /* BebasNeueBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8C1C7EE6E300F04AC3 /* BebasNeueBook.otf */; };
+		B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8D1C7EE6E300F04AC3 /* BebasNeueLight.otf */; };
+		B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8E1C7EE6E300F04AC3 /* BebasNeueRegular.otf */; };
+		B5307F941C7EE6E300F04AC3 /* BebasNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5307F8F1C7EE6E300F04AC3 /* BebasNeue-Thin.otf */; };
 		C1CAC8837F7630815E9A39A0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4040FFF439FA729D207C8 /* Pods.framework */; };
 		CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */; };
 		CF56A2301C7EC956002F9F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22F1C7EC956002F9F5B /* ViewController.swift */; };
@@ -33,16 +33,16 @@
 
 /* Begin PBXFileReference section */
 		9B9F15CC63F2B2FF661D7EFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B5307F811C7EE6CB00F04AC3 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
-		B5307F821C7EE6CB00F04AC3 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
-		B5307F831C7EE6CB00F04AC3 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
-		B5307F841C7EE6CB00F04AC3 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
-		B5307F851C7EE6CB00F04AC3 /* SF-UI-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Semibold.otf"; sourceTree = "<group>"; };
-		B5307F8B1C7EE6E300F04AC3 /* BebasNeue Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.otf"; sourceTree = "<group>"; };
-		B5307F8C1C7EE6E300F04AC3 /* BebasNeue Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Book.otf"; sourceTree = "<group>"; };
-		B5307F8D1C7EE6E300F04AC3 /* BebasNeue Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.otf"; sourceTree = "<group>"; };
-		B5307F8E1C7EE6E300F04AC3 /* BebasNeue Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.otf"; sourceTree = "<group>"; };
-		B5307F8F1C7EE6E300F04AC3 /* BebasNeue Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.otf"; sourceTree = "<group>"; };
+		B5307F811C7EE6CB00F04AC3 /* SFUIText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Bold.otf"; sourceTree = "<group>"; };
+		B5307F821C7EE6CB00F04AC3 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.otf"; sourceTree = "<group>"; };
+		B5307F831C7EE6CB00F04AC3 /* SFUIText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Medium.otf"; sourceTree = "<group>"; };
+		B5307F841C7EE6CB00F04AC3 /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.otf"; sourceTree = "<group>"; };
+		B5307F851C7EE6CB00F04AC3 /* SFUIText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Semibold.otf"; sourceTree = "<group>"; };
+		B5307F8B1C7EE6E300F04AC3 /* BebasNeueBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueBold.otf; sourceTree = "<group>"; };
+		B5307F8C1C7EE6E300F04AC3 /* BebasNeueBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueBook.otf; sourceTree = "<group>"; };
+		B5307F8D1C7EE6E300F04AC3 /* BebasNeueLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueLight.otf; sourceTree = "<group>"; };
+		B5307F8E1C7EE6E300F04AC3 /* BebasNeueRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueRegular.otf; sourceTree = "<group>"; };
+		B5307F8F1C7EE6E300F04AC3 /* BebasNeue-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.otf"; sourceTree = "<group>"; };
 		BFB4040FFF439FA729D207C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C969E93E25491B4E8787ABDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF56A22A1C7EC956002F9F5B /* e-driving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-driving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,16 +101,16 @@
 		B5307F3C1C7EE57F00F04AC3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				B5307F8B1C7EE6E300F04AC3 /* BebasNeue Bold.otf */,
-				B5307F8C1C7EE6E300F04AC3 /* BebasNeue Book.otf */,
-				B5307F8D1C7EE6E300F04AC3 /* BebasNeue Light.otf */,
-				B5307F8E1C7EE6E300F04AC3 /* BebasNeue Regular.otf */,
-				B5307F8F1C7EE6E300F04AC3 /* BebasNeue Thin.otf */,
-				B5307F811C7EE6CB00F04AC3 /* SF-UI-Text-Bold.otf */,
-				B5307F821C7EE6CB00F04AC3 /* SF-UI-Text-Light.otf */,
-				B5307F831C7EE6CB00F04AC3 /* SF-UI-Text-Medium.otf */,
-				B5307F841C7EE6CB00F04AC3 /* SF-UI-Text-Regular.otf */,
-				B5307F851C7EE6CB00F04AC3 /* SF-UI-Text-Semibold.otf */,
+				B5307F8B1C7EE6E300F04AC3 /* BebasNeueBold.otf */,
+				B5307F8C1C7EE6E300F04AC3 /* BebasNeueBook.otf */,
+				B5307F8D1C7EE6E300F04AC3 /* BebasNeueLight.otf */,
+				B5307F8E1C7EE6E300F04AC3 /* BebasNeueRegular.otf */,
+				B5307F8F1C7EE6E300F04AC3 /* BebasNeue-Thin.otf */,
+				B5307F811C7EE6CB00F04AC3 /* SFUIText-Bold.otf */,
+				B5307F821C7EE6CB00F04AC3 /* SFUIText-Light.otf */,
+				B5307F831C7EE6CB00F04AC3 /* SFUIText-Medium.otf */,
+				B5307F841C7EE6CB00F04AC3 /* SFUIText-Regular.otf */,
+				B5307F851C7EE6CB00F04AC3 /* SFUIText-Semibold.otf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -216,23 +216,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5307F911C7EE6E300F04AC3 /* BebasNeue Book.otf in Resources */,
-				B5307F881C7EE6CB00F04AC3 /* SF-UI-Text-Medium.otf in Resources */,
-				B5307F931C7EE6E300F04AC3 /* BebasNeue Regular.otf in Resources */,
-				B5307F891C7EE6CB00F04AC3 /* SF-UI-Text-Regular.otf in Resources */,
-				B5307F941C7EE6E300F04AC3 /* BebasNeue Thin.otf in Resources */,
+				B5307F911C7EE6E300F04AC3 /* BebasNeueBook.otf in Resources */,
+				B5307F881C7EE6CB00F04AC3 /* SFUIText-Medium.otf in Resources */,
+				B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */,
+				B5307F891C7EE6CB00F04AC3 /* SFUIText-Regular.otf in Resources */,
+				B5307F941C7EE6E300F04AC3 /* BebasNeue-Thin.otf in Resources */,
 				CF56A2381C7EC956002F9F5B /* LaunchScreen.storyboard in Resources */,
 				CF56A2351C7EC956002F9F5B /* Assets.xcassets in Resources */,
 				CF56A2521C7ED67F002F9F5B /* Feed.storyboard in Resources */,
 				CF56A2451C7ED006002F9F5B /* MenuCell.xib in Resources */,
-				B5307F8A1C7EE6CB00F04AC3 /* SF-UI-Text-Semibold.otf in Resources */,
+				B5307F8A1C7EE6CB00F04AC3 /* SFUIText-Semibold.otf in Resources */,
 				CF56A2411C7ECC0C002F9F5B /* Menu.storyboard in Resources */,
-				B5307F861C7EE6CB00F04AC3 /* SF-UI-Text-Bold.otf in Resources */,
+				B5307F861C7EE6CB00F04AC3 /* SFUIText-Bold.otf in Resources */,
 				CF56A24B1C7ED64B002F9F5B /* Car Performance.storyboard in Resources */,
-				B5307F871C7EE6CB00F04AC3 /* SF-UI-Text-Light.otf in Resources */,
-				B5307F921C7EE6E300F04AC3 /* BebasNeue Light.otf in Resources */,
+				B5307F871C7EE6CB00F04AC3 /* SFUIText-Light.otf in Resources */,
+				B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */,
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
-				B5307F901C7EE6E300F04AC3 /* BebasNeue Bold.otf in Resources */,
+				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
 				CF56A2481C7ED633002F9F5B /* Your Drive.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
