@@ -19,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Do some additional configuration if needed here
 		BITHockeyManager.sharedHockeyManager().startManager()
 		BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+		customizeAppearance()
 		return true
+	}
+
+	func customizeAppearance() {
+		let navBar = UINavigationBar.appearance()
+		navBar.shadowImage = UIImage()
+		navBar.setBackgroundImage(UIImage(fromColor: UIColor.clearColor()), forBarPosition: .Any, barMetrics: .Default)
+		navBar.titleTextAttributes = [
+			NSFontAttributeName: UIFont(name: "SFUIText-Regular", size: 16)!,
+			NSForegroundColorAttributeName: UIColor(hexRGB: 0x005599)]
 	}
 }
 

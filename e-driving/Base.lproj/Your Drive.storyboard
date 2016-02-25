@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Drive" id="PFD-5y-Exz">
+                    <navigationItem key="navigationItem" title="Your Drive" id="PFD-5y-Exz" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="UR5-1U-ybs">
                             <connections>
                                 <action selector="showRootMenu" destination="obL-Wt-UbZ" id="9FC-x6-Cum"/>

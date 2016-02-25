@@ -35,7 +35,7 @@
                             <constraint firstItem="76s-dd-90o" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="r4G-yw-e9O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Activity" id="mhu-P3-s0v">
+                    <navigationItem key="navigationItem" title="Activity" id="mhu-P3-s0v" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="1zn-II-D1F">
                             <connections>
                                 <action selector="showRootMenu" destination="CZQ-pf-AF9" id="UOp-2b-jgg"/>

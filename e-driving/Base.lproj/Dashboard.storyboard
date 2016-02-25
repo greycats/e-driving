@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dashboard" id="lT7-rX-yRv">
+                    <navigationItem key="navigationItem" title="Dashboard" id="lT7-rX-yRv" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="tZY-LP-JLD">
                             <connections>
                                 <action selector="showRootMenu" destination="TtO-yO-4LX" id="Q79-ps-5WK"/>

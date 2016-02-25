@@ -30,6 +30,7 @@
 		CF56A2521C7ED67F002F9F5B /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF56A2501C7ED67F002F9F5B /* Feed.storyboard */; };
 		CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF56A2531C7ED69C002F9F5B /* Dashboard.storyboard */; };
 		CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2571C7ED9B8002F9F5B /* Graphics.swift */; };
+		CF56A25A1C7F09CF002F9F5B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2591C7F09CF002F9F5B /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		CF56A2511C7ED67F002F9F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
 		CF56A2541C7ED69C002F9F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		CF56A2571C7ED9B8002F9F5B /* Graphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
+		CF56A2591C7F09CF002F9F5B /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,7 @@
 				B5307F841C7EE6CB00F04AC3 /* SFUIText-Regular.otf */,
 				B5307F851C7EE6CB00F04AC3 /* SFUIText-Semibold.otf */,
 			);
-			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CF56A2211C7EC955002F9F5B = {
@@ -146,6 +148,7 @@
 				CF56A2461C7ED633002F9F5B /* Your Drive.storyboard */,
 				CF56A2441C7ED006002F9F5B /* MenuCell.xib */,
 				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
+				CF56A2591C7F09CF002F9F5B /* NavigationBar.swift */,
 				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
 				CF56A2531C7ED69C002F9F5B /* Dashboard.storyboard */,
 				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF56A25A1C7F09CF002F9F5B /* NavigationBar.swift in Sources */,
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				CF56A2301C7EC956002F9F5B /* ViewController.swift in Sources */,
