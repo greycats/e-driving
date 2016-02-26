@@ -78,7 +78,7 @@ class RouteView: UIView {
 		line.opaque = false
 		line.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(line)
-		addConstraint(NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 106))
+		addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.618, constant: 0))
 		addConstraint(NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: 16))
 		let label = PositionLabel()
 		label.layout = "Compact"
@@ -101,8 +101,9 @@ class RouteView: UIView {
 			view.translatesAutoresizingMaskIntoConstraints = false
 			addSubview(view)
 			view.miles = miles
-			addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 25))
-			addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .CenterY, multiplier: 1, constant: 0))
+			addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 0))
+			addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: line, attribute: .Leading, multiplier: 1, constant: 0))
+			addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .CenterY, multiplier: 1, constant: 7))
 		}
 		return line
 	}

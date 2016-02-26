@@ -28,17 +28,11 @@
                             <rect key="frame" x="0.0" y="3" width="56" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="56" id="1by-Oa-QeK"/>
-                                <constraint firstAttribute="height" constant="28" id="7Qm-w7-bQE"/>
                                 <constraint firstAttribute="width" secondItem="Jro-bv-mkK" secondAttribute="height" id="dPE-c6-Jie"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="7Qm-w7-bQE"/>
-                                </mask>
-                            </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,9 +52,8 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="gEM-bk-zzP" secondAttribute="trailing" id="0hU-hG-9j4"/>
+                <constraint firstItem="gEM-bk-zzP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3k9-9J-hau"/>
                 <constraint firstAttribute="bottom" secondItem="gEM-bk-zzP" secondAttribute="bottom" id="BPi-XM-7Fu"/>
-                <constraint firstItem="gEM-bk-zzP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="E1K-M3-ulF"/>
                 <constraint firstItem="gEM-bk-zzP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jno-ia-Be0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
