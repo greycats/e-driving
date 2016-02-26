@@ -21,12 +21,9 @@ class MilesView: NibView {
     @IBInspectable var mile: String? {
         didSet { renderMile() }
     }
-    @IBInspectable var showMile: Bool = false {
-        didSet { renderMile() }
-    }
     private func renderMile() {
         mileLabel?.text = mile
-        mileLabel?.hidden = !showMile
+        mileLabel?.hidden = (mile == "0")
     }
     
     @IBOutlet weak var positionLabel: PositionLabel! {
