@@ -17,14 +17,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="74" height="136"/>
+            <rect key="frame" x="0.0" y="0.0" width="94" height="136"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Route_Dark" translatesAutoresizingMaskIntoConstraints="NO" id="Njh-U9-22C">
-                    <rect key="frame" x="0.0" y="0.0" width="74" height="104"/>
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="104"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-8b-vYL">
-                    <rect key="frame" x="0.0" y="104" width="74" height="32"/>
+                    <rect key="frame" x="0.0" y="104" width="94" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="XWv-l8-0II"/>
                     </constraints>

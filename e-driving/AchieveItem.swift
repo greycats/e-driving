@@ -45,6 +45,7 @@ class AchieveItem: NibView {
             itemLabel?.textColor = UIColor(hexRGB: 0x9B9B9B)
         }
 		
+		// in IBDesignable, UIImage need bundle
 		let bundle = NSBundle(forClass: AchieveItem.self)
         let image = UIImage(named: picName, inBundle: bundle, compatibleWithTraitCollection: nil)
         itemPic?.image = image
