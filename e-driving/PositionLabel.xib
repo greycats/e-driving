@@ -24,13 +24,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-Nw-XMp">
-                    <rect key="frame" x="32" y="0.0" width="354" height="14.5"/>
+                    <rect key="frame" x="43" y="0.0" width="343" height="14.5"/>
                     <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="992 Valley Ave, Jackson, NE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Rx-RXv">
-                    <rect key="frame" x="32" y="15" width="354" height="35.5"/>
+                    <rect key="frame" x="43" y="15" width="343" height="35.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="LYk-cs-sdf"/>
                     </constraints>
@@ -39,9 +39,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-gf-PbJ" customClass="DashLine" customModule="e_driving" customModuleProvider="target">
-                    <rect key="frame" x="12" y="0.0" width="20" height="85.5"/>
+                    <rect key="frame" x="12" y="0.0" width="16" height="85.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="20" id="nia-lT-MJb"/>
+                        <constraint firstAttribute="width" constant="16" id="nia-lT-MJb"/>
                     </constraints>
                 </view>
             </subviews>
@@ -51,7 +51,7 @@
                 <constraint firstItem="ela-Rx-RXv" firstAttribute="leading" secondItem="Xxp-Nw-XMp" secondAttribute="leading" id="6fU-S3-j8u"/>
                 <constraint firstItem="a3P-gf-PbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9aM-ch-Ex7"/>
                 <constraint firstAttribute="bottom" secondItem="ela-Rx-RXv" secondAttribute="bottom" priority="250" id="KND-c6-sc0"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="a3P-gf-PbJ" secondAttribute="trailing" id="TXF-hO-J9B"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="a3P-gf-PbJ" secondAttribute="trailing" constant="15" id="TXF-hO-J9B"/>
                 <constraint firstAttribute="bottom" secondItem="a3P-gf-PbJ" secondAttribute="bottom" id="aLc-fM-vFr"/>
                 <constraint firstAttribute="trailing" secondItem="Xxp-Nw-XMp" secondAttribute="trailing" id="cYi-MA-IFd"/>
                 <constraint firstAttribute="trailing" secondItem="ela-Rx-RXv" secondAttribute="trailing" id="dKB-Wo-fSN"/>
