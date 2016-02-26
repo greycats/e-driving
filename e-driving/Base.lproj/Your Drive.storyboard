@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jMQ-g4-O5y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gf4-Ce-d9M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1041"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1041"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2D-Sh-gFD" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="585"/>
@@ -254,7 +254,7 @@ ACCELERATIONS</string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="1100"/>
+                    <size key="freeformSize" width="414" height="1041"/>
                     <connections>
                         <outlet property="driveView" destination="RU7-Pe-24n" id="2Eb-Fk-dC0"/>
                         <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
