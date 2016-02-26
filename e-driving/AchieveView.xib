@@ -10,7 +10,19 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchieveView" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="DriftItem" destination="9Fj-aX-qAE" id="MXd-B6-eho"/>
+                <outlet property="HappyItem" destination="bwa-7H-SfR" id="kZX-lu-ZJA"/>
+                <outlet property="HoursItem" destination="tHl-go-HRk" id="LYG-OZ-Akk"/>
+                <outlet property="NotDrunkItem" destination="MWt-8v-EHu" id="jYv-TF-eUf"/>
+                <outlet property="RouteItem" destination="tlU-vP-SQU" id="gqL-kP-y0S"/>
+                <outlet property="SafeItem" destination="xDy-7X-5f9" id="eGJ-9J-7bu"/>
+                <outlet property="SlowItem" destination="RmU-4x-Fso" id="Yow-fx-qMq"/>
+                <outlet property="SpeedItem" destination="QcP-y6-Usn" id="orp-5j-Rm9"/>
+                <outlet property="TicketItem" destination="meo-Xq-MZB" id="1kY-dp-WPs"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="744"/>
