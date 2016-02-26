@@ -8,6 +8,7 @@
 
 import UIKit
 import HockeySDK
+import Greycats
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,10 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func customizeAppearance() {
 		let navBar = UINavigationBar.appearance()
 		navBar.shadowImage = UIImage()
-		navBar.setBackgroundImage(UIImage(fromColor: UIColor.clearColor()), forBarPosition: .Any, barMetrics: .Default)
+		navBar.setBackgroundImage(UIImage(fromColor: .clearColor()), forBarPosition: .Any, barMetrics: .Default)
 		navBar.titleTextAttributes = [
 			NSFontAttributeName: UIFont(name: "SFUIText-Regular", size: 16)!,
 			NSForegroundColorAttributeName: UIColor(hexRGB: 0x005599)]
 	}
 }
-
