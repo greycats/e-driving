@@ -18,91 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2D-Sh-gFD" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="585"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-TZ-iaV" customClass="VehicleView" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="215" y="100" width="170" height="418"/>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-aI-Fpb" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="134" width="215" height="102.5"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="MILES"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="34"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s48-a5-B0V" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="385" y="134" width="215" height="102.5"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="HOURS"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="1:15"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOL-jW-bXF" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="258" width="215" height="102.5"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="MPG"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="31.2"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqI-qG-tdd" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="374" width="215" height="117"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                        <string key="value">HARD
-BRAKES</string>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="4"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-rQ-fPw" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="385" y="251" width="215" height="117"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                        <string key="value">OVER
-SPEED</string>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="23"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showAlert" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8db-ug-D23" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="385" y="374" width="215" height="117"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                        <string key="value">HARD
-ACCELERATIONS</string>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="value" value="5"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="leading" secondItem="wOL-jW-bXF" secondAttribute="trailing" id="8Wg-aI-UUZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="6Mn-TZ-iaV" secondAttribute="bottom" constant="67" id="8cL-Ns-3WS"/>
-                                            <constraint firstItem="Q9p-aI-Fpb" firstAttribute="leading" secondItem="d2D-Sh-gFD" secondAttribute="leading" id="BhC-HD-kou"/>
-                                            <constraint firstAttribute="trailing" secondItem="kWc-rQ-fPw" secondAttribute="trailing" id="Edf-ZR-Ut0"/>
-                                            <constraint firstAttribute="trailing" secondItem="8db-ug-D23" secondAttribute="trailing" id="F16-6x-Jlj"/>
-                                            <constraint firstAttribute="trailing" secondItem="s48-a5-B0V" secondAttribute="trailing" id="FgU-lA-AYC"/>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="leading" secondItem="IqI-qG-tdd" secondAttribute="trailing" id="L7l-3m-HPP"/>
-                                            <constraint firstItem="8db-ug-D23" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" multiplier="1.4" id="MTH-MX-WFc"/>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="centerX" secondItem="d2D-Sh-gFD" secondAttribute="centerX" id="Nfz-G9-kkS"/>
-                                            <constraint firstItem="IqI-qG-tdd" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" multiplier="1.4" id="VTn-Cq-ZUN"/>
-                                            <constraint firstItem="wOL-jW-bXF" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" id="a5x-t6-Wuf"/>
-                                            <constraint firstItem="s48-a5-B0V" firstAttribute="leading" secondItem="6Mn-TZ-iaV" secondAttribute="trailing" id="aGE-Qr-3Yl"/>
-                                            <constraint firstItem="kWc-rQ-fPw" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" id="bmn-cr-hel"/>
-                                            <constraint firstItem="Q9p-aI-Fpb" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" multiplier="0.6" id="bzU-g9-vFO"/>
-                                            <constraint firstItem="s48-a5-B0V" firstAttribute="centerY" secondItem="6Mn-TZ-iaV" secondAttribute="centerY" multiplier="0.6" id="gFZ-ko-I4D"/>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="trailing" secondItem="kWc-rQ-fPw" secondAttribute="leading" id="hkv-aQ-JNk"/>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="leading" secondItem="Q9p-aI-Fpb" secondAttribute="trailing" id="iRc-qd-vnX"/>
-                                            <constraint firstItem="8db-ug-D23" firstAttribute="leading" secondItem="6Mn-TZ-iaV" secondAttribute="trailing" id="p4p-Mb-g9B"/>
-                                            <constraint firstItem="wOL-jW-bXF" firstAttribute="leading" secondItem="d2D-Sh-gFD" secondAttribute="leading" id="vaF-y1-U7c"/>
-                                            <constraint firstItem="6Mn-TZ-iaV" firstAttribute="top" secondItem="d2D-Sh-gFD" secondAttribute="top" constant="100" id="wYe-ax-pTe"/>
-                                            <constraint firstItem="IqI-qG-tdd" firstAttribute="leading" secondItem="d2D-Sh-gFD" secondAttribute="leading" id="zJx-W1-Yqu"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                 <color key="value" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -223,6 +143,9 @@ ACCELERATIONS</string>
                                         <exclude reference="M8y-i7-2Gw"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="obL-Wt-UbZ" id="QiI-Qw-och"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -242,6 +165,10 @@ ACCELERATIONS</string>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="driveView" destination="RU7-Pe-24n" id="2Eb-Fk-dC0"/>
+                        <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nj0-EW-0Vz" sceneMemberID="firstResponder"/>
             </objects>
