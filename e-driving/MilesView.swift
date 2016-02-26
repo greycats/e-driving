@@ -9,6 +9,11 @@
 import Greycats
 
 @IBDesignable
+class MileLabel: UILabel {
+
+}
+
+@IBDesignable
 class MilesView: NibView {
     @IBOutlet weak var mileLabel: UILabel! {
         didSet { renderMile() }
