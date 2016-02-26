@@ -43,6 +43,8 @@
 		CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2621C7F1759002F9F5B /* ViewController.swift */; };
 		CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */; };
 		CF97042D1C7FEE220035CECE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97042C1C7FEE220035CECE /* Route.swift */; };
+		CF9704321C804BB00035CECE /* PositionLabelCompact.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9704311C804BB00035CECE /* PositionLabelCompact.xib */; };
+		CF9704341C8052070035CECE /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9704331C8052070035CECE /* ActivityScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		CF56A2621C7F1759002F9F5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexLabel.swift; sourceTree = "<group>"; };
 		CF97042C1C7FEE220035CECE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		CF9704311C804BB00035CECE /* PositionLabelCompact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabelCompact.xib; sourceTree = "<group>"; };
+		CF9704331C8052070035CECE /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,20 +169,20 @@
 		CF56A22C1C7EC956002F9F5B /* e-driving */ = {
 			isa = PBXGroup;
 			children = (
+				CF56A2391C7EC956002F9F5B /* Info.plist */,
 				CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */,
-				CF56A2421C7ECE2F002F9F5B /* MenuScene.swift */,
 				CF56A2571C7ED9B8002F9F5B /* Graphics.swift */,
-				CF56A2621C7F1759002F9F5B /* ViewController.swift */,
-				CF56A2611C7F16FD002F9F5B /* Vehicle Scene */,
-				CF56A2441C7ED006002F9F5B /* MenuCell.xib */,
-				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
+				CF56A2421C7ECE2F002F9F5B /* MenuScene.swift */,
 				CF56A2591C7F09CF002F9F5B /* NavigationBar.swift */,
+				CF56A2621C7F1759002F9F5B /* ViewController.swift */,
+				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
+				CF56A2441C7ED006002F9F5B /* MenuCell.xib */,
+				CF9704301C801D180035CECE /* Activity Scene */,
 				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
 				CF56A2531C7ED69C002F9F5B /* Dashboard.storyboard */,
-				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
-				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
-				CF56A2391C7EC956002F9F5B /* Info.plist */,
+				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
+				CF56A2611C7F16FD002F9F5B /* Vehicle Scene */,
 				CF56A2661C7F18D8002F9F5B /* Views */,
 			);
 			path = "e-driving";
@@ -188,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				CF56A2461C7ED633002F9F5B /* Your Drive.storyboard */,
-				CF97042C1C7FEE220035CECE /* Route.swift */,
 				CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */,
 			);
 			name = "Vehicle Scene";
@@ -204,11 +207,22 @@
 				B5307F971C7EF72400F04AC3 /* ButtonView.xib */,
 				B55084CF1C7FC2DC0083B242 /* ButtonView.swift */,
 				B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */,
+				CF9704311C804BB00035CECE /* PositionLabelCompact.xib */,
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
 				B571573D1C7FECA900A905CB /* MilesView.xib */,
 				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CF9704301C801D180035CECE /* Activity Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CF97042C1C7FEE220035CECE /* Route.swift */,
+				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
+				CF9704331C8052070035CECE /* ActivityScene.swift */,
+			);
+			name = "Activity Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,7 @@
 				B5307F961C7EF10E00F04AC3 /* IndexLabel.xib in Resources */,
 				B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */,
 				B5307F891C7EE6CB00F04AC3 /* SFUIText-Regular.otf in Resources */,
+				CF9704321C804BB00035CECE /* PositionLabelCompact.xib in Resources */,
 				B5307F941C7EE6E300F04AC3 /* BebasNeue-Thin.otf in Resources */,
 				CF56A2381C7EC956002F9F5B /* LaunchScreen.storyboard in Resources */,
 				CF56A2351C7EC956002F9F5B /* Assets.xcassets in Resources */,
@@ -371,6 +386,7 @@
 				CF97042D1C7FEE220035CECE /* Route.swift in Sources */,
 				CF56A25A1C7F09CF002F9F5B /* NavigationBar.swift in Sources */,
 				CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */,
+				CF9704341C8052070035CECE /* ActivityScene.swift in Sources */,
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,

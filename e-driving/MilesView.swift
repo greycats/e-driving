@@ -9,38 +9,33 @@
 import Greycats
 
 @IBDesignable
-class MileLabel: UILabel {
-
-}
-
-@IBDesignable
 class MilesView: NibView {
-    @IBOutlet weak var mileLabel: UILabel! {
-        didSet { renderMile() }
-    }
-    @IBInspectable var mile: String? {
-        didSet { renderMile() }
-    }
-    private func renderMile() {
-        mileLabel?.text = mile
-        mileLabel?.hidden = (mile == "0")
-    }
-    
-    @IBOutlet weak var positionLabel: PositionLabel! {
-        didSet { renderPosition() }
-    }
-    @IBInspectable var title: String? {
-        didSet { renderPosition() }
-    }
-    @IBInspectable var address: String? {
-        didSet { renderPosition() }
-    }
-    @IBInspectable var circleColor: UIColor? {
-        didSet { renderPosition() }
-    }
-    private func renderPosition() {
-        positionLabel?.titleLabel?.text = title?.uppercaseString
-        positionLabel?.addressLabel?.text = address
-        positionLabel?.circleView?.borderColor = circleColor
-    }
+	let highlightColor = UIColor(hexRGB: 0x2ECC71)
+	let normalColor = UIColor(hexRGB: 0x9B9B9B)
+
+	@IBOutlet weak var backgroundView: UIView! {
+		didSet { renderBackgroundView() }
+	}
+	@IBInspectable var highlighted: Bool = false {
+		didSet { renderBackgroundView() }
+	}
+	private func renderBackgroundView() {
+		backgroundView?.backgroundColor = highlighted ? highlightColor : normalColor
+	}
+
+	@IBOutlet weak var milesLabel: UILabel! {
+		didSet { renderMile() }
+	}
+
+	@IBInspectable var miles: Double = 0 {
+		didSet { renderMile() }
+	}
+
+	private func renderMile() {
+		let formatter = NSNumberFormatter()
+		formatter.minimumFractionDigits = 0
+		formatter.maximumFractionDigits = 1
+		formatter.minimumIntegerDigits = 1
+		milesLabel.text = formatter.stringFromNumber(miles)
+	}
 }

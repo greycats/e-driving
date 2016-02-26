@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			BITHockeyManager.sharedHockeyManager().startManager()
 			BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
 		}
-		createRoute()
 		return true
 	}
 

@@ -9,7 +9,7 @@
 import Greycats
 
 @IBDesignable
-class PositionLabel: NibView {
+class PositionLabel: StyledView {
 	@IBOutlet weak var titleLabel: UILabel! {
         didSet { renderTitle() }
     }
@@ -28,15 +28,5 @@ class PositionLabel: NibView {
     }
     private func renderAddress() {
         addressLabel?.text = address
-    }
-    
-    @IBOutlet weak var circleView: UIView! {
-        didSet { renderColor() }
-    }
-    @IBInspectable var color: UIColor? {
-        didSet { renderColor() }
-    }
-    private func renderColor() {
-        circleView?.borderColor = color
     }
 }
