@@ -44,21 +44,15 @@ class Animation: NSObject {
 @IBDesignable
 class CurveBackgroundView: UIView {
 	@IBInspectable var color: UIColor = UIColor.grayColor() {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	@IBInspectable var waveHeight: CGFloat = 27 {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	@IBInspectable var middleRatio: CGFloat = 0.4277 {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	let animation = Animation()
@@ -107,5 +101,24 @@ class CurveBackgroundView: UIView {
 		path.closePath()
 		color.setFill()
 		path.fill()
+	}
+}
+
+@IBDesignable
+class DashLine: UIView {
+	override func drawRect(rect: CGRect) {
+		let context = UIGraphicsGetCurrentContext()
+		CGContextSaveGState(context)
+		let dash: [CGFloat] = [3, 3]
+		CGContextSetLineDash(context	, 1, dash, 2)
+		CGContextSetLineWidth(context, 2)
+		CGContextSetLineCap(context, .Round)
+		CGContextSetStrokeColorWithColor(context, tintColor.CGColor)
+		CGContextMoveToPoint(context, 1, 3)
+		let sum = dash.reduce(CGFloat(0), combine: +)
+		let height = floor(rect.size.height / sum) * sum
+		CGContextAddLineToPoint(context, 1, height)
+		CGContextStrokePath(context)
+		CGContextRestoreGState(context)
 	}
 }
