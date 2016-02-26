@@ -17,6 +17,6 @@ class ButtonView: NibView {
         didSet { renderTitle() }
     }
     private func renderTitle() {
-        buttonView?.setTitle(title, forState: UIControlState.Normal)
+        buttonView?.setTitle(title?.uppercaseString, forState: .Normal)
     }
 }

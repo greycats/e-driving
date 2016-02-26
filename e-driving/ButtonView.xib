@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SFUIText-Semibold.otf">
@@ -20,16 +20,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-HH-lid">
-                    <rect key="frame" x="20" y="20" width="307" height="82"/>
+                    <rect key="frame" x="20" y="20" width="307" height="60"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FMM-Jd-SBh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="16"/>
                     <state key="normal" title="PREVIOUS DRIVE">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="5"/>
+                            <real key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
@@ -39,7 +42,7 @@
                 <constraint firstItem="lFg-HH-lid" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="0bL-CE-bn6"/>
                 <constraint firstAttribute="trailing" secondItem="lFg-HH-lid" secondAttribute="trailing" constant="20" id="5E1-oq-4Qa"/>
                 <constraint firstItem="lFg-HH-lid" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="8g5-CD-0q5"/>
-                <constraint firstAttribute="bottom" secondItem="lFg-HH-lid" secondAttribute="bottom" constant="20" id="nA3-8a-Yjx"/>
+                <constraint firstAttribute="bottom" secondItem="lFg-HH-lid" secondAttribute="bottom" priority="999" constant="20" id="nA3-8a-Yjx"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
