@@ -22,6 +22,9 @@
 		B5307F9A1C7EFB5900F04AC3 /* VehicleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F991C7EFB5900F04AC3 /* VehicleView.xib */; };
 		B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */; };
 		B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106CD1C7FF2CB00690145 /* MilesView.swift */; };
+		B53106D01C80454500690145 /* AchieveItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53106CF1C80454500690145 /* AchieveItem.xib */; };
+		B53106D21C80479F00690145 /* AchieveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106D11C80479F00690145 /* AchieveItem.swift */; };
+		B53106D41C80660400690145 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106D31C80660400690145 /* Achievement.swift */; };
 		B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084CF1C7FC2DC0083B242 /* ButtonView.swift */; };
 		B55084D21C7FCB290083B242 /* PositionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084D11C7FCB290083B242 /* PositionLabel.swift */; };
 		B571573E1C7FECA900A905CB /* MilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B571573D1C7FECA900A905CB /* MilesView.xib */; };
@@ -62,6 +65,9 @@
 		B5307F991C7EFB5900F04AC3 /* VehicleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleView.xib; sourceTree = "<group>"; };
 		B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabel.xib; sourceTree = "<group>"; };
 		B53106CD1C7FF2CB00690145 /* MilesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilesView.swift; sourceTree = "<group>"; };
+		B53106CF1C80454500690145 /* AchieveItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchieveItem.xib; sourceTree = "<group>"; };
+		B53106D11C80479F00690145 /* AchieveItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchieveItem.swift; sourceTree = "<group>"; };
+		B53106D31C80660400690145 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		B55084CF1C7FC2DC0083B242 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		B55084D11C7FCB290083B242 /* PositionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionLabel.swift; sourceTree = "<group>"; };
 		B571573D1C7FECA900A905CB /* MilesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesView.xib; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
 				CF56A2391C7EC956002F9F5B /* Info.plist */,
+				B53106D31C80660400690145 /* Achievement.swift */,
 				CF56A2661C7F18D8002F9F5B /* Views */,
 			);
 			path = "e-driving";
@@ -207,6 +214,8 @@
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
 				B571573D1C7FECA900A905CB /* MilesView.xib */,
 				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
+				B53106CF1C80454500690145 /* AchieveItem.xib */,
+				B53106D11C80479F00690145 /* AchieveItem.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 				B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */,
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
 				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
+				B53106D01C80454500690145 /* AchieveItem.xib in Resources */,
 				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
 				B571573E1C7FECA900A905CB /* MilesView.xib in Resources */,
 				CF56A2481C7ED633002F9F5B /* Your Drive.storyboard in Resources */,
@@ -373,9 +383,11 @@
 				CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */,
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
+				B53106D21C80479F00690145 /* AchieveItem.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
+				B53106D41C80660400690145 /* Achievement.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,
 				CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */,
