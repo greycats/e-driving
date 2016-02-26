@@ -20,43 +20,31 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="386" height="85.5"/>
+            <rect key="frame" x="0.0" y="0.0" width="386" height="73"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-Nw-XMp">
-                    <rect key="frame" x="43" y="0.0" width="343" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="FROM HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-Nw-XMp">
+                    <rect key="frame" x="0.0" y="2" width="386" height="14.5"/>
                     <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="992 Valley Ave, Jackson, NE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Rx-RXv">
-                    <rect key="frame" x="43" y="15" width="343" height="35.5"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="LYk-cs-sdf"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" text="992 Valley Ave, Jackson, NE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Rx-RXv">
+                    <rect key="frame" x="0.0" y="17" width="386" height="21.5"/>
                     <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
                     <color key="textColor" red="0.12156862745098039" green="0.17254901960784313" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-gf-PbJ" customClass="DashLine" customModule="e_driving" customModuleProvider="target">
-                    <rect key="frame" x="12" y="0.0" width="16" height="85.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="16" id="nia-lT-MJb"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="a3P-gf-PbJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="675-FZ-06O"/>
                 <constraint firstItem="ela-Rx-RXv" firstAttribute="leading" secondItem="Xxp-Nw-XMp" secondAttribute="leading" id="6fU-S3-j8u"/>
-                <constraint firstItem="a3P-gf-PbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9aM-ch-Ex7"/>
-                <constraint firstAttribute="bottom" secondItem="ela-Rx-RXv" secondAttribute="bottom" priority="250" id="KND-c6-sc0"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="a3P-gf-PbJ" secondAttribute="trailing" constant="15" id="TXF-hO-J9B"/>
-                <constraint firstAttribute="bottom" secondItem="a3P-gf-PbJ" secondAttribute="bottom" id="aLc-fM-vFr"/>
+                <constraint firstAttribute="bottom" secondItem="ela-Rx-RXv" secondAttribute="bottom" priority="999" constant="30" id="KND-c6-sc0"/>
+                <constraint firstAttribute="bottom" secondItem="Xxp-Nw-XMp" secondAttribute="bottom" priority="999" constant="59" id="Lxs-R3-3lf"/>
                 <constraint firstAttribute="trailing" secondItem="Xxp-Nw-XMp" secondAttribute="trailing" id="cYi-MA-IFd"/>
                 <constraint firstAttribute="trailing" secondItem="ela-Rx-RXv" secondAttribute="trailing" id="dKB-Wo-fSN"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gVZ-DV-ki3"/>
-                <constraint firstItem="a3P-gf-PbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="gsk-pw-7sL"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="gVZ-DV-ki3"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kd2-xj-ERy"/>
                 <constraint firstItem="ela-Rx-RXv" firstAttribute="top" secondItem="Xxp-Nw-XMp" secondAttribute="bottom" id="yfJ-c5-1RQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -65,10 +53,10 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="gsk-pw-7sL"/>
+                    <exclude reference="Lxs-R3-3lf"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="94" y="87.75"/>
+            <point key="canvasLocation" x="94" y="82.75"/>
         </view>
     </objects>
 </document>

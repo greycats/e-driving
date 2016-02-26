@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="obL-Wt-UbZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -15,10 +14,10 @@
                         <viewControllerLayoutGuide type="bottom" id="jMQ-g4-O5y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gf4-Ce-d9M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-wq-ITb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2D-Sh-gFD" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
@@ -118,27 +117,86 @@ ACCELERATIONS</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-cb-znw">
-                                        <rect key="frame" x="0.0" y="585" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="585" width="414" height="141"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flV-9K-LEQ" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="13" y="0.0" width="401" height="300"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flV-9K-LEQ" userLabel="from pos" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="44" y="5" width="370" height="68"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="FROM HOME"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="address" value="992 Valley Ave, Jackson, NE"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="highlightLine" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-oq-9US" customClass="DashLine" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="5" width="16" height="68"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="IpA-Ec-fgT"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="highlightLine" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-2w-9zS" userLabel="to pos" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="44" y="73" width="370" height="68"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="TO OFFICE"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="address" value="776 Park Way, Fontana, IA"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasLine" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-C5-peS" customClass="DashLine" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="13" y="73" width="16" height="68"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="0fy-mU-LVU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasLine" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="highlightDot" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="flV-9K-LEQ" firstAttribute="leading" secondItem="OVU-oq-9US" secondAttribute="trailing" constant="15" id="09y-tw-ny3"/>
+                                            <constraint firstItem="flV-9K-LEQ" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="top" constant="5" id="1e4-aB-4pU"/>
+                                            <constraint firstItem="OVU-oq-9US" firstAttribute="height" secondItem="flV-9K-LEQ" secondAttribute="height" id="3Hc-xH-fe7"/>
+                                            <constraint firstItem="OVU-oq-9US" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="top" constant="5" id="3pj-3c-9sK"/>
+                                            <constraint firstAttribute="trailing" secondItem="dbq-2w-9zS" secondAttribute="trailing" id="9PU-07-48U"/>
                                             <constraint firstItem="flV-9K-LEQ" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="top" id="Bxp-NU-D0X"/>
+                                            <constraint firstItem="QsP-C5-peS" firstAttribute="leading" secondItem="OVU-oq-9US" secondAttribute="leading" id="CyG-fT-ofs"/>
+                                            <constraint firstItem="OVU-oq-9US" firstAttribute="leading" secondItem="723-cb-znw" secondAttribute="leading" constant="13" id="IjX-qD-Wjv"/>
+                                            <constraint firstItem="dbq-2w-9zS" firstAttribute="leading" secondItem="QsP-C5-peS" secondAttribute="trailing" constant="13" id="Je7-vW-5ne"/>
+                                            <constraint firstItem="QsP-C5-peS" firstAttribute="height" secondItem="dbq-2w-9zS" secondAttribute="height" id="K5I-Cf-Rqe"/>
+                                            <constraint firstAttribute="bottom" secondItem="dbq-2w-9zS" secondAttribute="bottom" id="LEs-Do-Bl0"/>
                                             <constraint firstItem="flV-9K-LEQ" firstAttribute="leading" secondItem="723-cb-znw" secondAttribute="leading" constant="13" id="LcN-H4-ADP"/>
                                             <constraint firstAttribute="trailing" secondItem="flV-9K-LEQ" secondAttribute="trailing" id="Ouo-RV-rxU"/>
-                                            <constraint firstAttribute="bottom" secondItem="flV-9K-LEQ" secondAttribute="bottom" priority="999" id="hCE-XX-bdZ"/>
-                                            <constraint firstAttribute="height" constant="300" id="y98-5h-d4c"/>
+                                            <constraint firstItem="dbq-2w-9zS" firstAttribute="trailing" secondItem="flV-9K-LEQ" secondAttribute="trailing" id="Ov6-P1-sN5"/>
+                                            <constraint firstItem="QsP-C5-peS" firstAttribute="top" secondItem="dbq-2w-9zS" secondAttribute="top" id="SPU-k1-6bl"/>
+                                            <constraint firstItem="dbq-2w-9zS" firstAttribute="trailing" secondItem="flV-9K-LEQ" secondAttribute="trailing" id="VZ8-hz-Ube"/>
+                                            <constraint firstItem="dbq-2w-9zS" firstAttribute="top" secondItem="flV-9K-LEQ" secondAttribute="bottom" id="bTK-Sb-dA2"/>
+                                            <constraint firstItem="OVU-oq-9US" firstAttribute="bottom" secondItem="flV-9K-LEQ" secondAttribute="bottom" id="fLW-ow-3DJ"/>
+                                            <constraint firstItem="OVU-oq-9US" firstAttribute="top" secondItem="flV-9K-LEQ" secondAttribute="top" id="hEi-at-Gst"/>
+                                            <constraint firstItem="dbq-2w-9zS" firstAttribute="leading" secondItem="flV-9K-LEQ" secondAttribute="leading" id="qKY-UJ-Cio"/>
+                                            <constraint firstItem="QsP-C5-peS" firstAttribute="bottom" secondItem="dbq-2w-9zS" secondAttribute="bottom" id="r3K-Rr-sr6"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3Hc-xH-fe7"/>
+                                                <exclude reference="3pj-3c-9sK"/>
+                                                <exclude reference="Bxp-NU-D0X"/>
+                                                <exclude reference="LcN-H4-ADP"/>
+                                                <exclude reference="Je7-vW-5ne"/>
+                                                <exclude reference="Ov6-P1-sN5"/>
+                                            </mask>
+                                        </variation>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="3Kf-i0-PUA">
+                                        <rect key="frame" x="0.0" y="726" width="414" height="215"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="215" id="BYa-Pr-lNI"/>
+                                        </constraints>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-Km-JaA" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="885" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="941" width="414" height="100"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Previous Drive"/>
                                         </userDefinedRuntimeAttributes>
@@ -148,9 +206,12 @@ ACCELERATIONS</string>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="4Fw-E6-f3e"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="top" secondItem="GlL-wq-ITb" secondAttribute="top" id="8z0-of-ZBn"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="Ds7-1r-1ot"/>
+                                    <constraint firstItem="3Kf-i0-PUA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="FQi-0F-TlJ"/>
                                     <constraint firstAttribute="bottom" secondItem="RU7-Pe-24n" secondAttribute="bottom" id="M8y-i7-2Gw"/>
+                                    <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="3Kf-i0-PUA" secondAttribute="bottom" id="OXz-m5-KwH"/>
                                     <constraint firstItem="d2D-Sh-gFD" firstAttribute="leading" secondItem="RU7-Pe-24n" secondAttribute="leading" id="T75-b6-lEk"/>
                                     <constraint firstAttribute="trailing" secondItem="723-cb-znw" secondAttribute="trailing" id="TCQ-NB-w8Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Kf-i0-PUA" secondAttribute="trailing" id="VKZ-fR-0UV"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="bottom" id="WRz-bA-95u"/>
                                     <constraint firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="WlU-Y0-a6h"/>
                                     <constraint firstItem="d2D-Sh-gFD" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="top" id="ehP-19-hjX"/>
@@ -161,10 +222,12 @@ ACCELERATIONS</string>
                                     <constraint firstItem="d2D-Sh-gFD" firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="t5c-dA-ofc"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="tcb-gL-Ma6"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="u1e-3T-HtG"/>
+                                    <constraint firstItem="3Kf-i0-PUA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="zHK-rd-1Ja"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="M8y-i7-2Gw"/>
+                                        <exclude reference="4Fw-E6-f3e"/>
                                         <exclude reference="rjh-FT-VpX"/>
                                     </mask>
                                 </variation>
@@ -176,7 +239,7 @@ ACCELERATIONS</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RU7-Pe-24n" firstAttribute="width" secondItem="Gf4-Ce-d9M" secondAttribute="width" id="4AE-Qi-a8e"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="GlL-wq-ITb" secondAttribute="bottom" id="jBh-uF-YxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="GlL-wq-ITb" secondAttribute="bottom" id="jBh-uF-YxJ"/>
                             <constraint firstItem="GlL-wq-ITb" firstAttribute="top" secondItem="Gf4-Ce-d9M" secondAttribute="top" id="kOA-99-IaF"/>
                             <constraint firstAttribute="trailing" secondItem="GlL-wq-ITb" secondAttribute="trailing" id="pMM-FK-KDk"/>
                             <constraint firstItem="GlL-wq-ITb" firstAttribute="leading" secondItem="Gf4-Ce-d9M" secondAttribute="leading" id="tEb-xU-6UL"/>
@@ -191,7 +254,7 @@ ACCELERATIONS</string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="1100"/>
                     <connections>
                         <outlet property="driveView" destination="RU7-Pe-24n" id="2Eb-Fk-dC0"/>
                         <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
@@ -203,5 +266,6 @@ ACCELERATIONS</string>
     </scenes>
     <resources>
         <image name="hamburger" width="20" height="15"/>
+        <image name="map" width="414" height="215"/>
     </resources>
 </document>

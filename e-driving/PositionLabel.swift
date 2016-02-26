@@ -10,7 +10,7 @@ import Greycats
 
 @IBDesignable
 class PositionLabel: NibView {
-    @IBOutlet weak var titleLabel: UILabel! {
+	@IBOutlet weak var titleLabel: UILabel! {
         didSet { renderTitle() }
     }
     @IBInspectable var title: String? {

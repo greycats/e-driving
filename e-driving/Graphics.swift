@@ -128,10 +128,9 @@ class DashLine: UIView {
 		let context = UIGraphicsGetCurrentContext()
 		CGContextSaveGState(context)
 		let color = highlightDot ? highlightColor : normalColor
-
+		let dotRect = CGRect(x: thickness / 2, y: thickness / 2, width: dotDiameter, height: dotDiameter)
 		CGContextSetStrokeColorWithColor(context, color.CGColor)
 		CGContextSetLineWidth(context, thickness)
-		let dotRect = CGRect(x: thickness / 2, y: thickness / 2, width: dotDiameter, height: dotDiameter)
 		CGContextAddEllipseInRect(context, dotRect)
 		CGContextStrokePath(context)
 		CGContextRestoreGState(context)
@@ -142,13 +141,14 @@ class DashLine: UIView {
 			let dash: [CGFloat] = [1, 5]
 			let color = highlightLine ? highlightColor : normalColor
 			let sum = dash.reduce(CGFloat(0), combine: +)
-			let height = floor((rect.size.height - dotDiameter) / sum) * sum
+			let top = dotDiameter + thickness
+			let height = floor((rect.size.height - top) / sum) * sum
 			CGContextSetLineDash(context	, 1, dash, 2)
 			CGContextSetLineWidth(context, 2)
 			CGContextSetLineCap(context, .Round)
 			CGContextSetStrokeColorWithColor(context, color.CGColor)
-			CGContextMoveToPoint(context, mid, dotDiameter)
-			CGContextAddLineToPoint(context, mid, height)
+			CGContextMoveToPoint(context, mid, top)
+			CGContextAddLineToPoint(context, mid, height + top)
 			CGContextStrokePath(context)
 			CGContextRestoreGState(context)
 		}
