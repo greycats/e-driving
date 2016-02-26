@@ -12,51 +12,70 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="ela-Rx-RXv" id="ADv-OV-kuu"/>
+                <outlet property="circleView" destination="lKX-yt-lhd" id="yfL-SN-8W3"/>
+                <outlet property="titleLabel" destination="Xxp-Nw-XMp" id="bxJ-JV-79s"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="399" height="68.5"/>
+            <rect key="frame" x="0.0" y="0.0" width="386" height="85.5"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-Nw-XMp">
-                    <rect key="frame" x="45" y="5" width="354" height="14.5"/>
+                    <rect key="frame" x="40" y="0.5" width="346" height="14.5"/>
                     <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="woe-Mj-Ang">
-                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKX-yt-lhd">
+                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="Hwi-8J-th4"/>
-                        <constraint firstAttribute="height" constant="25" id="dMJ-Lk-KiV"/>
+                        <constraint firstAttribute="width" constant="15" id="Rlh-6Q-cCC"/>
+                        <constraint firstAttribute="height" constant="15" id="Rzq-JD-Hpj"/>
                     </constraints>
-                </imageView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="992 Valley Ave, Jackson, NE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Rx-RXv">
-                    <rect key="frame" x="45" y="24.5" width="354" height="24"/>
+                    <rect key="frame" x="40" y="15" width="346" height="35.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="LYk-cs-sdf"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.12156862745098039" green="0.17254901960784313" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-45" id="GaU-kh-6Ca"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="woe-Mj-Ang" secondAttribute="trailing" constant="20" id="Ta9-ss-aW0"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="centerY" secondItem="woe-Mj-Ang" secondAttribute="centerY" id="bxL-BZ-PJR"/>
-                <constraint firstItem="ela-Rx-RXv" firstAttribute="leading" secondItem="Xxp-Nw-XMp" secondAttribute="leading" id="coO-bM-epo"/>
-                <constraint firstItem="ela-Rx-RXv" firstAttribute="top" secondItem="Xxp-Nw-XMp" secondAttribute="bottom" constant="5" id="gts-NE-OqY"/>
-                <constraint firstItem="woe-Mj-Ang" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="itD-va-QUX"/>
-                <constraint firstItem="woe-Mj-Ang" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jy8-tr-wlP"/>
-                <constraint firstItem="ela-Rx-RXv" firstAttribute="width" secondItem="Xxp-Nw-XMp" secondAttribute="width" id="nVW-co-GO7"/>
+                <constraint firstItem="ela-Rx-RXv" firstAttribute="leading" secondItem="Xxp-Nw-XMp" secondAttribute="leading" id="6fU-S3-j8u"/>
+                <constraint firstItem="lKX-yt-lhd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6pA-nF-Kw0"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="centerY" secondItem="lKX-yt-lhd" secondAttribute="centerY" id="JLn-Qy-Hbz"/>
+                <constraint firstAttribute="bottom" secondItem="ela-Rx-RXv" secondAttribute="bottom" priority="250" id="KND-c6-sc0"/>
+                <constraint firstAttribute="trailing" secondItem="Xxp-Nw-XMp" secondAttribute="trailing" id="cYi-MA-IFd"/>
+                <constraint firstAttribute="trailing" secondItem="ela-Rx-RXv" secondAttribute="trailing" id="dKB-Wo-fSN"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="lKX-yt-lhd" secondAttribute="trailing" constant="25" id="hjX-eo-oKa"/>
+                <constraint firstItem="lKX-yt-lhd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rQE-py-OKP"/>
+                <constraint firstItem="ela-Rx-RXv" firstAttribute="top" secondItem="Xxp-Nw-XMp" secondAttribute="bottom" id="yfJ-c5-1RQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="176.5" y="141.25"/>
+            <point key="canvasLocation" x="94" y="87.75"/>
         </view>
     </objects>
-    <resources>
-        <image name="circle" width="16" height="17"/>
-    </resources>
 </document>
