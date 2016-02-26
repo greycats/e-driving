@@ -21,18 +21,12 @@ class MilesView: NibView {
     @IBInspectable var mile: String? {
         didSet { renderMile() }
     }
+    @IBInspectable var showMile: Bool = false {
+        didSet { renderMile() }
+    }
     private func renderMile() {
         mileLabel?.text = mile
-    }
-    
-    @IBOutlet weak var mileView: UIView! {
-        didSet { renderColor() }
-    }
-    @IBInspectable var mileColor: UIColor? {
-        didSet { renderColor() }
-    }
-    private func renderColor() {
-        mileView?.backgroundColor = mileColor
+        mileLabel?.hidden = !showMile
     }
     
     @IBOutlet weak var positionLabel: PositionLabel! {
