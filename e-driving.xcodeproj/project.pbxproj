@@ -21,8 +21,10 @@
 		B5307F981C7EF72400F04AC3 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F971C7EF72400F04AC3 /* ButtonView.xib */; };
 		B5307F9A1C7EFB5900F04AC3 /* VehicleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F991C7EFB5900F04AC3 /* VehicleView.xib */; };
 		B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */; };
+		B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106CD1C7FF2CB00690145 /* MilesView.swift */; };
 		B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084CF1C7FC2DC0083B242 /* ButtonView.swift */; };
 		B55084D21C7FCB290083B242 /* PositionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084D11C7FCB290083B242 /* PositionLabel.swift */; };
+		B571573E1C7FECA900A905CB /* MilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B571573D1C7FECA900A905CB /* MilesView.xib */; };
 		C1CAC8837F7630815E9A39A0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4040FFF439FA729D207C8 /* Pods.framework */; };
 		CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */; };
 		CF56A2351C7EC956002F9F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF56A2341C7EC956002F9F5B /* Assets.xcassets */; };
@@ -59,8 +61,10 @@
 		B5307F971C7EF72400F04AC3 /* ButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
 		B5307F991C7EFB5900F04AC3 /* VehicleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleView.xib; sourceTree = "<group>"; };
 		B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabel.xib; sourceTree = "<group>"; };
+		B53106CD1C7FF2CB00690145 /* MilesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilesView.swift; sourceTree = "<group>"; };
 		B55084CF1C7FC2DC0083B242 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		B55084D11C7FCB290083B242 /* PositionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionLabel.swift; sourceTree = "<group>"; };
+		B571573D1C7FECA900A905CB /* MilesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesView.xib; sourceTree = "<group>"; };
 		BFB4040FFF439FA729D207C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C969E93E25491B4E8787ABDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF56A22A1C7EC956002F9F5B /* e-driving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-driving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,8 @@
 				B55084CF1C7FC2DC0083B242 /* ButtonView.swift */,
 				B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */,
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
+				B571573D1C7FECA900A905CB /* MilesView.xib */,
+				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
 				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
 				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
+				B571573E1C7FECA900A905CB /* MilesView.xib in Resources */,
 				CF56A2481C7ED633002F9F5B /* Your Drive.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +374,7 @@
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
+				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,

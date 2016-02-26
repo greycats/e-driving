@@ -17,7 +17,7 @@ class PositionLabel: NibView {
         didSet { renderTitle() }
     }
     private func renderTitle() {
-        titleLabel?.text = title
+        titleLabel?.text = title?.uppercaseString
     }
     
     @IBOutlet weak var addressLabel: UILabel! {

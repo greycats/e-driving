@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BebasNeueBold.otf">
+            <string>BebasNeueBold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="mileLabel" destination="Jro-bv-mkK" id="Qff-uT-TuT"/>
+                <outlet property="positionLabel" destination="mpB-2O-ns5" id="BFO-3z-Hvt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="154.5"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-bv-mkK" customClass="MileLabel" customModule="e_driving" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="49" width="56" height="56.5"/>
+                    <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="1by-Oa-QeK"/>
+                        <constraint firstAttribute="height" constant="28" id="7Qm-w7-bQE"/>
+                        <constraint firstAttribute="width" secondItem="Jro-bv-mkK" secondAttribute="height" id="dPE-c6-Jie"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7Qm-w7-bQE"/>
+                        </mask>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpB-2O-ns5" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
+                    <rect key="frame" x="76" y="0.0" width="289" height="154.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="6:45 PM - HOME"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="address" value="776 Park Way, Fontan, IA"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.062745098039215685" green="0.5725490196078431" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mpB-2O-ns5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FUd-iM-eId"/>
+                <constraint firstItem="mpB-2O-ns5" firstAttribute="leading" secondItem="Jro-bv-mkK" secondAttribute="trailing" constant="20" id="L5v-o6-xiT"/>
+                <constraint firstAttribute="bottom" secondItem="mpB-2O-ns5" secondAttribute="bottom" id="SMS-Gi-Id3"/>
+                <constraint firstItem="Jro-bv-mkK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X5e-0Z-Eqi"/>
+                <constraint firstAttribute="trailing" secondItem="mpB-2O-ns5" secondAttribute="trailing" id="dtF-3U-45b"/>
+                <constraint firstItem="Jro-bv-mkK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wwI-UO-CT1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="262.5" y="184.25"/>
+        </view>
+    </objects>
+</document>

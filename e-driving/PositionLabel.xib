@@ -15,7 +15,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PositionLabel" customModule="e_driving" customModuleProvider="target">
             <connections>
                 <outlet property="addressLabel" destination="ela-Rx-RXv" id="ADv-OV-kuu"/>
-                <outlet property="circleView" destination="lKX-yt-lhd" id="yfL-SN-8W3"/>
                 <outlet property="titleLabel" destination="Xxp-Nw-XMp" id="bxJ-JV-79s"/>
             </connections>
         </placeholder>
@@ -25,56 +24,50 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxp-Nw-XMp">
-                    <rect key="frame" x="40" y="0.5" width="346" height="14.5"/>
+                    <rect key="frame" x="43" y="0.0" width="343" height="14.5"/>
                     <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKX-yt-lhd">
-                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="15" id="Rlh-6Q-cCC"/>
-                        <constraint firstAttribute="height" constant="15" id="Rzq-JD-Hpj"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="3"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="7"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="992 Valley Ave, Jackson, NE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ela-Rx-RXv">
-                    <rect key="frame" x="40" y="15" width="346" height="35.5"/>
+                    <rect key="frame" x="43" y="15" width="343" height="35.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="LYk-cs-sdf"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
                     <color key="textColor" red="0.12156862745098039" green="0.17254901960784313" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-gf-PbJ" customClass="DashLine" customModule="e_driving" customModuleProvider="target">
+                    <rect key="frame" x="12" y="0.0" width="16" height="85.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="nia-lT-MJb"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="a3P-gf-PbJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="675-FZ-06O"/>
                 <constraint firstItem="ela-Rx-RXv" firstAttribute="leading" secondItem="Xxp-Nw-XMp" secondAttribute="leading" id="6fU-S3-j8u"/>
-                <constraint firstItem="lKX-yt-lhd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6pA-nF-Kw0"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="centerY" secondItem="lKX-yt-lhd" secondAttribute="centerY" id="JLn-Qy-Hbz"/>
+                <constraint firstItem="a3P-gf-PbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9aM-ch-Ex7"/>
                 <constraint firstAttribute="bottom" secondItem="ela-Rx-RXv" secondAttribute="bottom" priority="250" id="KND-c6-sc0"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="a3P-gf-PbJ" secondAttribute="trailing" constant="15" id="TXF-hO-J9B"/>
+                <constraint firstAttribute="bottom" secondItem="a3P-gf-PbJ" secondAttribute="bottom" id="aLc-fM-vFr"/>
                 <constraint firstAttribute="trailing" secondItem="Xxp-Nw-XMp" secondAttribute="trailing" id="cYi-MA-IFd"/>
                 <constraint firstAttribute="trailing" secondItem="ela-Rx-RXv" secondAttribute="trailing" id="dKB-Wo-fSN"/>
-                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="leading" secondItem="lKX-yt-lhd" secondAttribute="trailing" constant="25" id="hjX-eo-oKa"/>
-                <constraint firstItem="lKX-yt-lhd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rQE-py-OKP"/>
+                <constraint firstItem="Xxp-Nw-XMp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gVZ-DV-ki3"/>
+                <constraint firstItem="a3P-gf-PbJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="gsk-pw-7sL"/>
                 <constraint firstItem="ela-Rx-RXv" firstAttribute="top" secondItem="Xxp-Nw-XMp" secondAttribute="bottom" id="yfJ-c5-1RQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gsk-pw-7sL"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="94" y="87.75"/>
         </view>
     </objects>

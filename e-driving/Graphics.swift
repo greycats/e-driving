@@ -6,7 +6,7 @@
 //  Copyright © 2016 Interactive Labs. All rights reserved.
 //
 
-import UIKit
+import Greycats
 
 class Animation: NSObject {
 	var lastDrawTime: CFTimeInterval = 0
@@ -44,21 +44,15 @@ class Animation: NSObject {
 @IBDesignable
 class CurveBackgroundView: UIView {
 	@IBInspectable var color: UIColor = UIColor.grayColor() {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	@IBInspectable var waveHeight: CGFloat = 27 {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	@IBInspectable var middleRatio: CGFloat = 0.4277 {
-		didSet {
-			setNeedsDisplay()
-		}
+		didSet { setNeedsDisplay() }
 	}
 
 	let animation = Animation()
@@ -107,5 +101,56 @@ class CurveBackgroundView: UIView {
 		path.closePath()
 		color.setFill()
 		path.fill()
+	}
+}
+
+@IBDesignable
+class DashLine: UIView {
+	@IBInspectable var hasLine: Bool = true {
+		didSet { setNeedsDisplay() }
+	}
+
+	@IBInspectable var highlightDot: Bool = false {
+		didSet { setNeedsDisplay() }
+	}
+
+	@IBInspectable var highlightLine: Bool = false {
+		didSet { setNeedsDisplay() }
+	}
+
+	let highlightColor = UIColor(hexRGB: 0x1092E0)
+	let normalColor = UIColor(hexRGB: 0x9B9B9B)
+
+	let dotDiameter: CGFloat = 14
+	let thickness: CGFloat = 2
+
+	override func drawRect(rect: CGRect) {
+		let context = UIGraphicsGetCurrentContext()
+		CGContextSaveGState(context)
+		let color = highlightDot ? highlightColor : normalColor
+
+		CGContextSetStrokeColorWithColor(context, color.CGColor)
+		CGContextSetLineWidth(context, thickness)
+		let dotRect = CGRect(x: thickness / 2, y: thickness / 2, width: dotDiameter, height: dotDiameter)
+		CGContextAddEllipseInRect(context, dotRect)
+		CGContextStrokePath(context)
+		CGContextRestoreGState(context)
+
+		if hasLine {
+			CGContextSaveGState(context)
+			let mid = CGRectGetMidX(dotRect)
+			let dash: [CGFloat] = [1, 5]
+			let color = highlightLine ? highlightColor : normalColor
+			let sum = dash.reduce(CGFloat(0), combine: +)
+			let height = floor((rect.size.height - dotDiameter) / sum) * sum
+			CGContextSetLineDash(context	, 1, dash, 2)
+			CGContextSetLineWidth(context, 2)
+			CGContextSetLineCap(context, .Round)
+			CGContextSetStrokeColorWithColor(context, color.CGColor)
+			CGContextMoveToPoint(context, mid, dotDiameter)
+			CGContextAddLineToPoint(context, mid, height)
+			CGContextStrokePath(context)
+			CGContextRestoreGState(context)
+		}
 	}
 }
