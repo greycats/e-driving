@@ -23,7 +23,6 @@ class AchieveItem: NibView {
         didSet { renderItem() }
     }
     private func renderItem() {
-        var picName = title!
 		switch(title!)
 		{
 		case "Hours": itemLabel?.text = "9999 DRIVE\nHOURS"
@@ -37,17 +36,19 @@ class AchieveItem: NibView {
 		case "Speed": itemLabel?.text = "300\nKM//H"
 		default: itemLabel?.text = "missed"
 		}
-        if isLight {
-            picName += "_Light"
-            itemLabel?.textColor = UIColor(hexRGB: 0xFFFFFF)
-        } else {
-            picName += "_Dark"
-            itemLabel?.textColor = UIColor(hexRGB: 0x9B9B9B)
-        }
 		
 		// in IBDesignable, UIImage need bundle
 		let bundle = NSBundle(forClass: AchieveItem.self)
-        let image = UIImage(named: picName, inBundle: bundle, compatibleWithTraitCollection: nil)
-        itemPic?.image = image
+		var image = UIImage(named: title!, inBundle: bundle, compatibleWithTraitCollection: nil)
+		image = image?.imageWithRenderingMode(.AlwaysTemplate)//change image color with tintcolor
+		itemPic?.image = image
+		
+        if isLight {
+            itemLabel?.textColor = UIColor(hexRGB: 0xFFFFFF)
+			itemPic?.tintColor = UIColor(hexRGB: 0xE67E22)
+        } else {
+            itemLabel?.textColor = UIColor(hexRGB: 0x9B9B9B)
+			itemPic?.tintColor = UIColor(hexRGB: 0x3D3D3F)
+        }
     }
 }
