@@ -10,7 +10,7 @@ import Greycats
 
 @IBDesignable
 class AchieveItem: NibView {
-    @IBInspectable var title: String? = "Route" {
+    @IBInspectable var title: AchieveName? = AchieveName.Route {
         didSet { renderItem() }
     }
     @IBInspectable var isLight: Bool = false {
@@ -24,23 +24,43 @@ class AchieveItem: NibView {
     }
     private func renderItem() {
 		if let achieveName = title {
+			var imageName = "Route"
 			switch(achieveName)
 			{
-			case "Hours": itemLabel?.text = "9999 DRIVE\nHOURS"
-			case "Happy": itemLabel?.text = "HAPPY\nENDING"
-			case "Slow": itemLabel?.text = "SLOW\nENOUGH"
-			case "Ticket": itemLabel?.text = "TICKET\nAVOID"
-			case "Drift": itemLabel?.text = "1ST TIME\nDRIFT"
-			case "NotDrunk": itemLabel?.text = "NOT\nDRUNK"
-			case "Route": itemLabel?.text = "ROUTE\nSCHEDULE"
-			case "Safe": itemLabel?.text = "SAFE &\nSOUND"
-			case "Speed": itemLabel?.text = "300\nKM//H"
-			default: itemLabel?.text = "missed"
+				case AchieveName.Hours:
+					imageName = "Hours"
+					itemLabel?.text = "9999 DRIVE\nHOURS"
+				case AchieveName.Happy:
+					imageName = "Happy"
+					itemLabel?.text = "HAPPY\nENDING"
+				case AchieveName.Slow:
+					imageName = "Slow"
+					itemLabel?.text = "SLOW\nENOUGH"
+				case AchieveName.Ticket:
+					imageName = "Ticket"
+					itemLabel?.text = "TICKET\nAVOID"
+				case AchieveName.Drift:
+					imageName = "Drift"
+					itemLabel?.text = "1ST TIME\nDRIFT"
+				case AchieveName.NotDrunk:
+					imageName = "NotDrunk"
+					itemLabel?.text = "NOT\nDRUNK"
+				case AchieveName.Route:
+					imageName = "Route"
+					itemLabel?.text = "ROUTE\nSCHEDULE"
+				case AchieveName.Safe:
+					imageName = "Safe"
+					itemLabel?.text = "SAFE &\nSOUND"
+				case AchieveName.Speed:
+					imageName = "Speed"
+					itemLabel?.text = "300\nKM//H"
+				default:
+					itemLabel?.text = "missed"
 			}
 			
 			// in IBDesignable, UIImage need bundle
 			let bundle = NSBundle(forClass: AchieveItem.self)
-			var image = UIImage(named: achieveName, inBundle: bundle, compatibleWithTraitCollection: nil)
+			var image = UIImage(named: imageName, inBundle: bundle, compatibleWithTraitCollection: nil)
 			image = image?.imageWithRenderingMode(.AlwaysTemplate)//change image color with tintcolor
 			itemPic?.image = image
 			

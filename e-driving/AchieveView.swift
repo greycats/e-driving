@@ -17,7 +17,7 @@ class AchieveView: NibView {
 		didSet { renderHours() }
 	}
 	private func renderHours() {
-		hoursItem?.title = "Hours"
+		hoursItem?.title = AchieveName.Hours
 		hoursItem?.isLight = getHours
 	}
 	
@@ -28,7 +28,7 @@ class AchieveView: NibView {
 		didSet { renderHappy() }
 	}
 	private func renderHappy() {
-		happyItem?.title = "Happy"
+		happyItem?.title = AchieveName.Happy
 		happyItem?.isLight = getHappy
 	}
 	
@@ -39,7 +39,7 @@ class AchieveView: NibView {
 		didSet { renderSlow() }
 	}
 	private func renderSlow() {
-		slowItem?.title = "Slow"
+		slowItem?.title = AchieveName.Slow
 		slowItem?.isLight = getSlow
 	}
 	
@@ -50,7 +50,7 @@ class AchieveView: NibView {
 		didSet { renderTicket() }
 	}
 	private func renderTicket() {
-		ticketItem?.title = "Ticket"
+		ticketItem?.title = AchieveName.Ticket
 		ticketItem?.isLight = getTicket
 	}
 	
@@ -61,7 +61,7 @@ class AchieveView: NibView {
 		didSet { renderDrift() }
 	}
 	private func renderDrift() {
-		driftItem?.title = "Drift"
+		driftItem?.title = AchieveName.Drift
 		driftItem?.isLight = getDrift
 	}
 	
@@ -72,7 +72,7 @@ class AchieveView: NibView {
 		didSet { renderNotDrunk() }
 	}
 	private func renderNotDrunk() {
-		notDrunkItem?.title = "NotDrunk"
+		notDrunkItem?.title = AchieveName.NotDrunk
 		notDrunkItem?.isLight = getNotDrunk
 	}
 	
@@ -83,7 +83,7 @@ class AchieveView: NibView {
 		didSet { renderRoute() }
 	}
 	private func renderRoute() {
-		routeItem?.title = "Route"
+		routeItem?.title = AchieveName.Route
 		routeItem?.isLight = getRoute
 	}
 	
@@ -94,7 +94,7 @@ class AchieveView: NibView {
 		didSet { renderSafe() }
 	}
 	private func renderSafe() {
-		safeItem?.title = "Safe"
+		safeItem?.title = AchieveName.Safe
 		safeItem?.isLight = getSafe
 	}
 	
@@ -105,8 +105,7 @@ class AchieveView: NibView {
 		didSet { renderSpeed() }
 	}
 	private func renderSpeed() {
-		speedItem?.title = "Speed"
+		speedItem?.title = AchieveName.Speed
 		speedItem?.isLight = getSpeed
 	}
-	
 }
