@@ -10,103 +10,103 @@ import Greycats
 
 @IBDesignable
 class AchieveView: NibView {
-	@IBOutlet weak var HoursItem: AchieveItem! {
+	@IBOutlet weak var hoursItem: AchieveItem! {
 	didSet { renderHours() }
 	}
 	@IBInspectable var getHours: Bool = false {
 		didSet { renderHours() }
 	}
 	private func renderHours() {
-		HoursItem?.title = "Hours"
-		HoursItem?.isLight = getHours
+		hoursItem?.title = "Hours"
+		hoursItem?.isLight = getHours
 	}
 	
-	@IBOutlet weak var HappyItem: AchieveItem! {
+	@IBOutlet weak var happyItem: AchieveItem! {
 		didSet { renderHappy() }
 	}
 	@IBInspectable var getHappy: Bool = false {
 		didSet { renderHappy() }
 	}
 	private func renderHappy() {
-		HappyItem?.title = "Happy"
-		HappyItem?.isLight = getHappy
+		happyItem?.title = "Happy"
+		happyItem?.isLight = getHappy
 	}
 	
-	@IBOutlet weak var SlowItem: AchieveItem! {
+	@IBOutlet weak var slowItem: AchieveItem! {
 		didSet { renderSlow() }
 	}
 	@IBInspectable var getSlow: Bool = true {
 		didSet { renderSlow() }
 	}
 	private func renderSlow() {
-		SlowItem?.title = "Slow"
-		SlowItem?.isLight = getSlow
+		slowItem?.title = "Slow"
+		slowItem?.isLight = getSlow
 	}
 	
-	@IBOutlet weak var TicketItem: AchieveItem! {
+	@IBOutlet weak var ticketItem: AchieveItem! {
 		didSet { renderTicket() }
 	}
 	@IBInspectable var getTicket: Bool = false {
 		didSet { renderTicket() }
 	}
 	private func renderTicket() {
-		TicketItem?.title = "Ticket"
-		TicketItem?.isLight = getTicket
+		ticketItem?.title = "Ticket"
+		ticketItem?.isLight = getTicket
 	}
 	
-	@IBOutlet weak var DriftItem: AchieveItem! {
+	@IBOutlet weak var driftItem: AchieveItem! {
 		didSet { renderDrift() }
 	}
 	@IBInspectable var getDrift: Bool = false {
 		didSet { renderDrift() }
 	}
 	private func renderDrift() {
-		DriftItem?.title = "Drift"
-		DriftItem?.isLight = getDrift
+		driftItem?.title = "Drift"
+		driftItem?.isLight = getDrift
 	}
 	
-	@IBOutlet weak var NotDrunkItem: AchieveItem! {
+	@IBOutlet weak var notDrunkItem: AchieveItem! {
 		didSet { renderNotDrunk() }
 	}
 	@IBInspectable var getNotDrunk: Bool = false {
 		didSet { renderNotDrunk() }
 	}
 	private func renderNotDrunk() {
-		NotDrunkItem?.title = "NotDrunk"
-		NotDrunkItem?.isLight = getNotDrunk
+		notDrunkItem?.title = "NotDrunk"
+		notDrunkItem?.isLight = getNotDrunk
 	}
 	
-	@IBOutlet weak var RouteItem: AchieveItem! {
+	@IBOutlet weak var routeItem: AchieveItem! {
 		didSet { renderRoute() }
 	}
 	@IBInspectable var getRoute: Bool = false {
 		didSet { renderRoute() }
 	}
 	private func renderRoute() {
-		RouteItem?.title = "Route"
-		RouteItem?.isLight = getRoute
+		routeItem?.title = "Route"
+		routeItem?.isLight = getRoute
 	}
 	
-	@IBOutlet weak var SafeItem: AchieveItem! {
+	@IBOutlet weak var safeItem: AchieveItem! {
 		didSet { renderSafe() }
 	}
 	@IBInspectable var getSafe: Bool = true {
 		didSet { renderSafe() }
 	}
 	private func renderSafe() {
-		SafeItem?.title = "Safe"
-		SafeItem?.isLight = getSafe
+		safeItem?.title = "Safe"
+		safeItem?.isLight = getSafe
 	}
 	
-	@IBOutlet weak var SpeedItem: AchieveItem! {
+	@IBOutlet weak var speedItem: AchieveItem! {
 		didSet { renderSpeed() }
 	}
 	@IBInspectable var getSpeed: Bool = false {
 		didSet { renderSpeed() }
 	}
 	private func renderSpeed() {
-		SpeedItem?.title = "Speed"
-		SpeedItem?.isLight = getSpeed
+		speedItem?.title = "Speed"
+		speedItem?.isLight = getSpeed
 	}
 	
 }
