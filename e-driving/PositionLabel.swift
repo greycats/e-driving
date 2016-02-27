@@ -11,22 +11,29 @@ import Greycats
 @IBDesignable
 class PositionLabel: StyledView {
 	@IBOutlet weak var titleLabel: UILabel! {
-        didSet { renderTitle() }
-    }
-    @IBInspectable var title: String? {
-        didSet { renderTitle() }
-    }
-    private func renderTitle() {
-        titleLabel?.text = title?.uppercaseString
-    }
-    
-    @IBOutlet weak var addressLabel: UILabel! {
-        didSet { renderAddress() }
-    }
-    @IBInspectable var address: String? {
-        didSet { renderAddress() }
-    }
-    private func renderAddress() {
-        addressLabel?.text = address
-    }
+		didSet { renderTitle() }
+	}
+	@IBInspectable var title: String? {
+		didSet { renderTitle() }
+	}
+	private func renderTitle() {
+		if let title = title, titleLabel = titleLabel {
+			let string = NSAttributedString(string: title.uppercaseString, attributes: [
+				NSKernAttributeName: 1,
+				NSForegroundColorAttributeName: titleLabel.textColor,
+				NSFontAttributeName: titleLabel.font
+				])
+			titleLabel.attributedText = string
+		}
+	}
+
+	@IBOutlet weak var addressLabel: UILabel! {
+		didSet { renderAddress() }
+	}
+	@IBInspectable var address: String? {
+		didSet { renderAddress() }
+	}
+	private func renderAddress() {
+		addressLabel?.text = address
+	}
 }

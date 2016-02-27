@@ -47,6 +47,8 @@ class RouteView: UIView {
 		}
 	}
 
+	var displayMiles: Bool = true
+
 	func renderRoute() {
 		var g = route.generate()
 		var point: RouteHistory? = g.next()
@@ -61,8 +63,10 @@ class RouteView: UIView {
 			line = newLine
 			let nextPoint = g.next()
 			if let _ = nextPoint {
-				let height: CGFloat = p.milesToNext > 0 ? 86 : 67
-				addConstraint(NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: height))
+				if displayMiles {
+					let height: CGFloat = p.milesToNext > 0 ? 86 : 67
+					addConstraint(NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: height))
+				}
 			} else {
 				line.hasLine = false
 			}
@@ -78,7 +82,11 @@ class RouteView: UIView {
 		line.opaque = false
 		line.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(line)
-		addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.618, constant: 0))
+		if displayMiles {
+		addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.55, constant: 0))
+		} else {
+			addConstraint(NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 13))
+		}
 		addConstraint(NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: 16))
 		let label = PositionLabel()
 		label.layout = "Compact"
@@ -95,8 +103,8 @@ class RouteView: UIView {
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: line, attribute: .Top, multiplier: 1, constant: 0))
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Bottom, relatedBy: .Equal, toItem: line, attribute: .Bottom, multiplier: 1, constant: 0))
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1, constant: 0))
-		addConstraint(NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: line, attribute: .Trailing, multiplier: 1, constant: 12.5))
-		if let miles = history.milesToNext {
+		addConstraint(NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: line, attribute: .Trailing, multiplier: 1, constant: displayMiles ? 25 : 31))
+		if let miles = history.milesToNext where displayMiles {
 			let view = MilesView()
 			view.translatesAutoresizingMaskIntoConstraints = false
 			addSubview(view)
@@ -104,6 +112,8 @@ class RouteView: UIView {
 			addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 0))
 			addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: line, attribute: .Leading, multiplier: 1, constant: 0))
 			addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .CenterY, multiplier: 1, constant: 7))
+		} else {
+			line.hasLine = false
 		}
 		return line
 	}

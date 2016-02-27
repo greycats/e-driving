@@ -142,13 +142,13 @@ class DashLine: UIView {
 			let color = highlightLine ? highlightColor : normalColor
 			let sum = dash.reduce(CGFloat(0), combine: +)
 			let top = dotDiameter + thickness
-			let height = floor((rect.size.height - top) / sum) * sum
+			let height = floor((rect.size.height - top) / sum) * sum + top
 			CGContextSetLineDash(context	, 1, dash, 2)
 			CGContextSetLineWidth(context, 2)
 			CGContextSetLineCap(context, .Round)
 			CGContextSetStrokeColorWithColor(context, color.CGColor)
 			CGContextMoveToPoint(context, mid, top)
-			CGContextAddLineToPoint(context, mid, height + top)
+			CGContextAddLineToPoint(context, mid, height)
 			CGContextStrokePath(context)
 			CGContextRestoreGState(context)
 		}
