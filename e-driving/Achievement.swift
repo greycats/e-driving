@@ -22,3 +22,13 @@ public struct AchieveName: OptionSetType {
 	public static let Safe = AchieveName(0x040)
 	public static let Speed = AchieveName(0x080)
 }
+
+class Achievement {
+	var name: AchieveName
+	var isLight: Bool
+	
+	init(name: AchieveName, isLight: Bool) {
+		self.name = name
+		self.isLight = isLight
+	}
+}

@@ -1,5 +1,5 @@
 //
-//  AchieveView.swift
+//  AchieveItem.swift
 //  e-driving
 //
 //  Created by Jint on 2/26/16.
@@ -10,102 +10,62 @@ import Greycats
 
 @IBDesignable
 class AchieveView: NibView {
-	@IBOutlet weak var hoursItem: AchieveItem! {
-	didSet { renderHours() }
-	}
-	@IBInspectable var getHours: Bool = false {
-		didSet { renderHours() }
-	}
-	private func renderHours() {
-		hoursItem?.title = AchieveName.Hours
-		hoursItem?.isLight = getHours
-	}
-	
-	@IBOutlet weak var happyItem: AchieveItem! {
-		didSet { renderHappy() }
-	}
-	@IBInspectable var getHappy: Bool = false {
-		didSet { renderHappy() }
-	}
-	private func renderHappy() {
-		happyItem?.title = AchieveName.Happy
-		happyItem?.isLight = getHappy
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var itemPic: UIImageView!
+
+	override var nibName: String { return "AchieveView" }
+	var isLight: Bool = false {
+		didSet {
+			if isLight {
+				itemLabel?.textColor = UIColor(hexRGB: 0xFFFFFF)
+				itemPic?.tintColor = UIColor(hexRGB: 0xE67E22)
+			} else {
+				itemLabel?.textColor = UIColor(hexRGB: 0x9B9B9B)
+				itemPic?.tintColor = UIColor(hexRGB: 0x3D3D3F)
+			}
+		}
 	}
 	
-	@IBOutlet weak var slowItem: AchieveItem! {
-		didSet { renderSlow() }
-	}
-	@IBInspectable var getSlow: Bool = true {
-		didSet { renderSlow() }
-	}
-	private func renderSlow() {
-		slowItem?.title = AchieveName.Slow
-		slowItem?.isLight = getSlow
-	}
-	
-	@IBOutlet weak var ticketItem: AchieveItem! {
-		didSet { renderTicket() }
-	}
-	@IBInspectable var getTicket: Bool = false {
-		didSet { renderTicket() }
-	}
-	private func renderTicket() {
-		ticketItem?.title = AchieveName.Ticket
-		ticketItem?.isLight = getTicket
-	}
-	
-	@IBOutlet weak var driftItem: AchieveItem! {
-		didSet { renderDrift() }
-	}
-	@IBInspectable var getDrift: Bool = false {
-		didSet { renderDrift() }
-	}
-	private func renderDrift() {
-		driftItem?.title = AchieveName.Drift
-		driftItem?.isLight = getDrift
-	}
-	
-	@IBOutlet weak var notDrunkItem: AchieveItem! {
-		didSet { renderNotDrunk() }
-	}
-	@IBInspectable var getNotDrunk: Bool = false {
-		didSet { renderNotDrunk() }
-	}
-	private func renderNotDrunk() {
-		notDrunkItem?.title = AchieveName.NotDrunk
-		notDrunkItem?.isLight = getNotDrunk
-	}
-	
-	@IBOutlet weak var routeItem: AchieveItem! {
-		didSet { renderRoute() }
-	}
-	@IBInspectable var getRoute: Bool = false {
-		didSet { renderRoute() }
-	}
-	private func renderRoute() {
-		routeItem?.title = AchieveName.Route
-		routeItem?.isLight = getRoute
-	}
-	
-	@IBOutlet weak var safeItem: AchieveItem! {
-		didSet { renderSafe() }
-	}
-	@IBInspectable var getSafe: Bool = true {
-		didSet { renderSafe() }
-	}
-	private func renderSafe() {
-		safeItem?.title = AchieveName.Safe
-		safeItem?.isLight = getSafe
-	}
-	
-	@IBOutlet weak var speedItem: AchieveItem! {
-		didSet { renderSpeed() }
-	}
-	@IBInspectable var getSpeed: Bool = false {
-		didSet { renderSpeed() }
-	}
-	private func renderSpeed() {
-		speedItem?.title = AchieveName.Speed
-		speedItem?.isLight = getSpeed
+	convenience init(achieveName: AchieveName) {
+		self.init()
+		var imageName = ""
+		switch(achieveName)
+		{
+		case AchieveName.Hours:
+			imageName = "Hours"
+			itemLabel?.text = "9999 DRIVE\nHOURS"
+		case AchieveName.Happy:
+			imageName = "Happy"
+			itemLabel?.text = "HAPPY\nENDING"
+		case AchieveName.Slow:
+			imageName = "Slow"
+			itemLabel?.text = "SLOW\nENOUGH"
+		case AchieveName.Ticket:
+			imageName = "Ticket"
+			itemLabel?.text = "TICKET\nAVOID"
+		case AchieveName.Drift:
+			imageName = "Drift"
+			itemLabel?.text = "1ST TIME\nDRIFT"
+		case AchieveName.NotDrunk:
+			imageName = "NotDrunk"
+			itemLabel?.text = "NOT\nDRUNK"
+		case AchieveName.Route:
+			imageName = "Route"
+			itemLabel?.text = "ROUTE\nSCHEDULE"
+		case AchieveName.Safe:
+			imageName = "Safe"
+			itemLabel?.text = "SAFE &\nSOUND"
+		case AchieveName.Speed:
+			imageName = "Speed"
+			itemLabel?.text = "300\nKM//H"
+		default:
+			itemLabel?.text = "missed"
+		}
+		
+		// in IBDesignable, UIImage need bundle
+		let bundle = NSBundle(forClass: AchieveView.self)
+		var image = UIImage(named: imageName, inBundle: bundle, compatibleWithTraitCollection: nil)
+		image = image?.imageWithRenderingMode(.AlwaysTemplate)//change image color with tintcolor
+		itemPic?.image = image
 	}
 }
