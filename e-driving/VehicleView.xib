@@ -3,8 +3,21 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BebasNeueBold.otf">
+            <string>BebasNeueBold</string>
+        </mutableArray>
+        <mutableArray key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </mutableArray>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VehicleView" customModule="e_driving" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VehicleView" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="display" destination="hgd-Qu-bMH" id="BRp-bl-jQK"/>
+                <outlet property="scoreLabel" destination="eHx-6u-lO2" id="cJG-go-sKZ"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="336" height="600"/>
@@ -13,11 +26,53 @@
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vehicle" translatesAutoresizingMaskIntoConstraints="NO" id="llL-9g-8bf">
                     <rect key="frame" x="0.0" y="0.0" width="336" height="600"/>
                 </imageView>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgd-Qu-bMH" customClass="VehicleDisplay" customModule="e_driving" customModuleProvider="target">
+                    <rect key="frame" x="120" y="289" width="96" height="114"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-6u-lO2">
+                            <rect key="frame" x="48" y="19" width="0.0" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="8tD-oX-nH7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="60"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="8tD-oX-nH7"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om6-cE-NyC">
+                            <rect key="frame" x="27" y="19" width="41.5" height="14.5"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="tintColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="114" id="1T4-PC-Sln"/>
+                        <constraint firstItem="om6-cE-NyC" firstAttribute="centerX" secondItem="eHx-6u-lO2" secondAttribute="centerX" id="3Dx-Kq-hM5"/>
+                        <constraint firstItem="eHx-6u-lO2" firstAttribute="centerX" secondItem="hgd-Qu-bMH" secondAttribute="centerX" id="6aM-Qb-tW9"/>
+                        <constraint firstItem="om6-cE-NyC" firstAttribute="top" secondItem="eHx-6u-lO2" secondAttribute="bottom" id="Ke9-kW-0mU"/>
+                        <constraint firstItem="eHx-6u-lO2" firstAttribute="centerY" secondItem="hgd-Qu-bMH" secondAttribute="centerY" id="SHm-Rj-5QV"/>
+                        <constraint firstAttribute="width" constant="96" id="kWA-cD-dRh"/>
+                        <constraint firstItem="eHx-6u-lO2" firstAttribute="top" secondItem="hgd-Qu-bMH" secondAttribute="top" constant="19" id="kne-Ew-QM5"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SHm-Rj-5QV"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
             <constraints>
                 <constraint firstItem="llL-9g-8bf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7vR-rB-eja"/>
                 <constraint firstItem="llL-9g-8bf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ENN-HW-2E8"/>
+                <constraint firstItem="hgd-Qu-bMH" firstAttribute="centerX" secondItem="llL-9g-8bf" secondAttribute="centerX" id="Qxz-Yn-7g0"/>
                 <constraint firstAttribute="bottom" secondItem="llL-9g-8bf" secondAttribute="bottom" id="RtQ-W6-JaU"/>
+                <constraint firstItem="hgd-Qu-bMH" firstAttribute="centerY" secondItem="llL-9g-8bf" secondAttribute="centerY" constant="46" id="kGZ-oC-L4d"/>
                 <constraint firstAttribute="trailing" secondItem="llL-9g-8bf" secondAttribute="trailing" id="lXX-GY-ICR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

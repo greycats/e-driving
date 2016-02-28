@@ -8,10 +8,18 @@
 
 import Greycats
 
-class VehicleViewController: UIViewController, UIScrollViewDelegate {
+class VehicleViewController: UIViewController {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var driveView: UIView!
+	@IBOutlet weak var vehicleView: VehicleView!
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		vehicleView.score = 8.5
+	}
+}
+
+extension VehicleViewController: UIScrollViewDelegate {
 	func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 		let y = targetContentOffset.memory.y
 		let over = CGFloat(fmodf(Float(y), 55))
@@ -38,11 +46,11 @@ class VehicleViewController: UIViewController, UIScrollViewDelegate {
 
 	func scrollViewDidScroll(scrollView: UIScrollView) {
 		let v = scrollView.contentOffset.y
-//		if v >= 0 {
-//			scrollView.contentOffset.y = v / 5
-//		} else {
-//			scrollView.contentOffset.y = 0
-//		}
-//		print(scrollView.contentOffset.y)
+		//		if v >= 0 {
+		//			scrollView.contentOffset.y = v / 5
+		//		} else {
+		//			scrollView.contentOffset.y = 0
+		//		}
+		//		print(scrollView.contentOffset.y)
 	}
 }
