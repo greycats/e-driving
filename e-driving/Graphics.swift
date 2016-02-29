@@ -134,7 +134,7 @@ class CurveBackgroundView: UIView {
 }
 
 @IBDesignable
-class DashLine: UIView {
+class DashLine: UIView, ColorPalette {
 	@IBInspectable var hasLine: Bool = true {
 		didSet { setNeedsDisplay() }
 	}
@@ -148,10 +148,22 @@ class DashLine: UIView {
 	}
 
 	let highlightColor = UIColor(hexRGB: 0x1092E0)
-	let normalColor = UIColor(hexRGB: 0x9B9B9B)
 
 	let dotDiameter: CGFloat = 14
 	let thickness: CGFloat = 2
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .SupplymentText:
+			normalColor = color
+		default:
+			break
+		}
+	}
+	
+	var normalColor: UIColor = UIColor.grayColor() {
+		didSet { setNeedsDisplay() }
+	}
 
 	override func drawRect(rect: CGRect) {
 		let context = UIGraphicsGetCurrentContext()

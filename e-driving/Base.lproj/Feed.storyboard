@@ -33,7 +33,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-W9-Nmy" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="194" width="600" height="0.0"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" placeholder="YES" id="5sd-36-ZXL"/>
                                 </constraints>

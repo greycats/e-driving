@@ -8,7 +8,7 @@
 
 import Greycats
 
-class RouteView: UIView {
+class RouteView: UIView, ColorPalette {
 	var route: [RouteHistory] = [] {
 		didSet {
 			renderRoute()
@@ -16,6 +16,16 @@ class RouteView: UIView {
 	}
 
 	var displayMiles: Bool = true
+
+	var theme: Theme = .Dark
+	func applyTheme(theme: Theme) {
+		self.theme = theme
+		for subview in subviews {
+			if let subview = subview as? ColorPalette {
+				subview.applyTheme(theme)
+			}
+		}
+	}
 
 	func renderRoute() {
 		var g = route.generate()
@@ -49,6 +59,7 @@ class RouteView: UIView {
 		let line = DashLine()
 		line.opaque = false
 		line.translatesAutoresizingMaskIntoConstraints = false
+		line.applyTheme(theme)
 		addSubview(line)
 		if displayMiles {
 		addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.55, constant: 0))
@@ -59,6 +70,7 @@ class RouteView: UIView {
 		let label = PositionLabel()
 		label.layout = "Compact"
 		label.translatesAutoresizingMaskIntoConstraints = false
+		label.applyTheme(theme)
 		addSubview(label)
 		let time = RouteTime.format(history.timestamp)
 		if let placeName = history.recoginzedName?.uppercaseString {
@@ -74,6 +86,8 @@ class RouteView: UIView {
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: line, attribute: .Trailing, multiplier: 1, constant: displayMiles ? 25 : 31))
 		if let miles = history.milesToNext where displayMiles {
 			let view = MilesView()
+			view.applyTheme(theme)
+			view.opaque = false
 			view.translatesAutoresizingMaskIntoConstraints = false
 			addSubview(view)
 			view.miles = miles

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Interactive Labs. All rights reserved.
 //
 
-import Foundation
+import Greycats
 import CoreLocation
 
 struct RouteHistory {
@@ -44,7 +44,9 @@ struct RouteHistory {
 					}
 					string += administrativeArea
 				}
-				closure(address: string)
+				foreground {
+					closure(address: string)
+				}
 			}
 		}
 	}

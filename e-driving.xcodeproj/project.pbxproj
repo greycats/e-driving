@@ -195,12 +195,12 @@
 				CF56A2621C7F1759002F9F5B /* ViewController.swift */,
 				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
 				CF56A2441C7ED006002F9F5B /* MenuCell.xib */,
-				CFA34D811C83E3B900B2D869 /* Models */,
 				CF9704301C801D180035CECE /* Activity Scene */,
-				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
+				CFC154C71C841F0B00B78F18 /* Car Performance Scene */,
 				CFA34D7E1C83E0DF00B2D869 /* Dashboard Scene */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
 				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
+				CFA34D811C83E3B900B2D869 /* Models */,
 				CF56A2611C7F16FD002F9F5B /* Vehicle Scene */,
 				CF56A2661C7F18D8002F9F5B /* Views */,
 			);
@@ -266,6 +266,14 @@
 				CF0378E51C8400C6004AD39B /* ColorPalette.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CFC154C71C841F0B00B78F18 /* Car Performance Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
+			);
+			name = "Car Performance Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

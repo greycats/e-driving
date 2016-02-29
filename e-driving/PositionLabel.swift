@@ -9,13 +9,14 @@
 import Greycats
 
 @IBDesignable
-class PositionLabel: StyledView {
+class PositionLabel: StyledView, ColorPalette {
 	@IBOutlet weak var titleLabel: UILabel! {
 		didSet { renderTitle() }
 	}
 	@IBInspectable var title: String? {
 		didSet { renderTitle() }
 	}
+
 	private func renderTitle() {
 		if let title = title, titleLabel = titleLabel {
 			let string = NSAttributedString(string: title.uppercaseString, attributes: [
@@ -35,5 +36,17 @@ class PositionLabel: StyledView {
 	}
 	private func renderAddress() {
 		addressLabel?.text = address
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .SupplymentText:
+			titleLabel.textColor = color
+			renderTitle()
+		case .MainText:
+			addressLabel.textColor = color
+		default:
+			break
+		}
 	}
 }

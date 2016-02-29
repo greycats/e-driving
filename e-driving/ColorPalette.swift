@@ -17,7 +17,9 @@ enum ColorCategory {
 	case Background
 	case Foreground
 	case MainText
+	case Line
 	case SupplymentText
+	case Highlight
 }
 
 protocol ColorPalette {
@@ -26,6 +28,9 @@ protocol ColorPalette {
 }
 
 extension ColorPalette {
+	func setColor(color: UIColor, category: ColorCategory) {
+	}
+
 	func applyTheme(theme: Theme) {
 		let mirror = Mirror(reflecting: self)
 		for (_, field) in mirror.children {
@@ -39,10 +44,13 @@ extension ColorPalette {
 			setColor(UIColor(hexRGB: 0x000000), category: .Background)
 			setColor(UIColor(hexRGB: 0xF7F7F7), category: .Foreground)
 			setColor(UIColor(hexRGB: 0x1F2C3A), category: .MainText)
+			setColor(UIColor(hexRGB: 0x9B9B9B), category: .SupplymentText)
 		case .Dark:
 			setColor(UIColor(hexRGB: 0x000E31), category: .Background)
 			setColor(UIColor(hexRGB: 0x063090), category: .Foreground)
 			setColor(UIColor(hexRGB: 0xFFFFFF), category: .MainText)
+			setColor(UIColor(hexRGB: 0x8396C0), category: .SupplymentText)
+			setColor(UIColor(hexRGB: 0x50D5C2), category: .Highlight)
 		}
 	}
 }
