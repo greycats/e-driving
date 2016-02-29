@@ -48,7 +48,7 @@ extension ColorPalette {
 			setColor(UIColor(hexRGB: 0xE67E22), category: .Highlight)
 		case .Dark:
 			setColor(UIColor(hexRGB: 0x000E31), category: .Background)
-			setColor(UIColor(hexRGB: 0x072A7A), category: .Foreground)
+			setColor(UIColor(hexRGB: 0x072E86), category: .Foreground)
 			setColor(UIColor(hexRGB: 0xFFFFFF), category: .MainText)
 			setColor(UIColor(hexRGB: 0x8396C0), category: .SupplymentText)
 			setColor(UIColor(hexRGB: 0x50D5C2), category: .Highlight)

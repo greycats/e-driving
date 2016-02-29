@@ -8,7 +8,7 @@
 
 import Greycats
 
-class RootViewController: UIViewController, UINavigationControllerDelegate {
+class RootViewController: UIViewController, UINavigationControllerDelegate, ColorPalette {
 	@IBOutlet weak var overlayView: UIView!
 	@IBOutlet weak var leading: NSLayoutConstraint!
 	@IBOutlet var tapGesture: UITapGestureRecognizer!
@@ -16,6 +16,21 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		childNavigationController?.delegate = self
+		applyTheme(.Dark)
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Background:
+			view.backgroundColor = color
+			view.window?.backgroundColor = color
+		default:
+			break
+		}
+	}
+
+	override func preferredStatusBarStyle() -> UIStatusBarStyle {
+		return .LightContent
 	}
 
 	func controllerWithIndentifier(identifier: String, closure: (UINavigationController, UIViewController) -> () = { $0.viewControllers = [$1] }) -> UIViewController? {
@@ -44,7 +59,8 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
 		leading.constant = 0
 		UIView.animateWithDuration(0.25) {
 			self.view.layoutIfNeeded()
-			self.overlayView.alpha = 0.1
+			self.overlayView.alpha = 1
+			self.childNavigationController?.view.transform = CGAffineTransformMakeScale(0.82, 0.82)
 		}
 		tapGesture.enabled = true
 		print("showMenu")
@@ -55,6 +71,7 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
 		UIView.animateWithDuration(0.25) {
 			self.view.layoutIfNeeded()
 			self.overlayView.alpha = 0
+			self.childNavigationController?.view.transform = CGAffineTransformIdentity
 		}
 		tapGesture.enabled = false
 		print("dismissMenu")
@@ -82,6 +99,7 @@ class MenuCell: UITableViewCell, TableViewDataNibCell {
 
 class MenuViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var experienceView: ExperienceView!
 
 	let menu = TableViewDataNib<String, MenuCell>(title: nil)
 		.onRender { $0.nameLabel.text = $1.uppercaseString }
@@ -99,6 +117,11 @@ class MenuViewController: UIViewController {
 		}
 		connectTableView(tableView, sections: [menu])
 		tableView.tableFooterView = UIView()
+	}
+
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		experienceView.experience = 30
 	}
 
 	func openItem(item: String) {
