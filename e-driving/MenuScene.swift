@@ -95,14 +95,31 @@ extension UIViewController {
 class MenuCell: UITableViewCell, TableViewDataNibCell {
 	static var nibName = "MenuCell"
 	@IBOutlet weak var nameLabel: UILabel!
+	@IBOutlet weak var selectedMark: GradientView!
+
+	var name: String! {
+		didSet {
+			nameLabel.attributedText = NSAttributedString(string: name.uppercaseString, attributes: [
+				NSKernAttributeName: 2,
+				NSForegroundColorAttributeName: nameLabel.textColor,
+				NSFontAttributeName: nameLabel.font
+				])
+		}
+	}
+
+	override func setSelected(selected: Bool, animated: Bool) {
+		UIView.animateWithDuration(0.25) {
+			self.selectedMark.alpha = selected ? 1 : 0
+			self.nameLabel.alpha = selected ? 1 : 0.5
+		}
+	}
 }
 
 class MenuViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var experienceView: ExperienceView!
 
-	let menu = TableViewDataNib<String, MenuCell>(title: nil)
-		.onRender { $0.nameLabel.text = $1.uppercaseString }
+	let menu = TableViewDataNib<String, MenuCell>(title: nil).keepSelection().onRender { $0.name = $1 }
 
 	var rootViewController: RootViewController? {
 		return parentViewController as? RootViewController
@@ -110,13 +127,14 @@ class MenuViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		menu.source = ["Your Drive", "Feed", "Dashboard", "Car Performance"]
+		menu.source = ["Driver Score", "Feed", "Car Performance", "Dashboard"]
 		menu.onSelect {[weak self] (item: String) in
 			self?.openItem(item)
 			return nil
 		}
 		connectTableView(tableView, sections: [menu])
 		tableView.tableFooterView = UIView()
+		tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .None)
 	}
 
 	override func viewDidAppear(animated: Bool) {

@@ -11,31 +11,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WLg-Vf-tNr" customClass="MenuCell" customModule="e_driving" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="WLg-Vf-tNr" customClass="MenuCell" customModule="e_driving" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLg-Vf-tNr" id="Aqj-O2-1xE">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="72.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-Yi-73d">
-                        <rect key="frame" x="30" y="23" width="48.5" height="26.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-Yi-73d">
+                        <rect key="frame" x="30" y="0.0" width="48.5" height="24.5"/>
                         <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nff-JB-IgV" customClass="GradientView" customModule="Greycats">
+                        <rect key="frame" x="0.0" y="0.0" width="4" height="24.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="4" id="49E-Y9-OdV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                <color key="value" red="0.22745098039215686" green="0.4823529411764706" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                <color key="value" red="0.0" green="0.82352941176470584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="loc1">
+                                <point key="value" x="1" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="loc2">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" constant="23" id="bng-BN-DXf"/>
+                    <constraint firstItem="nff-JB-IgV" firstAttribute="leading" secondItem="Aqj-O2-1xE" secondAttribute="leading" id="TmC-FM-cQx"/>
+                    <constraint firstItem="nff-JB-IgV" firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" id="bgX-qH-eOA"/>
+                    <constraint firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" constant="48" id="bng-BN-DXf"/>
                     <constraint firstItem="iDX-Yi-73d" firstAttribute="leading" secondItem="Aqj-O2-1xE" secondAttribute="leading" constant="30" id="h0g-rU-eXb"/>
-                    <constraint firstItem="iDX-Yi-73d" firstAttribute="top" secondItem="Aqj-O2-1xE" secondAttribute="top" constant="23" id="ndd-vg-aMU"/>
+                    <constraint firstItem="nff-JB-IgV" firstAttribute="top" secondItem="iDX-Yi-73d" secondAttribute="top" id="mkD-2O-REj"/>
+                    <constraint firstItem="iDX-Yi-73d" firstAttribute="top" secondItem="Aqj-O2-1xE" secondAttribute="top" id="ndd-vg-aMU"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="nameLabel" destination="iDX-Yi-73d" id="iMf-38-0gk"/>
+                <outlet property="selectedMark" destination="nff-JB-IgV" id="vgd-sr-53h"/>
             </connections>
             <point key="canvasLocation" x="146" y="36"/>
         </tableViewCell>
