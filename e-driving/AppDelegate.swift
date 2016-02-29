@@ -31,8 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let navBar = UINavigationBar.appearance()
 		navBar.shadowImage = UIImage()
 		navBar.setBackgroundImage(UIImage(fromColor: .clearColor()), forBarPosition: .Any, barMetrics: .Default)
-		navBar.titleTextAttributes = [
-			NSFontAttributeName: UIFont(name: "SFUIText-Regular", size: 16)!,
-			NSForegroundColorAttributeName: UIColor(hexRGB: 0x005599)]
 	}
 }

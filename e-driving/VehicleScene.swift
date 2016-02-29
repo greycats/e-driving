@@ -20,7 +20,6 @@ class VehicleViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var hardAcceleLabel: IndexLabel!
 	@IBOutlet weak var overSpeedLabel: IndexLabel!
 	@IBOutlet weak var experienceView: ExperienceView!
-	@IBOutlet weak var separator: UIView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -35,11 +34,6 @@ class VehicleViewController: UIViewController, ColorPalette {
 				subview.applyTheme(.Dark)
 			}
 		}
-
-		separator.layer.shadowColor = UIColor(white: 0, alpha: 0.3).CGColor
-		separator.layer.shadowRadius = 10
-		separator.layer.shadowOpacity = 1
-		separator.layer.shadowPath = UIBezierPath(rect: CGRect(x: -100, y: 0, width: ScreenSize.width + 200, height: 10)).CGPath
 
 		routeView.displayMiles = false
 		routeView.route = [

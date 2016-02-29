@@ -17,50 +17,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76s-dd-90o" customClass="CurveBackgroundView" customModule="e_driving" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.36470588235294116" green="0.36470588235294116" blue="0.36470588235294116" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Uc-4f6">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="244.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbA-fd-jhQ" customClass="DateTicker" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="174" y="95" width="252" height="21.5"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvp-Ky-DQZ">
+                                        <rect key="frame" x="0.0" y="116.5" width="600" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="eRt-Xz-UMb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="9rZ-EO-gJP"/>
+                                    <constraint firstItem="fbA-fd-jhQ" firstAttribute="top" secondItem="TGw-Uc-4f6" secondAttribute="top" constant="95" id="0ff-lj-USe"/>
+                                    <constraint firstItem="fbA-fd-jhQ" firstAttribute="centerX" secondItem="TGw-Uc-4f6" secondAttribute="centerX" id="G5e-cJ-B0E"/>
+                                    <constraint firstItem="pvp-Ky-DQZ" firstAttribute="leading" secondItem="TGw-Uc-4f6" secondAttribute="leading" id="Ped-6K-9yY"/>
+                                    <constraint firstItem="fbA-fd-jhQ" firstAttribute="bottom" secondItem="pvp-Ky-DQZ" secondAttribute="top" id="b5K-yE-oyz"/>
+                                    <constraint firstAttribute="trailing" secondItem="pvp-Ky-DQZ" secondAttribute="trailing" id="bzy-un-J29"/>
+                                    <constraint firstAttribute="bottom" secondItem="pvp-Ky-DQZ" secondAttribute="bottom" id="wFD-lG-reB"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrt-XX-CgZ" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="244.5" width="600" height="72"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-W9-Nmy" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="194" width="600" height="0.0"/>
+                                <rect key="frame" x="0.0" y="316.5" width="600" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" placeholder="YES" id="5sd-36-ZXL"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7R3-O6-HYc" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="316.5" width="600" height="72"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9tI-W9-Nmy" secondAttribute="trailing" id="2N5-kR-uSt"/>
-                            <constraint firstItem="76s-dd-90o" firstAttribute="bottom" secondItem="TGw-Uc-4f6" secondAttribute="bottom" id="6x9-o8-MEa"/>
+                            <constraint firstItem="zrt-XX-CgZ" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="2Z9-7m-h14"/>
                             <constraint firstItem="TGw-Uc-4f6" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="IFw-Cs-77y"/>
                             <constraint firstItem="TGw-Uc-4f6" firstAttribute="top" secondItem="mzs-iy-nLR" secondAttribute="topMargin" id="ILL-qX-sQF"/>
-                            <constraint firstItem="76s-dd-90o" firstAttribute="trailing" secondItem="TGw-Uc-4f6" secondAttribute="trailing" id="RPq-yL-HY4"/>
+                            <constraint firstAttribute="trailing" secondItem="7R3-O6-HYc" secondAttribute="trailing" id="Lg4-dW-RaL"/>
                             <constraint firstItem="9tI-W9-Nmy" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="SkP-ws-2Re"/>
                             <constraint firstAttribute="trailing" secondItem="TGw-Uc-4f6" secondAttribute="trailing" id="TNu-Qg-kVj"/>
+                            <constraint firstItem="7R3-O6-HYc" firstAttribute="leading" secondItem="mzs-iy-nLR" secondAttribute="leading" id="YML-hp-7Rn"/>
                             <constraint firstItem="9tI-W9-Nmy" firstAttribute="top" secondItem="TGw-Uc-4f6" secondAttribute="bottom" constant="66" id="c9f-Kh-oBM"/>
-                            <constraint firstItem="76s-dd-90o" firstAttribute="top" secondItem="TGw-Uc-4f6" secondAttribute="top" id="l9a-hu-veb"/>
-                            <constraint firstItem="76s-dd-90o" firstAttribute="leading" secondItem="TGw-Uc-4f6" secondAttribute="leading" id="wkR-Zh-VJV"/>
+                            <constraint firstItem="zrt-XX-CgZ" firstAttribute="bottom" secondItem="9tI-W9-Nmy" secondAttribute="top" id="eUO-36-aXm"/>
+                            <constraint firstAttribute="trailing" secondItem="zrt-XX-CgZ" secondAttribute="trailing" id="hlB-Td-jBw"/>
+                            <constraint firstItem="7R3-O6-HYc" firstAttribute="top" secondItem="9tI-W9-Nmy" secondAttribute="bottom" id="jyx-bJ-GeT"/>
+                            <constraint firstItem="zrt-XX-CgZ" firstAttribute="top" secondItem="TGw-Uc-4f6" secondAttribute="bottom" id="pJO-eI-oYs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="c9f-Kh-oBM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="mhu-P3-s0v" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
-                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="bYg-oc-760"/>
-                        <barButtonItem key="rightBarButtonItem" image="hamburger" id="1zn-II-D1F">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="bYg-oc-760">
                             <connections>
-                                <action selector="showRootMenu" destination="CZQ-pf-AF9" id="UOp-2b-jgg"/>
+                                <action selector="showRootMenu" destination="CZQ-pf-AF9" id="anH-HJ-kwc"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gear" id="1zn-II-D1F"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateTicker" destination="fbA-fd-jhQ" id="QzX-RL-Fnr"/>
                         <outlet property="routeView" destination="9tI-W9-Nmy" id="B9S-Xb-Xgb"/>
                     </connections>
                 </viewController>
@@ -70,6 +93,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
 </document>

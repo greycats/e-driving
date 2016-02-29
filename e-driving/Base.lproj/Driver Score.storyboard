@@ -114,43 +114,30 @@ SPEED</string>
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-QQ-Ee0" userLabel="line">
-                                        <rect key="frame" x="0.0" y="526" width="414" height="1"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="YcU-jR-rRk"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.29999999999999999"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                                <point key="value" x="0.0" y="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
-                                        </userDefinedRuntimeAttributes>
+                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-QQ-Ee0" userLabel="line" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="495" width="414" height="72"/>
                                     </view>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-cb-znw" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="566" width="414" height="146"/>
+                                        <rect key="frame" x="0.0" y="567" width="414" height="146"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="146" placeholder="YES" id="auE-lC-r1x"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="3Kf-i0-PUA">
-                                        <rect key="frame" x="0.0" y="712" width="414" height="215"/>
+                                        <rect key="frame" x="0.0" y="713" width="414" height="215"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="215" id="BYa-Pr-lNI"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-Km-JaA" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="927" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="928" width="414" height="100"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Previous Drive"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="PA7-QQ-Ee0" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" constant="31" id="7x3-Ul-0la"/>
+                                    <constraint firstItem="PA7-QQ-Ee0" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" id="7x3-Ul-0la"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="top" secondItem="GlL-wq-ITb" secondAttribute="top" id="8z0-of-ZBn"/>
                                     <constraint firstAttribute="trailing" secondItem="PA7-QQ-Ee0" secondAttribute="trailing" id="Ds5-ea-eKc"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="Ds7-1r-1ot"/>
@@ -167,21 +154,15 @@ SPEED</string>
                                     <constraint firstAttribute="bottom" secondItem="xTg-Km-JaA" secondAttribute="bottom" id="mYW-QD-yR5"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="tcb-gL-Ma6"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="u1e-3T-HtG"/>
-                                    <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="PA7-QQ-Ee0" secondAttribute="top" constant="40" id="w65-1r-hp7"/>
-                                    <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" constant="71" id="z1V-nr-tWr"/>
+                                    <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="PA7-QQ-Ee0" secondAttribute="bottom" id="w65-1r-hp7"/>
                                     <constraint firstItem="3Kf-i0-PUA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="zHK-rd-1Ja"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="z1V-nr-tWr"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="obL-Wt-UbZ" id="QiI-Qw-och"/>
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.26274509800000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RU7-Pe-24n" firstAttribute="width" secondItem="Gf4-Ce-d9M" secondAttribute="width" id="4AE-Qi-a8e"/>
                             <constraint firstAttribute="bottom" secondItem="GlL-wq-ITb" secondAttribute="bottom" id="jBh-uF-YxJ"/>
@@ -211,7 +192,6 @@ SPEED</string>
                         <outlet property="overSpeedLabel" destination="mKx-Cb-vdi" id="IM0-nP-Bpx"/>
                         <outlet property="routeView" destination="723-cb-znw" id="nOA-Nh-fbB"/>
                         <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
-                        <outlet property="separator" destination="PA7-QQ-Ee0" id="hqk-39-bhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nj0-EW-0Vz" sceneMemberID="firstResponder"/>

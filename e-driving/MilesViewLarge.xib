@@ -8,6 +8,9 @@
         <mutableArray key="BebasNeueBold.otf">
             <string>BebasNeueBold</string>
         </mutableArray>
+        <mutableArray key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
@@ -43,6 +46,12 @@
                             <nil key="highlightedColor"/>
                             <size key="shadowOffset" width="0.0" height="0.0"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-na-W0G">
+                            <rect key="frame" x="71" y="117" width="36.5" height="14.5"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.095883200354609927" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -51,8 +60,10 @@
                         <constraint firstItem="3dZ-nK-9au" firstAttribute="leading" secondItem="gEM-bk-zzP" secondAttribute="leading" constant="7" id="Sn5-tC-71S"/>
                         <constraint firstItem="3dZ-nK-9au" firstAttribute="centerX" secondItem="gEM-bk-zzP" secondAttribute="centerX" id="f4Q-My-fil"/>
                         <constraint firstItem="3dZ-nK-9au" firstAttribute="top" secondItem="gEM-bk-zzP" secondAttribute="top" constant="7" id="ffj-ld-6sm"/>
+                        <constraint firstItem="dDN-na-W0G" firstAttribute="top" secondItem="Jro-bv-mkK" secondAttribute="bottom" constant="-4" id="j7W-yd-cYc"/>
                         <constraint firstItem="Jro-bv-mkK" firstAttribute="centerX" secondItem="gEM-bk-zzP" secondAttribute="centerX" id="nA8-7i-vUn"/>
                         <constraint firstAttribute="width" secondItem="gEM-bk-zzP" secondAttribute="height" id="wkR-sy-ijv"/>
+                        <constraint firstItem="dDN-na-W0G" firstAttribute="centerX" secondItem="Jro-bv-mkK" secondAttribute="centerX" id="yDj-9F-SXH"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

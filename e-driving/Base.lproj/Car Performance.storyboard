@@ -7,7 +7,7 @@
         <!--Car Performance-->
         <scene sceneID="ETV-aZ-YBg">
             <objects>
-                <viewController storyboardIdentifier="Car Performance" id="Q16-mX-tzg" customClass="ViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Car Performance" id="Q16-mX-tzg" customClass="CarPerformanceViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y0T-HZ-PTY"/>
                         <viewControllerLayoutGuide type="bottom" id="Jee-vb-2b7"/>
@@ -24,7 +24,7 @@
                                 <action selector="showRootMenu" destination="Q16-mX-tzg" id="W88-Ol-bSm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="hamburger" id="QwH-9s-ejk"/>
+                        <barButtonItem key="rightBarButtonItem" image="gear" id="QwH-9s-ejk"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -34,6 +34,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
 </document>

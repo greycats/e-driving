@@ -34,5 +34,5 @@ class ExperienceView: NibView {
 		}
 	}
 
-	var experienceFormat: (Int, Int) -> String = { "+\($0)" }
+	var experienceFormat: (Int, Int) -> String = { e, me in "+\(e)" }
 }
