@@ -14,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperienceView" customModule="e_driving" customModuleProvider="target">
             <connections>
+                <outlet property="captionLabel" destination="0Wt-4k-rgt" id="Luq-CI-Xqm"/>
                 <outlet property="experienceBar" destination="dpe-6S-u50" id="2fe-ej-tqJ"/>
                 <outlet property="experienceBarWidth" destination="QAF-7c-996" id="Wvj-f6-I2a"/>
                 <outlet property="increasedExperienceLabel" destination="vP8-if-us4" id="5ja-MR-Dw9"/>
@@ -30,8 +31,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-if-us4">
-                    <rect key="frame" x="0.0" y="13" width="28" height="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-if-us4">
+                    <rect key="frame" x="0.0" y="13" width="19" height="22"/>
                     <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>

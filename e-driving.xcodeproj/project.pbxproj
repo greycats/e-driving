@@ -214,8 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				CF56A2461C7ED633002F9F5B /* Driver Score.storyboard */,
-				CFC154CC1C8446F800B78F18 /* ExperienceView.xib */,
-				CFC154CE1C84490900B78F18 /* ExperienceView.swift */,
 				CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */,
 			);
 			name = "Vehicle Scene";
@@ -224,20 +222,22 @@
 		CF56A2661C7F18D8002F9F5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5307F951C7EF10E00F04AC3 /* IndexLabel.xib */,
-				CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */,
-				B5307F991C7EFB5900F04AC3 /* VehicleView.xib */,
-				CF56A25D1C7F169C002F9F5B /* VehicleView.swift */,
-				B5307F971C7EF72400F04AC3 /* ButtonView.xib */,
 				B55084CF1C7FC2DC0083B242 /* ButtonView.swift */,
-				B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */,
-				CF9704311C804BB00035CECE /* PositionLabelCompact.xib */,
-				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
-				B571573D1C7FECA900A905CB /* MilesView.xib */,
-				CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */,
-				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
+				B5307F971C7EF72400F04AC3 /* ButtonView.xib */,
 				CFA34D861C83E85D00B2D869 /* DateTicker.swift */,
 				CFA34D881C83E8B000B2D869 /* DateTicker.xib */,
+				CFC154CE1C84490900B78F18 /* ExperienceView.swift */,
+				CFC154CC1C8446F800B78F18 /* ExperienceView.xib */,
+				CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */,
+				B5307F951C7EF10E00F04AC3 /* IndexLabel.xib */,
+				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
+				B571573D1C7FECA900A905CB /* MilesView.xib */,
+				CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */,
+				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
+				B5307F9B1C7EFF0D00F04AC3 /* PositionLabel.xib */,
+				CF9704311C804BB00035CECE /* PositionLabelCompact.xib */,
+				CF56A25D1C7F169C002F9F5B /* VehicleView.swift */,
+				B5307F991C7EFB5900F04AC3 /* VehicleView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";

@@ -46,14 +46,17 @@ class RootViewController: UIViewController, UINavigationControllerDelegate, Colo
 		return result
 	}
 
-	var childNavigationController: UINavigationController? {
+	func _child<T>() -> T? {
 		for child in childViewControllers {
-			if let child = child as? UINavigationController {
+			if let child = child as? T {
 				return child
 			}
 		}
 		return nil
 	}
+
+	var childNavigationController: UINavigationController? { return _child() }
+	var menuViewController: MenuViewController? { return _child() }
 
 	@IBAction func showMenu() {
 		leading.constant = 0
@@ -62,6 +65,7 @@ class RootViewController: UIViewController, UINavigationControllerDelegate, Colo
 			self.overlayView.alpha = 1
 			self.childNavigationController?.view.transform = CGAffineTransformMakeScale(0.82, 0.82)
 		}
+		self.menuViewController?.reload()
 		tapGesture.enabled = true
 		print("showMenu")
 	}
@@ -127,6 +131,9 @@ class MenuViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		experienceView.captionLabel.text = "EXPERT"
+		experienceView.maxExperience = 500
+		experienceView.experienceFormat = { "\($0)/\($1)" }
 		menu.source = ["Driver Score", "Feed", "Car Performance", "Dashboard"]
 		menu.onSelect {[weak self] (item: String) in
 			self?.openItem(item)
@@ -137,9 +144,8 @@ class MenuViewController: UIViewController {
 		tableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .None)
 	}
 
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		experienceView.experience = 30
+	func reload() {
+		experienceView.experience = 335
 	}
 
 	func openItem(item: String) {
