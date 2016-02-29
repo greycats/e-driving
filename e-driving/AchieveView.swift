@@ -26,46 +26,10 @@ class AchieveView: NibView {
 		}
 	}
 	
-	convenience init(achieveName: AchieveName) {
+	convenience init(achievement: Achievement) {
 		self.init()
-		var imageName = ""
-		switch(achieveName)
-		{
-		case AchieveName.Hours:
-			imageName = "Hours"
-			itemLabel?.text = "9999 DRIVE\nHOURS"
-		case AchieveName.Happy:
-			imageName = "Happy"
-			itemLabel?.text = "HAPPY\nENDING"
-		case AchieveName.Slow:
-			imageName = "Slow"
-			itemLabel?.text = "SLOW\nENOUGH"
-		case AchieveName.Ticket:
-			imageName = "Ticket"
-			itemLabel?.text = "TICKET\nAVOID"
-		case AchieveName.Drift:
-			imageName = "Drift"
-			itemLabel?.text = "1ST TIME\nDRIFT"
-		case AchieveName.NotDrunk:
-			imageName = "NotDrunk"
-			itemLabel?.text = "NOT\nDRUNK"
-		case AchieveName.Route:
-			imageName = "Route"
-			itemLabel?.text = "ROUTE\nSCHEDULE"
-		case AchieveName.Safe:
-			imageName = "Safe"
-			itemLabel?.text = "SAFE &\nSOUND"
-		case AchieveName.Speed:
-			imageName = "Speed"
-			itemLabel?.text = "300\nKM//H"
-		default:
-			itemLabel?.text = "missed"
-		}
-		
-		// in IBDesignable, UIImage need bundle
-		let bundle = NSBundle(forClass: AchieveView.self)
-		var image = UIImage(named: imageName, inBundle: bundle, compatibleWithTraitCollection: nil)
-		image = image?.imageWithRenderingMode(.AlwaysTemplate)//change image color with tintcolor
-		itemPic?.image = image
+		let imageName = String(achievement)
+		itemLabel?.text = achievement.text
+		itemPic?.image = UIImage(named: imageName)?.imageWithRenderingMode(.AlwaysTemplate)
 	}
 }

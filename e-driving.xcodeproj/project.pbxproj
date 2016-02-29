@@ -24,7 +24,6 @@
 		B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106CD1C7FF2CB00690145 /* MilesView.swift */; };
 		B53106D01C80454500690145 /* AchieveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53106CF1C80454500690145 /* AchieveView.xib */; };
 		B53106D21C80479F00690145 /* AchieveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106D11C80479F00690145 /* AchieveView.swift */; };
-		B53106D41C80660400690145 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53106D31C80660400690145 /* Achievement.swift */; };
 		B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084CF1C7FC2DC0083B242 /* ButtonView.swift */; };
 		B55084D21C7FCB290083B242 /* PositionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084D11C7FCB290083B242 /* PositionLabel.swift */; };
 		B571573E1C7FECA900A905CB /* MilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B571573D1C7FECA900A905CB /* MilesView.xib */; };
@@ -72,7 +71,6 @@
 		B53106CD1C7FF2CB00690145 /* MilesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilesView.swift; sourceTree = "<group>"; };
 		B53106CF1C80454500690145 /* AchieveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchieveView.xib; sourceTree = "<group>"; };
 		B53106D11C80479F00690145 /* AchieveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchieveView.swift; sourceTree = "<group>"; };
-		B53106D31C80660400690145 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		B55084CF1C7FC2DC0083B242 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		B55084D11C7FCB290083B242 /* PositionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionLabel.swift; sourceTree = "<group>"; };
 		B571573D1C7FECA900A905CB /* MilesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesView.xib; sourceTree = "<group>"; };
@@ -413,7 +411,6 @@
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
-				B53106D41C80660400690145 /* Achievement.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,
