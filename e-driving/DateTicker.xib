@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateTicker" customModule="e_driving" customModuleProvider="target">
             <connections>
                 <outlet property="dateLabel" destination="nfi-nB-EDk" id="i9r-3Q-5uT"/>
+                <outlet property="leftArrow" destination="ibM-3u-QgS" id="sLu-bd-utJ"/>
+                <outlet property="rightArrow" destination="RmI-RZ-hW5" id="6Sq-Zn-efS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,10 +27,10 @@
                         <constraint firstAttribute="width" constant="202" id="qfC-Ys-MUa"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="0.1215686275" green="0.17254901959999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibM-3u-QgS" customClass="Arrow" customModule="e_driving" customModuleProvider="target">
+                <view opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibM-3u-QgS" customClass="Arrow" customModule="e_driving" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="19" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="4we-h5-Z5d"/>
@@ -38,7 +40,7 @@
                         <action selector="tapLeft:" destination="-1" eventType="touchUpInside" id="85d-aE-zT8"/>
                     </connections>
                 </view>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmI-RZ-hW5" customClass="Arrow" customModule="e_driving" customModuleProvider="target">
+                <view opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmI-RZ-hW5" customClass="Arrow" customModule="e_driving" customModuleProvider="target">
                     <rect key="frame" x="227" y="19" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="9YY-BL-6ck"/>
@@ -52,7 +54,6 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="RmI-RZ-hW5" firstAttribute="leading" secondItem="ibM-3u-QgS" secondAttribute="trailing" constant="202" id="4z4-kx-tdm"/>
                 <constraint firstItem="nfi-nB-EDk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Dut-Kp-v30"/>

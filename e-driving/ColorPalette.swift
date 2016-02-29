@@ -33,13 +33,16 @@ extension ColorPalette {
 				field.applyTheme(theme)
 			}
 		}
+
 		switch theme {
 		case .Light:
 			setColor(UIColor(hexRGB: 0x000000), category: .Background)
 			setColor(UIColor(hexRGB: 0xF7F7F7), category: .Foreground)
+			setColor(UIColor(hexRGB: 0x1F2C3A), category: .MainText)
 		case .Dark:
 			setColor(UIColor(hexRGB: 0x000E31), category: .Background)
 			setColor(UIColor(hexRGB: 0x063090), category: .Foreground)
+			setColor(UIColor(hexRGB: 0xFFFFFF), category: .MainText)
 		}
 	}
 }

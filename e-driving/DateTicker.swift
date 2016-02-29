@@ -47,20 +47,21 @@ enum DateBasis {
 }
 
 @IBDesignable
-class DateTicker: NibView {
+class DateTicker: NibView, ColorPalette {
+
+	@IBOutlet weak var leftArrow: Arrow!
+	@IBOutlet weak var rightArrow: Arrow!
+	@IBOutlet weak var dateLabel: UILabel!
 
 	var basis: DateBasis = .Weekly
-	var date: NSDate! = NSDate() {
+	var date: NSDate! {
 		didSet {
-			print(date)
 			dateLabel.text = basis.formatDate(date)
 			onDateChange?(date)
 		}
 	}
 
 	var onDateChange: ((NSDate) -> ())?
-	
-	@IBOutlet weak var dateLabel: UILabel!
 
 	@IBAction func tapLeft(sender: UIControl) {
 		date = basis.previous(date)
@@ -68,5 +69,16 @@ class DateTicker: NibView {
 
 	@IBAction func tapRight(sender: UIControl) {
 		date = basis.next(date)
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		leftArrow.setColor(color, category: category)
+		rightArrow.setColor(color, category: category)
+		switch category {
+		case .MainText:
+			dateLabel.textColor = color
+		default:
+			break
+		}
 	}
 }

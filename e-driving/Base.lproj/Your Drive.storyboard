@@ -110,11 +110,6 @@ ACCELERATIONS</string>
                                             <constraint firstItem="mvL-7q-zRY" firstAttribute="centerX" secondItem="RU7-Pe-24n" secondAttribute="centerX" id="uQ2-5w-4kx"/>
                                             <constraint firstItem="mKx-Cb-vdi" firstAttribute="centerY" secondItem="mvL-7q-zRY" secondAttribute="centerY" id="yzP-De-Yhn"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-cb-znw">
                                         <rect key="frame" x="0.0" y="585" width="414" height="146"/>

@@ -42,12 +42,20 @@ class Animation: NSObject {
 }
 
 @IBDesignable
-class Arrow: UIControl {
+class Arrow: UIControl, ColorPalette {
 	@IBInspectable var left: Bool = true {
 		didSet { setNeedsDisplay() }
 	}
 
-	let strokeColor = UIColor(red: 0.093, green: 0.128, blue: 0.172, alpha: 0.5)
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .MainText:
+			tintColor = color
+			setNeedsDisplay()
+		default:
+			break
+		}
+	}
 
 	override func drawRect(rect: CGRect) {
 		let path = UIBezierPath()
@@ -56,7 +64,7 @@ class Arrow: UIControl {
 		path.addLineToPoint(CGPointMake(left ? 16 : 9, 8))
 		path.lineCapStyle = .Round
 		path.lineJoinStyle = .Round
-		strokeColor.setStroke()
+		tintColor.setStroke()
 		path.lineWidth = 1
 		path.stroke()
 	}

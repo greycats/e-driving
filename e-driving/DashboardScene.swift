@@ -10,6 +10,8 @@ import Greycats
 
 class DashboardViewController: UIViewController, ColorPalette {
 
+	@IBOutlet weak var dateTicker: DateTicker!
+
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
 		case .Background:
@@ -22,5 +24,6 @@ class DashboardViewController: UIViewController, ColorPalette {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		applyTheme(.Dark)
+		dateTicker.date = NSDate()
 	}
 }
