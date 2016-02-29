@@ -114,7 +114,23 @@ SPEED</string>
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-cb-znw" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
+                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA7-QQ-Ee0" userLabel="line">
+                                        <rect key="frame" x="0.0" y="526" width="414" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="YcU-jR-rRk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-cb-znw" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="566" width="414" height="146"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="146" placeholder="YES" id="auE-lC-r1x"/>
@@ -134,33 +150,30 @@ SPEED</string>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="4Fw-E6-f3e"/>
+                                    <constraint firstItem="PA7-QQ-Ee0" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" constant="31" id="7x3-Ul-0la"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="top" secondItem="GlL-wq-ITb" secondAttribute="top" id="8z0-of-ZBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="PA7-QQ-Ee0" secondAttribute="trailing" id="Ds5-ea-eKc"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="Ds7-1r-1ot"/>
                                     <constraint firstItem="3Kf-i0-PUA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="FQi-0F-TlJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="RU7-Pe-24n" secondAttribute="bottom" id="M8y-i7-2Gw"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="3Kf-i0-PUA" secondAttribute="bottom" id="OXz-m5-KwH"/>
                                     <constraint firstItem="vvh-2S-mkU" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" constant="10" id="POP-2r-P8b"/>
                                     <constraint firstAttribute="trailing" secondItem="723-cb-znw" secondAttribute="trailing" id="TCQ-NB-w8Y"/>
                                     <constraint firstAttribute="trailing" secondItem="3Kf-i0-PUA" secondAttribute="trailing" id="VKZ-fR-0UV"/>
-                                    <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="bottom" constant="120" id="WRz-bA-95u"/>
                                     <constraint firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="WlU-Y0-a6h"/>
+                                    <constraint firstItem="PA7-QQ-Ee0" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="cv7-c7-a4r"/>
                                     <constraint firstAttribute="trailing" secondItem="vvh-2S-mkU" secondAttribute="trailing" constant="10" id="cy5-w1-K18"/>
                                     <constraint firstAttribute="trailing" secondItem="xTg-Km-JaA" secondAttribute="trailing" id="gyI-5f-dnN"/>
                                     <constraint firstItem="vvh-2S-mkU" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="bottom" constant="45" id="hfI-nG-PAG"/>
                                     <constraint firstAttribute="bottom" secondItem="xTg-Km-JaA" secondAttribute="bottom" id="mYW-QD-yR5"/>
-                                    <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="bottom" constant="100" id="rjh-FT-VpX"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="tcb-gL-Ma6"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="u1e-3T-HtG"/>
+                                    <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="PA7-QQ-Ee0" secondAttribute="top" constant="40" id="w65-1r-hp7"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" constant="71" id="z1V-nr-tWr"/>
                                     <constraint firstItem="3Kf-i0-PUA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="zHK-rd-1Ja"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="M8y-i7-2Gw"/>
-                                        <exclude reference="WRz-bA-95u"/>
-                                        <exclude reference="4Fw-E6-f3e"/>
-                                        <exclude reference="rjh-FT-VpX"/>
+                                        <exclude reference="z1V-nr-tWr"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -197,6 +210,7 @@ SPEED</string>
                         <outlet property="overSpeedLabel" destination="mKx-Cb-vdi" id="IM0-nP-Bpx"/>
                         <outlet property="routeView" destination="723-cb-znw" id="nOA-Nh-fbB"/>
                         <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
+                        <outlet property="separator" destination="PA7-QQ-Ee0" id="hqk-39-bhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nj0-EW-0Vz" sceneMemberID="firstResponder"/>
