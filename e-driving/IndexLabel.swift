@@ -9,7 +9,7 @@
 import Greycats
 
 @IBDesignable
-class IndexLabel: NibView {
+class IndexLabel: NibView, ColorPalette {
 
 	@IBInspectable var key: String? {
 		didSet { renderKey() }
@@ -39,5 +39,16 @@ class IndexLabel: NibView {
 	}
 	private func updateAlert() {
 		alertView?.hidden = !showAlert
+	}
+
+	func applyTheme(theme: Theme) {
+		switch theme {
+		case .Dark:
+			numberLabel.textColor = UIColor(hexRGB: 0xECF0F1)
+			titleLabel.textColor = UIColor(white: 1, alpha: 0.5)
+		case .Light:
+//			titleLabel.textColor = UIColor(hexRGB: 0xECF0F1)
+			break
+		}
 	}
 }

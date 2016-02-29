@@ -22,20 +22,19 @@ class ClockView: UIView, ColorPalette {
 			break
 		}
 	}
-
+	@IBInspectable var needleSize: CGSize = CGSize(width: 1.15, height: 5.57) { didSet { setNeedsDisplay() } }
 	override func drawRect(rect: CGRect) {
 		let angle = CGFloat(2 * M_PI / 45)
 		let offAfter = Int(floor(percentage * 45))
-		let size = CGSize(width: 1.15, height: 5.57)
 		let circleSize = rect.size
-		let startPoint = CGPoint(x: -size.width / 2, y: -circleSize.height / 2)
-		let cornerRadius = size.width / 2
+		let startPoint = CGPoint(x: -needleSize.width / 2, y: -circleSize.height / 2)
+		let cornerRadius = needleSize.width / 2
 		let context = UIGraphicsGetCurrentContext()
 		CGContextSaveGState(context)
 		CGContextTranslateCTM(context, circleSize.width / 2 + startPoint.x, -startPoint.y)
 		for i in 0..<45 {
 			let off = i >= offAfter
-			let path = UIBezierPath(roundedRect: CGRect(origin: startPoint, size: size), cornerRadius: cornerRadius)
+			let path = UIBezierPath(roundedRect: CGRect(origin: startPoint, size: needleSize), cornerRadius: cornerRadius)
 			CGContextAddPath(context, path.CGPath)
 			CGContextRotateCTM(context, angle)
 			CGContextSetFillColorWithColor(context, off ? offColor.CGColor : onColor.CGColor)
@@ -47,7 +46,7 @@ class ClockView: UIView, ColorPalette {
 }
 
 @IBDesignable
-class MilesView: NibView, ColorPalette {
+class MilesView: StyledView, ColorPalette {
 	@IBOutlet weak var backgroundView: UIView!
 	@IBOutlet weak var clockView: ClockView!
 	@IBOutlet weak var milesLabel: UILabel! {

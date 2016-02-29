@@ -12,15 +12,6 @@ class DashboardViewController: UIViewController, ColorPalette {
 
 	@IBOutlet weak var dateTicker: DateTicker!
 
-	func setColor(color: UIColor, category: ColorCategory) {
-		switch category {
-		case .Background:
-			view.backgroundColor = color
-		default:
-			break
-		}
-	}
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		applyTheme(.Dark)

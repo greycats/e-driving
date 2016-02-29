@@ -21,13 +21,4 @@ class ActivityViewController: UIViewController, ColorPalette {
 			RouteHistory(timestamp: NSDate(), location: CLLocation(latitude: 37.662438, longitude: -122.424233), recoginzedName: "Home", milesToNext: nil),
 		]
 	}
-
-	func setColor(color: UIColor, category: ColorCategory) {
-		switch category {
-		case .Foreground:
-			view.backgroundColor = color
-		default:
-			break
-		}
-	}
 }

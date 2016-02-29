@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BebasNeueBold.otf">
+            <string>BebasNeueBold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="gEM-bk-zzP" id="0RA-ia-QHJ"/>
+                <outlet property="clockView" destination="3dZ-nK-9au" id="Tv3-xY-crq"/>
+                <outlet property="milesLabel" destination="Jro-bv-mkK" id="44n-qq-m7G"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEM-bk-zzP" customClass="BoxView" customModule="Greycats">
+                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                    <subviews>
+                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dZ-nK-9au" customClass="ClockView" customModule="e_driving" customModuleProvider="target">
+                            <rect key="frame" x="7" y="7" width="166" height="166"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3dZ-nK-9au" secondAttribute="height" id="LCB-FY-kg5"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="size" keyPath="needleSize">
+                                    <size key="value" width="3.2599999999999998" height="15.84"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-bv-mkK">
+                            <rect key="frame" x="60" y="61" width="59" height="60"/>
+                            <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="60"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.095883200354609927" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Jro-bv-mkK" firstAttribute="centerY" secondItem="gEM-bk-zzP" secondAttribute="centerY" constant="1" id="6EC-sq-Wqh"/>
+                        <constraint firstAttribute="width" constant="180" id="A3e-mX-N8J"/>
+                        <constraint firstItem="3dZ-nK-9au" firstAttribute="leading" secondItem="gEM-bk-zzP" secondAttribute="leading" constant="7" id="Sn5-tC-71S"/>
+                        <constraint firstItem="3dZ-nK-9au" firstAttribute="centerX" secondItem="gEM-bk-zzP" secondAttribute="centerX" id="f4Q-My-fil"/>
+                        <constraint firstItem="3dZ-nK-9au" firstAttribute="top" secondItem="gEM-bk-zzP" secondAttribute="top" constant="7" id="ffj-ld-6sm"/>
+                        <constraint firstItem="Jro-bv-mkK" firstAttribute="centerX" secondItem="gEM-bk-zzP" secondAttribute="centerX" id="nA8-7i-vUn"/>
+                        <constraint firstAttribute="width" secondItem="gEM-bk-zzP" secondAttribute="height" id="wkR-sy-ijv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="90"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gEM-bk-zzP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3k9-9J-hau"/>
+                <constraint firstAttribute="bottom" secondItem="gEM-bk-zzP" secondAttribute="bottom" id="BPi-XM-7Fu"/>
+                <constraint firstItem="gEM-bk-zzP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jno-ia-Be0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="262.5" y="184.25"/>
+        </view>
+    </objects>
+</document>

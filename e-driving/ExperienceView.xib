@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="BebasNeueRegular.otf">
+            <string>BebasNeueRegular</string>
+        </mutableArray>
+        <mutableArray key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperienceView" customModule="e_driving" customModuleProvider="target">
+            <connections>
+                <outlet property="experienceBar" destination="dpe-6S-u50" id="2fe-ej-tqJ"/>
+                <outlet property="experienceBarWidth" destination="QAF-7c-996" id="Wvj-f6-I2a"/>
+                <outlet property="increasedExperienceLabel" destination="vP8-if-us4" id="5ja-MR-Dw9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRIVING EXPERIENCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-4k-rgt">
+                    <rect key="frame" x="472" y="17" width="128" height="14.5"/>
+                    <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-if-us4">
+                    <rect key="frame" x="0.0" y="13" width="28" height="22"/>
+                    <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-zB-ChY" customClass="BoxView" customModule="Greycats">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="3"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="Qq4-7x-gAG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-6S-u50" customClass="GradientView" customModule="Greycats">
+                    <rect key="frame" x="2" y="0.0" width="0.0" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="JBZ-Kv-AVk"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                            <color key="value" red="0.72156862749999995" green="0.91372549020000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                            <color key="value" red="0.57254901960000004" green="0.81568627449999997" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc1">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc2">
+                            <point key="value" x="1" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="JBZ-Kv-AVk"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-qn-gwE" customClass="GradientView" customModule="Greycats">
+                    <rect key="frame" x="0.0" y="0.0" width="4" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="QAF-7c-996"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                            <color key="value" red="0.72156862745098038" green="0.9137254901960784" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                            <color key="value" red="0.5725490196078431" green="0.81568627450980391" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc1">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc2">
+                            <point key="value" x="1" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vP8-if-us4" firstAttribute="centerY" secondItem="0Wt-4k-rgt" secondAttribute="centerY" id="D8P-K3-h6d"/>
+                <constraint firstItem="ZXN-qn-gwE" firstAttribute="centerY" secondItem="dGL-zB-ChY" secondAttribute="centerY" id="J8S-Oc-Icm"/>
+                <constraint firstItem="dGL-zB-ChY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JPl-ZS-mvE"/>
+                <constraint firstItem="dpe-6S-u50" firstAttribute="bottom" secondItem="ZXN-qn-gwE" secondAttribute="bottom" id="Nuk-vm-3qN"/>
+                <constraint firstAttribute="trailing" secondItem="dGL-zB-ChY" secondAttribute="trailing" id="PdQ-yh-6Kv"/>
+                <constraint firstItem="ZXN-qn-gwE" firstAttribute="height" secondItem="dGL-zB-ChY" secondAttribute="height" id="RzJ-YW-NUJ"/>
+                <constraint firstItem="dpe-6S-u50" firstAttribute="top" secondItem="ZXN-qn-gwE" secondAttribute="top" id="Zan-jy-VDn"/>
+                <constraint firstItem="vP8-if-us4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cIw-Jh-ZeJ"/>
+                <constraint firstItem="vP8-if-us4" firstAttribute="top" secondItem="dGL-zB-ChY" secondAttribute="bottom" constant="10" id="cYn-fH-44t"/>
+                <constraint firstAttribute="trailing" secondItem="0Wt-4k-rgt" secondAttribute="trailing" id="dBN-LB-Z85"/>
+                <constraint firstItem="ZXN-qn-gwE" firstAttribute="leading" secondItem="dGL-zB-ChY" secondAttribute="leading" id="g9c-KA-Ho5"/>
+                <constraint firstAttribute="bottom" secondItem="vP8-if-us4" secondAttribute="bottom" priority="999" id="ga7-5K-OlZ"/>
+                <constraint firstItem="dGL-zB-ChY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p4Z-uf-96O"/>
+                <constraint firstItem="dpe-6S-u50" firstAttribute="leading" secondItem="ZXN-qn-gwE" secondAttribute="leading" constant="2" id="yfM-qX-kNc"/>
+                <constraint firstItem="ZXN-qn-gwE" firstAttribute="trailing" secondItem="dpe-6S-u50" secondAttribute="trailing" constant="2" id="yym-Ac-Nja"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

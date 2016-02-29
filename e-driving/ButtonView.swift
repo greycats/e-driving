@@ -9,7 +9,7 @@
 import Greycats
 
 @IBDesignable
-class ButtonView: NibView {
+class ButtonView: NibView, ColorPalette {
     @IBOutlet weak var buttonView: UIButton! {
         didSet { renderTitle() }
     }
@@ -19,4 +19,13 @@ class ButtonView: NibView {
     private func renderTitle() {
         buttonView?.setTitle(title?.uppercaseString, forState: .Normal)
     }
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Highlight:
+			buttonView.backgroundColor = color
+		default:
+			break
+		}
+	}
 }

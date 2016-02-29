@@ -36,15 +36,16 @@ class RouteView: UIView, ColorPalette {
 			if let previous = line {
 				addConstraint(NSLayoutConstraint(item: newLine, attribute: .Top, relatedBy: .Equal, toItem: previous, attribute: .Bottom, multiplier: 1, constant: 0))
 			} else {
+				if !displayMiles {
+					newLine.highlightLine = true
+				}
 				addConstraint(NSLayoutConstraint(item: newLine, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1, constant: 0))
 			}
 			line = newLine
 			let nextPoint = g.next()
 			if let _ = nextPoint {
-				if displayMiles {
-					let height: CGFloat = p.milesToNext > 0 ? 86 : 67
-					addConstraint(NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: height))
-				}
+				let height: CGFloat = displayMiles ? (p.milesToNext > 0 ? 85 : 67) : 73
+				addConstraint(NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: height))
 			} else {
 				line.hasLine = false
 			}
@@ -52,6 +53,9 @@ class RouteView: UIView, ColorPalette {
 		}
 		if let line = line {
 			addConstraint(NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0))
+			if !displayMiles {
+				line.highlightDot = true
+			}
 		}
 	}
 
@@ -62,21 +66,29 @@ class RouteView: UIView, ColorPalette {
 		line.applyTheme(theme)
 		addSubview(line)
 		if displayMiles {
-		addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.55, constant: 0))
+			addConstraint(NSLayoutConstraint(item: line, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 0.55, constant: 0))
 		} else {
-			addConstraint(NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 13))
+			addConstraint(NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 23))
 		}
 		addConstraint(NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 0, constant: 16))
 		let label = PositionLabel()
-		label.layout = "Compact"
+		if displayMiles {
+			label.layout = "Compact"
+		}
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.applyTheme(theme)
 		addSubview(label)
-		let time = RouteTime.format(history.timestamp)
-		if let placeName = history.recoginzedName?.uppercaseString {
-			label.title = "\(time) - \(placeName)"
+		if displayMiles {
+			let time = RouteTime.format(history.timestamp)
+			if let placeName = history.recoginzedName?.uppercaseString {
+				label.title = "\(time) - \(placeName)"
+			} else {
+				label.title = time
+			}
 		} else {
-			label.title = time
+			if let placeName = history.recoginzedName?.uppercaseString {
+				label.title = placeName
+			}
 		}
 		print("adding", label.title)
 		history.fetchAddress { label.address = $0 }
@@ -94,9 +106,8 @@ class RouteView: UIView, ColorPalette {
 			addConstraint(NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1, constant: 0))
 			addConstraint(NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: line, attribute: .Leading, multiplier: 1, constant: 0))
 			addConstraint(NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .CenterY, multiplier: 1, constant: 7))
-		} else {
-			line.hasLine = false
 		}
+
 		return line
 	}
 }

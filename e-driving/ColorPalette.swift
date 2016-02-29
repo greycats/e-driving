@@ -45,12 +45,24 @@ extension ColorPalette {
 			setColor(UIColor(hexRGB: 0xF7F7F7), category: .Foreground)
 			setColor(UIColor(hexRGB: 0x1F2C3A), category: .MainText)
 			setColor(UIColor(hexRGB: 0x9B9B9B), category: .SupplymentText)
+			setColor(UIColor(hexRGB: 0xE67E22), category: .Highlight)
 		case .Dark:
 			setColor(UIColor(hexRGB: 0x000E31), category: .Background)
 			setColor(UIColor(hexRGB: 0x063090), category: .Foreground)
 			setColor(UIColor(hexRGB: 0xFFFFFF), category: .MainText)
 			setColor(UIColor(hexRGB: 0x8396C0), category: .SupplymentText)
 			setColor(UIColor(hexRGB: 0x50D5C2), category: .Highlight)
+		}
+	}
+}
+
+extension ColorPalette where Self: UIViewController {
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Foreground:
+			view.backgroundColor = color
+		default:
+			break
 		}
 	}
 }

@@ -54,6 +54,9 @@
 		CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D841C83E42700B2D869 /* RouteHistory.swift */; };
 		CFA34D871C83E85D00B2D869 /* DateTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D861C83E85D00B2D869 /* DateTicker.swift */; };
 		CFA34D891C83E8B000B2D869 /* DateTicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA34D881C83E8B000B2D869 /* DateTicker.xib */; };
+		CFC154CB1C843EBB00B78F18 /* MilesViewLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */; };
+		CFC154CD1C8446F800B78F18 /* ExperienceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154CC1C8446F800B78F18 /* ExperienceView.xib */; };
+		CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC154CE1C84490900B78F18 /* ExperienceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,9 @@
 		CFA34D841C83E42700B2D869 /* RouteHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteHistory.swift; sourceTree = "<group>"; };
 		CFA34D861C83E85D00B2D869 /* DateTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTicker.swift; sourceTree = "<group>"; };
 		CFA34D881C83E8B000B2D869 /* DateTicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateTicker.xib; sourceTree = "<group>"; };
+		CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesViewLarge.xib; sourceTree = "<group>"; };
+		CFC154CC1C8446F800B78F18 /* ExperienceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceView.xib; sourceTree = "<group>"; };
+		CFC154CE1C84490900B78F18 /* ExperienceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				CF56A2461C7ED633002F9F5B /* Your Drive.storyboard */,
+				CFC154CC1C8446F800B78F18 /* ExperienceView.xib */,
+				CFC154CE1C84490900B78F18 /* ExperienceView.swift */,
 				CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */,
 			);
 			name = "Vehicle Scene";
@@ -229,6 +237,7 @@
 				CF9704311C804BB00035CECE /* PositionLabelCompact.xib */,
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
 				B571573D1C7FECA900A905CB /* MilesView.xib */,
+				CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */,
 				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
 				CFA34D861C83E85D00B2D869 /* DateTicker.swift */,
 				CFA34D881C83E8B000B2D869 /* DateTicker.xib */,
@@ -342,6 +351,7 @@
 				B5307F911C7EE6E300F04AC3 /* BebasNeueBook.otf in Resources */,
 				B5307F881C7EE6CB00F04AC3 /* SFUIText-Medium.otf in Resources */,
 				B5307F961C7EF10E00F04AC3 /* IndexLabel.xib in Resources */,
+				CFC154CD1C8446F800B78F18 /* ExperienceView.xib in Resources */,
 				B5307F931C7EE6E300F04AC3 /* BebasNeueRegular.otf in Resources */,
 				B5307F891C7EE6CB00F04AC3 /* SFUIText-Regular.otf in Resources */,
 				CF9704321C804BB00035CECE /* PositionLabelCompact.xib in Resources */,
@@ -353,6 +363,7 @@
 				B5307F8A1C7EE6CB00F04AC3 /* SFUIText-Semibold.otf in Resources */,
 				B5307F981C7EF72400F04AC3 /* ButtonView.xib in Resources */,
 				CF56A2411C7ECC0C002F9F5B /* Menu.storyboard in Resources */,
+				CFC154CB1C843EBB00B78F18 /* MilesViewLarge.xib in Resources */,
 				B5307F9A1C7EFB5900F04AC3 /* VehicleView.xib in Resources */,
 				B5307F861C7EE6CB00F04AC3 /* SFUIText-Bold.otf in Resources */,
 				CF56A24B1C7ED64B002F9F5B /* Car Performance.storyboard in Resources */,
@@ -448,6 +459,7 @@
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
 				CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */,
+				CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */,
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
 				CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
