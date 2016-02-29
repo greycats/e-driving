@@ -74,7 +74,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MON-tp-Ijo" customClass="DateTicker" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="174" y="104" width="252" height="21.5"/>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A6M-gg-5Np" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6M-gg-5Np" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="169" width="180.5" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="h8z-x0-2dT"/>
@@ -85,9 +85,9 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="38Z-mw-9nE">
-                                                <rect key="frame" x="405" y="169" width="195" height="194"/>
+                                                <rect key="frame" x="210" y="169" width="390" height="388"/>
                                             </imageView>
-                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjO-IO-MTP">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjO-IO-MTP">
                                                 <rect key="frame" x="27" y="364" width="127" height="27"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                                                 <state key="normal" title="See Company Ranking">
@@ -108,6 +108,7 @@
                                             <constraint firstAttribute="trailing" secondItem="EUU-Ot-8MD" secondAttribute="trailing" id="RMD-Uq-tb5"/>
                                             <constraint firstItem="MON-tp-Ijo" firstAttribute="top" secondItem="EUU-Ot-8MD" secondAttribute="bottom" id="RjV-yO-XlG"/>
                                             <constraint firstItem="TQF-ud-yv1" firstAttribute="leading" secondItem="EUU-Ot-8MD" secondAttribute="leading" id="Yoz-EM-Wvk"/>
+                                            <constraint firstItem="A6M-gg-5Np" firstAttribute="leading" secondItem="qiO-zf-ys5" secondAttribute="leading" id="rIb-ri-JNa"/>
                                             <constraint firstAttribute="trailing" secondItem="38Z-mw-9nE" secondAttribute="trailing" id="reD-8X-MXb"/>
                                             <constraint firstItem="EUU-Ot-8MD" firstAttribute="leading" secondItem="qiO-zf-ys5" secondAttribute="leading" id="rjg-VS-uWC"/>
                                             <constraint firstItem="38Z-mw-9nE" firstAttribute="top" secondItem="A6M-gg-5Np" secondAttribute="top" id="uVx-Zu-Nhn"/>
