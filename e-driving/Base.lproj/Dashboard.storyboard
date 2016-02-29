@@ -45,6 +45,7 @@
                                 <action selector="showRootMenu" destination="TtO-yO-4LX" id="Q79-ps-5WK"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="hamburger" id="aKi-o7-aDM"/>
                     </navigationItem>
                     <connections>
                         <outlet property="dateTicker" destination="DUF-FT-C3J" id="tcT-9J-JnO"/>

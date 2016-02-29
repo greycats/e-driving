@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Your Drive-->
+        <!--Your Drive Score-->
         <scene sceneID="jaq-bf-VPI">
             <objects>
                 <viewController storyboardIdentifier="Your Drive" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="obL-Wt-UbZ" customClass="VehicleViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,12 +190,13 @@ SPEED</string>
                             <constraint firstItem="GlL-wq-ITb" firstAttribute="leading" secondItem="Gf4-Ce-d9M" secondAttribute="leading" id="tEb-xU-6UL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Drive" id="PFD-5y-Exz" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
+                    <navigationItem key="navigationItem" title="Your Drive Score" id="PFD-5y-Exz" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="UR5-1U-ybs">
                             <connections>
                                 <action selector="showRootMenu" destination="obL-Wt-UbZ" id="9FC-x6-Cum"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gear" id="K5B-Eq-IzC"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -218,6 +219,7 @@ SPEED</string>
         </scene>
     </scenes>
     <resources>
+        <image name="gear" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
         <image name="map" width="414" height="215"/>
     </resources>

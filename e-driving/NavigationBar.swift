@@ -34,7 +34,7 @@ class NavigationItem: UINavigationItem {
 		if let title = title?.uppercaseString {
 			view.attributedText = NSAttributedString(string: title, attributes: [
 				NSFontAttributeName: UIFont(name: "SFUIText-Regular", size: 16)!,
-				NSForegroundColorAttributeName: UIColor(hexRGB: 0x005599),
+				NSForegroundColorAttributeName: UIColor.whiteColor(),
 				NSKernAttributeName: 1]
 			)
 		}

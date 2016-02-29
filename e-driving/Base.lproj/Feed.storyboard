@@ -53,7 +53,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="mhu-P3-s0v" customClass="NavigationItem" customModule="e_driving" customModuleProvider="target">
-                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="1zn-II-D1F">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="bYg-oc-760"/>
+                        <barButtonItem key="rightBarButtonItem" image="hamburger" id="1zn-II-D1F">
                             <connections>
                                 <action selector="showRootMenu" destination="CZQ-pf-AF9" id="UOp-2b-jgg"/>
                             </connections>
