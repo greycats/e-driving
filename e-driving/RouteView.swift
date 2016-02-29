@@ -7,38 +7,6 @@
 //
 
 import Greycats
-import CoreLocation
-
-struct RouteHistory {
-	let timestamp: NSDate
-	let location: CLLocation
-	let recoginzedName: String?
-	let milesToNext: Double?
-}
-
-struct Formatter {
-	let format: NSDate -> String
-	let parse: String -> NSDate?
-
-	private static func create(format: String, fixTimeZone: Bool = false, ignoreLocale: Bool = true) -> Formatter {
-		let formatter = NSDateFormatter()
-		formatter.AMSymbol = "AM"
-		formatter.PMSymbol = "PM"
-		if fixTimeZone {
-			if let timeZone = NSTimeZone(name: "America/Los_Angeles") {
-				formatter.timeZone = timeZone
-			}
-		}
-		if ignoreLocale {
-			formatter.locale = NSLocale(localeIdentifier: "en_US")
-		}
-
-		formatter.dateFormat = format
-		return Formatter(format: { formatter.stringFromDate($0) }, parse: { formatter.dateFromString($0) })
-	}
-}
-
-let RouteTime = Formatter.create("h:mm a")
 
 class RouteView: UIView {
 	var route: [RouteHistory] = [] {
@@ -99,7 +67,7 @@ class RouteView: UIView {
 			label.title = time
 		}
 		print("adding", label.title)
-		fetchAddress(history.location, label: label)
+		history.fetchAddress { label.address = $0 }
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: line, attribute: .Top, multiplier: 1, constant: 0))
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Bottom, relatedBy: .Equal, toItem: line, attribute: .Bottom, multiplier: 1, constant: 0))
 		addConstraint(NSLayoutConstraint(item: label, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1, constant: 0))
@@ -116,39 +84,5 @@ class RouteView: UIView {
 			line.hasLine = false
 		}
 		return line
-	}
-
-	func fetchAddress(location: CLLocation, label: PositionLabel) {
-		label.address = "\(location.coordinate.latitude), \(location.coordinate.longitude)"
-		CLGeocoder().reverseGeocodeLocation(location) { (marks, error) in
-			if let mark = marks?.first {
-				var string = ""
-				var hasStreet = false
-				if let subThoroughfare = mark.subThoroughfare {
-					string += subThoroughfare
-					hasStreet = true
-				}
-				if let thoroughfare = mark.thoroughfare {
-					if hasStreet {
-						string += " "
-					}
-					string += thoroughfare
-					hasStreet = true
-				}
-				if let subAdministrativeArea = mark.subAdministrativeArea {
-					if hasStreet {
-						string += ", "
-					}
-					string += subAdministrativeArea
-				}
-				if let administrativeArea = mark.administrativeArea {
-					if hasStreet {
-						string += ", "
-					}
-					string += administrativeArea
-				}
-				label.address = string
-			}
-		}
 	}
 }

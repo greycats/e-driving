@@ -44,10 +44,13 @@
 		CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */; };
 		CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2621C7F1759002F9F5B /* ViewController.swift */; };
 		CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */; };
-		CF97042D1C7FEE220035CECE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97042C1C7FEE220035CECE /* Route.swift */; };
+		CF97042D1C7FEE220035CECE /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97042C1C7FEE220035CECE /* RouteView.swift */; };
 		CF9704321C804BB00035CECE /* PositionLabelCompact.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9704311C804BB00035CECE /* PositionLabelCompact.xib */; };
 		CF9704341C8052070035CECE /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9704331C8052070035CECE /* ActivityScene.swift */; };
 		CFA34D7D1C83D69700B2D869 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D7C1C83D69700B2D869 /* Achievement.swift */; };
+		CFA34D801C83E0F800B2D869 /* DashboardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D7F1C83E0F800B2D869 /* DashboardScene.swift */; };
+		CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D821C83E3ED00B2D869 /* Formatter.swift */; };
+		CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D841C83E42700B2D869 /* RouteHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,10 +95,13 @@
 		CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleScene.swift; sourceTree = "<group>"; };
 		CF56A2621C7F1759002F9F5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexLabel.swift; sourceTree = "<group>"; };
-		CF97042C1C7FEE220035CECE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		CF97042C1C7FEE220035CECE /* RouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		CF9704311C804BB00035CECE /* PositionLabelCompact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabelCompact.xib; sourceTree = "<group>"; };
 		CF9704331C8052070035CECE /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
 		CFA34D7C1C83D69700B2D869 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		CFA34D7F1C83E0F800B2D869 /* DashboardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardScene.swift; sourceTree = "<group>"; };
+		CFA34D821C83E3ED00B2D869 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		CFA34D841C83E42700B2D869 /* RouteHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,10 +189,10 @@
 				CF56A2621C7F1759002F9F5B /* ViewController.swift */,
 				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
 				CF56A2441C7ED006002F9F5B /* MenuCell.xib */,
+				CFA34D811C83E3B900B2D869 /* Models */,
 				CF9704301C801D180035CECE /* Activity Scene */,
 				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
-				CF56A2531C7ED69C002F9F5B /* Dashboard.storyboard */,
-				CFA34D7C1C83D69700B2D869 /* Achievement.swift */,
+				CFA34D7E1C83E0DF00B2D869 /* Dashboard Scene */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
 				CF56A23F1C7ECC0C002F9F5B /* Menu.storyboard */,
 				CF56A2611C7F16FD002F9F5B /* Vehicle Scene */,
@@ -218,8 +224,6 @@
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
 				B571573D1C7FECA900A905CB /* MilesView.xib */,
 				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
-				B53106CF1C80454500690145 /* AchievementView.xib */,
-				B5CAD01E1C82A253002D80EB /* AchievementsView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -227,11 +231,32 @@
 		CF9704301C801D180035CECE /* Activity Scene */ = {
 			isa = PBXGroup;
 			children = (
-				CF97042C1C7FEE220035CECE /* Route.swift */,
+				B53106CF1C80454500690145 /* AchievementView.xib */,
+				B5CAD01E1C82A253002D80EB /* AchievementsView.swift */,
+				CF97042C1C7FEE220035CECE /* RouteView.swift */,
 				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
 				CF9704331C8052070035CECE /* ActivityScene.swift */,
 			);
 			name = "Activity Scene";
+			sourceTree = "<group>";
+		};
+		CFA34D7E1C83E0DF00B2D869 /* Dashboard Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CF56A2531C7ED69C002F9F5B /* Dashboard.storyboard */,
+				CFA34D7F1C83E0F800B2D869 /* DashboardScene.swift */,
+			);
+			name = "Dashboard Scene";
+			sourceTree = "<group>";
+		};
+		CFA34D811C83E3B900B2D869 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFA34D7C1C83D69700B2D869 /* Achievement.swift */,
+				CFA34D841C83E42700B2D869 /* RouteHistory.swift */,
+				CFA34D821C83E3ED00B2D869 /* Formatter.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,16 +418,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF97042D1C7FEE220035CECE /* Route.swift in Sources */,
+				CF97042D1C7FEE220035CECE /* RouteView.swift in Sources */,
 				CF56A25A1C7F09CF002F9F5B /* NavigationBar.swift in Sources */,
 				CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */,
 				CF9704341C8052070035CECE /* ActivityScene.swift in Sources */,
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
+				CFA34D801C83E0F800B2D869 /* DashboardScene.swift in Sources */,
 				CFA34D7D1C83D69700B2D869 /* Achievement.swift in Sources */,
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
+				CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */,
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
+				CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,

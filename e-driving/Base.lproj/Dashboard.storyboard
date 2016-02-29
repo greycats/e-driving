@@ -7,7 +7,7 @@
         <!--Dashboard-->
         <scene sceneID="BOQ-Wr-zEO">
             <objects>
-                <viewController storyboardIdentifier="Dashboard" id="TtO-yO-4LX" customClass="ViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" id="TtO-yO-4LX" customClass="DashboardViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GYS-Rp-r1B"/>
                         <viewControllerLayoutGuide type="bottom" id="2Io-dZ-nBq"/>
