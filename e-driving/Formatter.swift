@@ -31,3 +31,6 @@ struct Formatter {
 }
 
 let RouteTime = Formatter.create("h:mm a")
+let WeeklyFormat = Formatter.create("'Week' W, MMMM")
+let MonthlyFormat = Formatter.create("MMMM y")
+let YearlyFormat = Formatter.create("y")

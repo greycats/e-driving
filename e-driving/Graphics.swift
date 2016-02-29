@@ -42,6 +42,27 @@ class Animation: NSObject {
 }
 
 @IBDesignable
+class Arrow: UIControl {
+	@IBInspectable var left: Bool = true {
+		didSet { setNeedsDisplay() }
+	}
+
+	let strokeColor = UIColor(red: 0.093, green: 0.128, blue: 0.172, alpha: 0.5)
+
+	override func drawRect(rect: CGRect) {
+		let path = UIBezierPath()
+		path.moveToPoint(CGPointMake(left ? 16 : 9, 18))
+		path.addLineToPoint(CGPointMake(left ? 11 : 14, 13))
+		path.addLineToPoint(CGPointMake(left ? 16 : 9, 8))
+		path.lineCapStyle = .Round
+		path.lineJoinStyle = .Round
+		strokeColor.setStroke()
+		path.lineWidth = 1
+		path.stroke()
+	}
+}
+
+@IBDesignable
 class CurveBackgroundView: UIView {
 	@IBInspectable var color: UIColor = UIColor.grayColor() {
 		didSet { setNeedsDisplay() }

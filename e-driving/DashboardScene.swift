@@ -8,6 +8,19 @@
 
 import Greycats
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, ColorPalette {
 
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Background:
+			view.backgroundColor = color
+		default:
+			break
+		}
+	}
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		applyTheme(.Dark)
+	}
 }

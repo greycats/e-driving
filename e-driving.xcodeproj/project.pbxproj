@@ -28,6 +28,7 @@
 		B571573E1C7FECA900A905CB /* MilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B571573D1C7FECA900A905CB /* MilesView.xib */; };
 		B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAD01E1C82A253002D80EB /* AchievementsView.swift */; };
 		C1CAC8837F7630815E9A39A0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4040FFF439FA729D207C8 /* Pods.framework */; };
+		CF0378E61C8400C6004AD39B /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0378E51C8400C6004AD39B /* ColorPalette.swift */; };
 		CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */; };
 		CF56A2351C7EC956002F9F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF56A2341C7EC956002F9F5B /* Assets.xcassets */; };
 		CF56A2381C7EC956002F9F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */; };
@@ -51,6 +52,8 @@
 		CFA34D801C83E0F800B2D869 /* DashboardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D7F1C83E0F800B2D869 /* DashboardScene.swift */; };
 		CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D821C83E3ED00B2D869 /* Formatter.swift */; };
 		CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D841C83E42700B2D869 /* RouteHistory.swift */; };
+		CFA34D871C83E85D00B2D869 /* DateTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D861C83E85D00B2D869 /* DateTicker.swift */; };
+		CFA34D891C83E8B000B2D869 /* DateTicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA34D881C83E8B000B2D869 /* DateTicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,7 @@
 		B5CAD01E1C82A253002D80EB /* AchievementsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		BFB4040FFF439FA729D207C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C969E93E25491B4E8787ABDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0378E51C8400C6004AD39B /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		CF56A22A1C7EC956002F9F5B /* e-driving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-driving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF56A2341C7EC956002F9F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		CFA34D7F1C83E0F800B2D869 /* DashboardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardScene.swift; sourceTree = "<group>"; };
 		CFA34D821C83E3ED00B2D869 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		CFA34D841C83E42700B2D869 /* RouteHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteHistory.swift; sourceTree = "<group>"; };
+		CFA34D861C83E85D00B2D869 /* DateTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTicker.swift; sourceTree = "<group>"; };
+		CFA34D881C83E8B000B2D869 /* DateTicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateTicker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,8 @@
 				B55084D11C7FCB290083B242 /* PositionLabel.swift */,
 				B571573D1C7FECA900A905CB /* MilesView.xib */,
 				B53106CD1C7FF2CB00690145 /* MilesView.swift */,
+				CFA34D861C83E85D00B2D869 /* DateTicker.swift */,
+				CFA34D881C83E8B000B2D869 /* DateTicker.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 				CFA34D7C1C83D69700B2D869 /* Achievement.swift */,
 				CFA34D841C83E42700B2D869 /* RouteHistory.swift */,
 				CFA34D821C83E3ED00B2D869 /* Formatter.swift */,
+				CF0378E51C8400C6004AD39B /* ColorPalette.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 				CF56A24B1C7ED64B002F9F5B /* Car Performance.storyboard in Resources */,
 				B5307F871C7EE6CB00F04AC3 /* SFUIText-Light.otf in Resources */,
 				B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */,
+				CFA34D891C83E8B000B2D869 /* DateTicker.xib in Resources */,
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
 				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
 				B53106D01C80454500690145 /* AchievementView.xib in Resources */,
@@ -418,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA34D871C83E85D00B2D869 /* DateTicker.swift in Sources */,
 				CF97042D1C7FEE220035CECE /* RouteView.swift in Sources */,
 				CF56A25A1C7F09CF002F9F5B /* NavigationBar.swift in Sources */,
 				CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */,
@@ -432,6 +443,7 @@
 				CF56A2631C7F1759002F9F5B /* ViewController.swift in Sources */,
 				CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
+				CF0378E61C8400C6004AD39B /* ColorPalette.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,
 				CF56A22E1C7EC956002F9F5B /* AppDelegate.swift in Sources */,
