@@ -59,14 +59,28 @@ class MilesView: NibView, ColorPalette {
 	}
 
 	private func renderMile() {
+		let miles = self.miles
+		let t: NSTimeInterval = 1
 		let formatter = NSNumberFormatter()
 		formatter.minimumFractionDigits = 0
 		formatter.maximumFractionDigits = 1
 		formatter.minimumIntegerDigits = 1
-		milesLabel.text = formatter.stringFromNumber(miles)
+		let animation = Animation()
+		animation.start {[weak self] time in
+			if time <= t {
+				let m = sin(time / t * M_PI_2) * miles
+				self?.milesLabel.text = formatter.stringFromNumber(m)
+				self?.clockView.percentage = m / 10
+			} else {
+				self?.animation = nil
+			}
+		}
+		self.animation = animation
 	}
 
-	func applyTheme(theme: Theme) {
+	var animation: Animation?
 
+	func applyTheme(theme: Theme) {
+		clockView.applyTheme(theme)
 	}
 }
