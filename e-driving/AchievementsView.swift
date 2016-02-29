@@ -9,10 +9,34 @@
 import Greycats
 
 @IBDesignable
-class AchievementsView: NibView {
+class AchievementView: NibView {
+	@IBOutlet weak var captionLabel: UILabel!
+	@IBOutlet weak var imageView: UIImageView!
+
+	var highlighted: Bool = false {
+		didSet {
+			if highlighted {
+				captionLabel.textColor = UIColor(hexRGB: 0xFFFFFF)
+				imageView.tintColor = UIColor(hexRGB: 0xE67E22)
+			} else {
+				captionLabel.textColor = UIColor(hexRGB: 0x9B9B9B)
+				imageView.tintColor = UIColor(hexRGB: 0x3D3D3F)
+			}
+		}
+	}
+
+	convenience init(achievement: Achievement) {
+		self.init()
+		let imageName = String(achievement)
+		captionLabel.text = achievement.text
+		imageView.image = UIImage(named: imageName)?.imageWithRenderingMode(.AlwaysTemplate)
+	}
+}
+
+class AchievementsView: UIView {
 	var achievements: [Achievement] = [] {
 		didSet {
-			self -< achievements.map { AchieveView(achievement: $0) }
+			self -< achievements.map { AchievementView(achievement: $0) }
 		}
 	}
 }
