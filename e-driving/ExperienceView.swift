@@ -8,8 +8,49 @@
 
 import Greycats
 
+
+protocol Syncing {
+	func startSync(@noescape completion: (end: () -> ()) -> ())
+	func syncingDidStop()
+	func syncingWillStart()
+	func setSyncingState(alpha: CGFloat)
+}
+
+protocol LabelSyncing: Syncing {
+	var syncingLabel: UILabel! { get }
+}
+
+extension Syncing where Self: NSObject {
+
+	func syncingDidStop() {
+	}
+
+	func startSync(@noescape completion: (end: () -> ()) -> ()) {
+		syncingWillStart()
+		let animation = Animation()
+		animation.start {[weak self] time in
+			self?.setSyncingState(breath(time))
+		}
+		completion {[weak self] end in
+			animation.stop()
+			self?.setSyncingState(1)
+			self?.syncingDidStop()
+		}
+	}
+}
+
+extension LabelSyncing {
+	func syncingWillStart() {
+		syncingLabel.text = "SYNC"
+	}
+
+	func setSyncingState(alpha: CGFloat) {
+		syncingLabel.alpha = alpha
+	}
+}
+
 @IBDesignable
-class ExperienceView: NibView {
+class ExperienceView: NibView, LabelSyncing {
 	@IBOutlet weak var increasedExperienceLabel: UILabel!
 	@IBOutlet weak var experienceBar: UIView!
 	@IBOutlet weak var experienceBarWidth: NSLayoutConstraint!
@@ -35,4 +76,6 @@ class ExperienceView: NibView {
 	}
 
 	var experienceFormat: (Int, Int) -> String = { e, me in "+\(e)" }
+
+	var syncingLabel: UILabel! { return increasedExperienceLabel }
 }

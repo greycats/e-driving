@@ -23,6 +23,10 @@ class Animation: NSObject {
 	}
 
 	deinit {
+		stop()
+	}
+
+	func stop() {
 		if let displayLink = displayLink {
 			displayLink.invalidate()
 		}

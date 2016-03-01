@@ -79,10 +79,19 @@ class ClockView: UIView, ColorPalette {
 	}
 }
 
+func breath(t: NSTimeInterval) -> CGFloat {
+	var (i, f) = modf(t)
+	if i % 2 == 1 {
+		f = 1 - f
+	}
+	return 1 - sin(CGFloat(f * M_PI_2))
+}
+
 @IBDesignable
-class MilesView: StyledView, ColorPalette {
+class MilesView: StyledView, ColorPalette, LabelSyncing {
 	@IBOutlet weak var backgroundView: UIView!
 	@IBOutlet weak var clockView: ClockView!
+	@IBOutlet weak var statusLabel: UILabel!
 	@IBOutlet weak var milesLabel: UILabel! {
 		didSet { renderMile() }
 	}
@@ -91,8 +100,16 @@ class MilesView: StyledView, ColorPalette {
 		didSet { renderMile() }
 	}
 
+	var animation: Animation?
+	var syncingLabel: UILabel! { return milesLabel }
+	
+	func syncingDidStop() {
+		statusLabel.hidden = false
+	}
+
 	private func renderMile() {
 		let miles = self.miles
+		if miles == 0 { return }
 		let t: NSTimeInterval = 1
 		let formatter = NSNumberFormatter()
 		formatter.minimumFractionDigits = 0
@@ -105,13 +122,12 @@ class MilesView: StyledView, ColorPalette {
 				self?.milesLabel.text = formatter.stringFromNumber(m)
 				self?.clockView.percentage = m / 10
 			} else {
+				self?.animation?.stop()
 				self?.animation = nil
 			}
 		}
 		self.animation = animation
 	}
-
-	var animation: Animation?
 
 	func applyTheme(theme: Theme) {
 		clockView.applyTheme(theme)

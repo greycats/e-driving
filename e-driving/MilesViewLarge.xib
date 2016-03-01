@@ -18,6 +18,7 @@
                 <outlet property="backgroundView" destination="gEM-bk-zzP" id="0RA-ia-QHJ"/>
                 <outlet property="clockView" destination="3dZ-nK-9au" id="Tv3-xY-crq"/>
                 <outlet property="milesLabel" destination="Jro-bv-mkK" id="44n-qq-m7G"/>
+                <outlet property="statusLabel" destination="dDN-na-W0G" id="G9d-tq-tQ9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -39,15 +40,15 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-bv-mkK">
-                            <rect key="frame" x="60" y="61" width="59" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-bv-mkK">
+                            <rect key="frame" x="89.5" y="91" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="BebasNeueBold" family="Bebas Neue" pointSize="60"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                             <size key="shadowOffset" width="0.0" height="0.0"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-na-W0G">
-                            <rect key="frame" x="71" y="117" width="36.5" height="14.5"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-na-W0G">
+                            <rect key="frame" x="71" y="87" width="36.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>

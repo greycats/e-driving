@@ -53,6 +53,7 @@
 		CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D841C83E42700B2D869 /* RouteHistory.swift */; };
 		CFA34D871C83E85D00B2D869 /* DateTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34D861C83E85D00B2D869 /* DateTicker.swift */; };
 		CFA34D891C83E8B000B2D869 /* DateTicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA34D881C83E8B000B2D869 /* DateTicker.xib */; };
+		CFBB91511C85A8FE00D2F0CA /* CarIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB91501C85A8FE00D2F0CA /* CarIndex.swift */; };
 		CFC154CB1C843EBB00B78F18 /* MilesViewLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */; };
 		CFC154CD1C8446F800B78F18 /* ExperienceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154CC1C8446F800B78F18 /* ExperienceView.xib */; };
 		CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC154CE1C84490900B78F18 /* ExperienceView.swift */; };
@@ -112,6 +113,7 @@
 		CFA34D841C83E42700B2D869 /* RouteHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteHistory.swift; sourceTree = "<group>"; };
 		CFA34D861C83E85D00B2D869 /* DateTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTicker.swift; sourceTree = "<group>"; };
 		CFA34D881C83E8B000B2D869 /* DateTicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateTicker.xib; sourceTree = "<group>"; };
+		CFBB91501C85A8FE00D2F0CA /* CarIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarIndex.swift; sourceTree = "<group>"; };
 		CFC154CA1C843EBB00B78F18 /* MilesViewLarge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesViewLarge.xib; sourceTree = "<group>"; };
 		CFC154CC1C8446F800B78F18 /* ExperienceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceView.xib; sourceTree = "<group>"; };
 		CFC154CE1C84490900B78F18 /* ExperienceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				CFA34D7C1C83D69700B2D869 /* Achievement.swift */,
 				CFA34D841C83E42700B2D869 /* RouteHistory.swift */,
+				CFBB91501C85A8FE00D2F0CA /* CarIndex.swift */,
 				CFA34D821C83E3ED00B2D869 /* Formatter.swift */,
 				CF0378E51C8400C6004AD39B /* ColorPalette.swift */,
 			);
@@ -475,6 +478,7 @@
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
 				CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */,
+				CFBB91511C85A8FE00D2F0CA /* CarIndex.swift in Sources */,
 				CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */,
 				CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
