@@ -8,7 +8,6 @@
 
 import Greycats
 
-
 protocol Syncing {
 	func startSync(@noescape completion: (end: () -> ()) -> ())
 	func syncingDidStop()
@@ -20,11 +19,15 @@ protocol LabelSyncing: Syncing {
 	var syncingLabel: UILabel! { get }
 }
 
-extension Syncing where Self: NSObject {
-
-	func syncingDidStop() {
+private func breath(t: NSTimeInterval) -> CGFloat {
+	var (i, f) = modf(t)
+	if i % 2 == 1 {
+		f = 1 - f
 	}
+	return 1 - sin(CGFloat(f * M_PI_2))
+}
 
+extension Syncing where Self: NSObject {
 	func startSync(@noescape completion: (end: () -> ()) -> ()) {
 		syncingWillStart()
 		let animation = Animation()
@@ -42,6 +45,9 @@ extension Syncing where Self: NSObject {
 extension LabelSyncing {
 	func syncingWillStart() {
 		syncingLabel.text = "SYNC"
+	}
+
+	func syncingDidStop() {
 	}
 
 	func setSyncingState(alpha: CGFloat) {

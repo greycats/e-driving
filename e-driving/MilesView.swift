@@ -79,14 +79,6 @@ class ClockView: UIView, ColorPalette {
 	}
 }
 
-func breath(t: NSTimeInterval) -> CGFloat {
-	var (i, f) = modf(t)
-	if i % 2 == 1 {
-		f = 1 - f
-	}
-	return 1 - sin(CGFloat(f * M_PI_2))
-}
-
 @IBDesignable
 class MilesView: StyledView, ColorPalette, LabelSyncing {
 	@IBOutlet weak var backgroundView: UIView!
