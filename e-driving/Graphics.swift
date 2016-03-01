@@ -231,10 +231,11 @@ class AlertIcon: UIView {
 		let labelStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
 		labelStyle.alignment = .Left
 
-		let labelFontAttributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(rect.width * 0.52), NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: labelStyle]
+		let font = UIFont.fontAwesomeOfSize(rect.width * 0.52)
+		let labelFontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: labelStyle]
 		let text = String.fontAwesomeIconWithName(.ExclamationTriangle)
 		let size = text.sizeWithAttributes(labelFontAttributes)
-		text.drawInRect(CGRect(origin: CGPoint(x: (rect.width - size.width) / 2, y: (rect.height - size.height) / 2), size: size), withAttributes: labelFontAttributes)
+		text.drawInRect(CGRect(origin: CGPoint(x: (rect.width - size.width) / 2, y: (rect.height - 2 * size.height + font.capHeight) / 2), size: size), withAttributes: labelFontAttributes)
 	}
 }
 
