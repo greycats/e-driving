@@ -30,6 +30,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func customizeAppearance() {
 		let navBar = UINavigationBar.appearance()
 		navBar.shadowImage = UIImage()
-		navBar.setBackgroundImage(UIImage(fromColor: .clearColor()), forBarPosition: .Any, barMetrics: .Default)
 	}
 }

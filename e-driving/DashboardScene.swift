@@ -8,7 +8,7 @@
 
 import Greycats
 
-class DashboardViewController: UIViewController, ColorPalette {
+class DashboardViewController: UIViewController, ColorPalette, Overlayed {
 
 	@IBOutlet weak var dateTicker: DateTicker!
 	@IBOutlet weak var basisPicker: UIView!

@@ -8,6 +8,10 @@
 
 import UIKit
 
-class CarPerformanceViewController: UIViewController, ColorPalette {
-
+class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		applyTheme(.Dark)
+	}
 }

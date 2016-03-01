@@ -9,7 +9,7 @@
 import Greycats
 import CoreLocation
 
-class ActivityViewController: UIViewController, ColorPalette {
+class ActivityViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var dateTicker: DateTicker!
 

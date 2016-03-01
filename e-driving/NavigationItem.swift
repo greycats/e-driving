@@ -1,5 +1,5 @@
 //
-//  NavigationBar.swift
+//  NavigationItem.swift
 //  e-driving
 //
 //  Created by Rex Sheng on 2/25/16.

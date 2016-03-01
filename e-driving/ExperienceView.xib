@@ -31,12 +31,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-if-us4">
-                    <rect key="frame" x="0.0" y="13" width="19" height="22"/>
-                    <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="24"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-zB-ChY" customClass="BoxView" customModule="Greycats">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="3"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,6 +95,12 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-if-us4">
+                    <rect key="frame" x="0.0" y="13" width="472" height="22"/>
+                    <fontDescription key="fontDescription" name="BebasNeueRegular" family="Bebas Neue" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -110,6 +110,7 @@
                 <constraint firstItem="dpe-6S-u50" firstAttribute="bottom" secondItem="ZXN-qn-gwE" secondAttribute="bottom" id="Nuk-vm-3qN"/>
                 <constraint firstAttribute="trailing" secondItem="dGL-zB-ChY" secondAttribute="trailing" id="PdQ-yh-6Kv"/>
                 <constraint firstItem="ZXN-qn-gwE" firstAttribute="height" secondItem="dGL-zB-ChY" secondAttribute="height" id="RzJ-YW-NUJ"/>
+                <constraint firstItem="0Wt-4k-rgt" firstAttribute="leading" secondItem="vP8-if-us4" secondAttribute="trailing" id="WZ9-dO-YxL"/>
                 <constraint firstItem="dpe-6S-u50" firstAttribute="top" secondItem="ZXN-qn-gwE" secondAttribute="top" id="Zan-jy-VDn"/>
                 <constraint firstItem="vP8-if-us4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cIw-Jh-ZeJ"/>
                 <constraint firstItem="vP8-if-us4" firstAttribute="top" secondItem="dGL-zB-ChY" secondAttribute="bottom" constant="10" id="cYn-fH-44t"/>
