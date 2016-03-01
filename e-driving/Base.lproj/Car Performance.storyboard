@@ -67,7 +67,6 @@
                                 <action selector="showRootMenu" destination="Q16-mX-tzg" id="W88-Ol-bSm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="dial" id="QwH-9s-ejk"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -82,7 +81,6 @@
     </scenes>
     <resources>
         <image name="Group 6" width="180" height="277"/>
-        <image name="dial" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
 </document>
