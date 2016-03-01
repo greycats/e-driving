@@ -27,9 +27,12 @@ class AchievementView: NibView {
 
 	convenience init(achievement: Achievement) {
 		self.init()
-		let imageName = String(achievement)
 		captionLabel.text = achievement.text
-		imageView.image = UIImage(named: imageName)?.imageWithRenderingMode(.AlwaysTemplate)
+		var imageName = String(achievement)
+		if let range = imageName.rangeOfString("(") {
+			imageName = imageName.substringToIndex(range.startIndex)
+		}
+		imageView.image = UIImage(named: imageName)
 	}
 }
 
