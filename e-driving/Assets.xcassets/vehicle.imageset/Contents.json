@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "vehicle.png",
       "scale" : "1x"
     },
     {

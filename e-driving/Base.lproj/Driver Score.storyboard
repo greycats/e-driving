@@ -75,33 +75,49 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-Km-JaA" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="928" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="928" width="214.5" height="100"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Previous Drive"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Previous"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkX-va-SNz" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="199" y="928" width="214.5" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Next"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kkX-va-SNz" secondAttribute="trailing" id="1z2-xH-26d"/>
                                     <constraint firstItem="PA7-QQ-Ee0" firstAttribute="top" secondItem="vvh-2S-mkU" secondAttribute="bottom" id="7x3-Ul-0la"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="top" secondItem="GlL-wq-ITb" secondAttribute="top" id="8z0-of-ZBn"/>
                                     <constraint firstAttribute="trailing" secondItem="PA7-QQ-Ee0" secondAttribute="trailing" id="Ds5-ea-eKc"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="Ds7-1r-1ot"/>
                                     <constraint firstItem="3Kf-i0-PUA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="FQi-0F-TlJ"/>
+                                    <constraint firstItem="kkX-va-SNz" firstAttribute="bottom" secondItem="xTg-Km-JaA" secondAttribute="bottom" id="Kmo-3Q-hYB"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="top" secondItem="3Kf-i0-PUA" secondAttribute="bottom" id="OXz-m5-KwH"/>
                                     <constraint firstItem="vvh-2S-mkU" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" constant="10" id="POP-2r-P8b"/>
                                     <constraint firstAttribute="trailing" secondItem="723-cb-znw" secondAttribute="trailing" id="TCQ-NB-w8Y"/>
+                                    <constraint firstItem="kkX-va-SNz" firstAttribute="leading" secondItem="xTg-Km-JaA" secondAttribute="trailing" constant="-15" id="TZf-RY-AZ9"/>
                                     <constraint firstAttribute="trailing" secondItem="3Kf-i0-PUA" secondAttribute="trailing" id="VKZ-fR-0UV"/>
                                     <constraint firstAttribute="trailing" secondItem="RU7-Pe-24n" secondAttribute="trailing" id="WlU-Y0-a6h"/>
+                                    <constraint firstItem="kkX-va-SNz" firstAttribute="top" secondItem="xTg-Km-JaA" secondAttribute="top" id="cLd-kt-hPp"/>
                                     <constraint firstItem="PA7-QQ-Ee0" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="cv7-c7-a4r"/>
                                     <constraint firstAttribute="trailing" secondItem="vvh-2S-mkU" secondAttribute="trailing" constant="10" id="cy5-w1-K18"/>
                                     <constraint firstAttribute="trailing" secondItem="xTg-Km-JaA" secondAttribute="trailing" id="gyI-5f-dnN"/>
                                     <constraint firstItem="vvh-2S-mkU" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="bottom" constant="45" id="hfI-nG-PAG"/>
                                     <constraint firstAttribute="bottom" secondItem="xTg-Km-JaA" secondAttribute="bottom" id="mYW-QD-yR5"/>
+                                    <constraint firstItem="kkX-va-SNz" firstAttribute="width" secondItem="xTg-Km-JaA" secondAttribute="width" id="qhf-bF-yqZ"/>
                                     <constraint firstItem="RU7-Pe-24n" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="tcb-gL-Ma6"/>
                                     <constraint firstItem="xTg-Km-JaA" firstAttribute="leading" secondItem="GlL-wq-ITb" secondAttribute="leading" id="u1e-3T-HtG"/>
                                     <constraint firstItem="723-cb-znw" firstAttribute="top" secondItem="PA7-QQ-Ee0" secondAttribute="bottom" id="w65-1r-hp7"/>
                                     <constraint firstItem="3Kf-i0-PUA" firstAttribute="top" secondItem="723-cb-znw" secondAttribute="bottom" id="zHK-rd-1Ja"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gyI-5f-dnN"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="obL-Wt-UbZ" id="QiI-Qw-och"/>
                                 </connections>

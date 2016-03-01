@@ -9,7 +9,9 @@
 import UIKit
 
 class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
-	
+	@IBOutlet weak var vehicleView: VehicleView!
+	@IBOutlet weak var findMechanic: ButtonView!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		applyTheme(.Dark)

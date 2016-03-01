@@ -9,23 +9,18 @@
 import Greycats
 
 @IBDesignable
-class VehicleView: NibView {
-	@IBOutlet weak var display: VehicleDisplay!
-	@IBOutlet weak var scoreLabel: UILabel!
+class VehicleView: NibView, ColorPalette {
+	@IBOutlet var alerts: [AlertIcon]!
+	@IBOutlet var warnings: [AlertIcon]!
 
-	var score: Double = 0 {
-		didSet {
-			let formatter = NSNumberFormatter()
-			formatter.maximumFractionDigits = 1
-			formatter.minimumFractionDigits = 1
-			formatter.minimumIntegerDigits = 1
-			formatter.maximumIntegerDigits = 2
-			let scoreString = formatter.stringFromNumber(score)!
-			scoreLabel.attributedText = NSAttributedString(string: scoreString, attributes: [
-				NSKernAttributeName: 2,
-				NSFontAttributeName: scoreLabel.font,
-				NSForegroundColorAttributeName: scoreLabel.textColor
-				])
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Alert:
+			alerts.forEach { $0.tintColor = color }
+		case .Warning:
+			warnings.forEach { $0.tintColor = color }
+		default:
+			break
 		}
 	}
 }
