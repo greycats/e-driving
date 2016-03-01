@@ -230,6 +230,12 @@
                         <outlet property="dateTicker" destination="MON-tp-Ijo" id="sPy-Nr-cfL"/>
                         <outlet property="indicesView" destination="KDH-ju-sOp" id="IKV-JL-G3t"/>
                         <outlet property="milesView" destination="A6M-gg-5Np" id="D5n-E1-Jg9"/>
+                        <outletCollection property="indices" destination="EZX-4Y-LEi" collectionClass="NSMutableArray" id="Cjk-fs-7Rf"/>
+                        <outletCollection property="indices" destination="2tf-wB-jSJ" collectionClass="NSMutableArray" id="TDx-jt-7Aj"/>
+                        <outletCollection property="indices" destination="AOa-3i-dWK" collectionClass="NSMutableArray" id="weZ-CE-0qN"/>
+                        <outletCollection property="indices" destination="SKH-gn-YE0" collectionClass="NSMutableArray" id="hIc-kN-L2i"/>
+                        <outletCollection property="indices" destination="t5G-Dw-2aS" collectionClass="NSMutableArray" id="3gy-7r-76Q"/>
+                        <outletCollection property="indices" destination="fJf-cK-Q7d" collectionClass="NSMutableArray" id="ezQ-pH-D6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhb-vb-T4O" sceneMemberID="firstResponder"/>

@@ -15,8 +15,17 @@ class DashboardViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var milesView: MilesView!
 	@IBOutlet weak var indicesView: UIView!
 
+	@IBOutlet var indices: [IndexLabel]!
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		indices.apply([
+			CarIndex(title: "miles", value: 3200),
+			CarIndex(title: "over speed", value: 13),
+			CarIndex(title: "hours", value: 376),
+			CarIndex(title: "hard brakes", value: 69),
+			CarIndex(title: "mpg", value: 30),
+			CarIndex(title: "hard accel", value: 27)
+			])
 		applyTheme(.Dark)
 		dateTicker.date = NSDate()
 		for subview in indicesView.subviews {

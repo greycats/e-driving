@@ -78,6 +78,7 @@ enum CarIndexState {
 	case Normal
 	case Alert
 	case Good
+	case Nice
 }
 
 struct CarIndex {
@@ -113,8 +114,8 @@ extension CollectionType where Generator.Element == IndexLabel, Index == Int {
 			label.titleLabel.text = index.title.uppercaseString
 			label.numberLabel.text = formatter.stringFromNumber(index.value)
 			label.showAlert = index.state == .Alert
-			label.thumbsUp = index.state == .Good
-			label.healthy = index.state == .Normal
+			label.thumbsUp = index.state == .Nice
+			label.healthy = index.state == .Good
 		}
 	}
 }
