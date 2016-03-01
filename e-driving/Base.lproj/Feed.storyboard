@@ -222,7 +222,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-dl-t9r" customClass="AchievementsView" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="176"/>
+                                                <rect key="frame" x="15" y="60" width="399" height="176"/>
                                             </view>
                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVH-sR-xH6">
                                                 <rect key="frame" x="118.5" y="266" width="177" height="14"/>
@@ -245,7 +245,7 @@
                                             <constraint firstItem="fWx-dl-t9r" firstAttribute="top" secondItem="2ig-5v-NnE" secondAttribute="top" constant="30" id="ThR-U2-s4w"/>
                                             <constraint firstItem="2ig-5v-NnE" firstAttribute="top" secondItem="XB1-0d-g4B" secondAttribute="top" constant="30" id="bKk-zz-ycV"/>
                                             <constraint firstItem="IVH-sR-xH6" firstAttribute="centerX" secondItem="XB1-0d-g4B" secondAttribute="centerX" id="mCP-eg-KAt"/>
-                                            <constraint firstItem="fWx-dl-t9r" firstAttribute="leading" secondItem="XB1-0d-g4B" secondAttribute="leading" id="q2L-bQ-tAw"/>
+                                            <constraint firstItem="fWx-dl-t9r" firstAttribute="leading" secondItem="XB1-0d-g4B" secondAttribute="leading" constant="15" id="q2L-bQ-tAw"/>
                                             <constraint firstItem="2ig-5v-NnE" firstAttribute="centerX" secondItem="XB1-0d-g4B" secondAttribute="centerX" id="tdb-kE-W9O"/>
                                         </constraints>
                                     </view>

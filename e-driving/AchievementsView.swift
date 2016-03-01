@@ -36,7 +36,7 @@ class AchievementView: NibView {
 	}
 }
 
-class AchievementsView: UIView {
+class AchievementsView: UIScrollView {
 	var achievements: [Achievement] = [] {
 		didSet {
 			self -< achievements.map { AchievementView(achievement: $0) }
