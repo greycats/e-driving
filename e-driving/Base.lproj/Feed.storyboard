@@ -37,13 +37,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Uc-4f6">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="441"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="478"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbA-fd-jhQ" customClass="DateTicker" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="81" y="80" width="252" height="21.5"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvp-Ky-DQZ">
-                                                <rect key="frame" x="0.0" y="141" width="414" height="300"/>
+                                                <rect key="frame" x="0.0" y="141" width="414" height="337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DRIVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-6e-jbI">
                                                         <rect key="frame" x="10" y="0.0" width="82.5" height="12"/>
@@ -61,16 +61,30 @@
                                                         </variation>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" image="GoodDriver" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-MH-3DN">
-                                                        <rect key="frame" x="112.5" y="6" width="301.5" height="1"/>
+                                                        <rect key="frame" x="112" y="6" width="301.5" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="VzB-7a-52O"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="to3-tn-Oja">
-                                                        <rect key="frame" x="0.0" y="12" width="414" height="238"/>
+                                                        <rect key="frame" x="0.0" y="12" width="414" height="315"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 7" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-VX-G2h">
+                                                                <rect key="frame" x="-76" y="0.0" width="542" height="315"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="542" id="4Gd-mx-UL7"/>
+                                                                    <constraint firstAttribute="height" constant="315" id="5lJ-Fx-IRI"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="jGN-VX-G2h" firstAttribute="top" secondItem="to3-tn-Oja" secondAttribute="top" id="L2J-yQ-eSh"/>
+                                                            <constraint firstItem="jGN-VX-G2h" firstAttribute="centerX" secondItem="to3-tn-Oja" secondAttribute="centerX" multiplier="0.98" constant="-8" id="ehD-2P-gsd"/>
+                                                            <constraint firstAttribute="bottom" secondItem="jGN-VX-G2h" secondAttribute="bottom" id="pdl-vY-Uv4"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70N-0F-Uhx">
-                                                        <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                                                        <rect key="frame" x="0.0" y="287" width="414" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-er-5Lm">
                                                                 <rect key="frame" x="35" y="15" width="33" height="12"/>
@@ -163,14 +177,12 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="70N-0F-Uhx" firstAttribute="top" secondItem="to3-tn-Oja" secondAttribute="bottom" id="1bK-Bc-WNR"/>
+                                                    <constraint firstItem="70N-0F-Uhx" firstAttribute="bottom" secondItem="to3-tn-Oja" secondAttribute="bottom" constant="10" id="1bK-Bc-WNR"/>
                                                     <constraint firstItem="Vrt-MH-3DN" firstAttribute="leading" secondItem="jKL-6e-jbI" secondAttribute="trailing" constant="20" id="5DC-Eh-MTG"/>
                                                     <constraint firstAttribute="trailing" secondItem="70N-0F-Uhx" secondAttribute="trailing" id="Bts-eb-th9"/>
                                                     <constraint firstItem="to3-tn-Oja" firstAttribute="top" secondItem="jKL-6e-jbI" secondAttribute="bottom" id="CzW-oA-TVa"/>
                                                     <constraint firstItem="to3-tn-Oja" firstAttribute="leading" secondItem="pvp-Ky-DQZ" secondAttribute="leading" id="Ibi-DI-aca"/>
-                                                    <constraint firstAttribute="bottom" secondItem="to3-tn-Oja" secondAttribute="bottom" constant="50" id="KYK-TF-9dO"/>
                                                     <constraint firstItem="jKL-6e-jbI" firstAttribute="top" secondItem="pvp-Ky-DQZ" secondAttribute="top" id="QFb-4X-31N"/>
-                                                    <constraint firstAttribute="height" constant="300" id="eRt-Xz-UMb"/>
                                                     <constraint firstItem="Vrt-MH-3DN" firstAttribute="top" secondItem="pvp-Ky-DQZ" secondAttribute="top" constant="6" id="fOz-IU-rLJ"/>
                                                     <constraint firstItem="jKL-6e-jbI" firstAttribute="leading" secondItem="pvp-Ky-DQZ" secondAttribute="leading" constant="10" id="gWk-J6-MUp"/>
                                                     <constraint firstAttribute="trailing" secondItem="to3-tn-Oja" secondAttribute="trailing" id="l7v-xO-jO5"/>
@@ -178,11 +190,6 @@
                                                     <constraint firstItem="70N-0F-Uhx" firstAttribute="leading" secondItem="pvp-Ky-DQZ" secondAttribute="leading" id="u6f-kk-7VT"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vrt-MH-3DN" secondAttribute="trailing" id="uq5-Hh-CrK"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="KYK-TF-9dO"/>
-                                                    </mask>
-                                                </variation>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -195,19 +202,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrt-XX-CgZ" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="441" width="414" height="72"/>
+                                        <rect key="frame" x="0.0" y="478" width="414" height="72"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-W9-Nmy" customClass="RouteView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="513" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="550" width="414" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" placeholder="YES" id="5sd-36-ZXL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7R3-O6-HYc" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="513" width="414" height="72"/>
+                                        <rect key="frame" x="0.0" y="550" width="414" height="72"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB1-0d-g4B">
-                                        <rect key="frame" x="0.0" y="585" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="622" width="414" height="300"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEEKLY ACHIEVEMENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-5v-NnE">
                                                 <rect key="frame" x="112" y="30" width="190" height="16"/>
@@ -313,6 +320,7 @@
     </scenes>
     <resources>
         <image name="GoodDriver" width="294" height="21"/>
+        <image name="Group 7" width="558" height="251"/>
         <image name="gear" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>

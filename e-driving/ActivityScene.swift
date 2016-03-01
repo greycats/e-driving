@@ -16,6 +16,7 @@ class ActivityViewController: UIViewController, ColorPalette, Overlayed {
 
 	override func viewDidLoad() {
 		applyTheme(.Dark)
+		dateTicker.userInteractionEnabled = false
 		routeView.route = [
 			RouteHistory(timestamp: NSDate(), location: CLLocation(latitude: 37.662438, longitude: -122.424233), recoginzedName: "Home", milesToNext: 6),
 			RouteHistory(timestamp: NSDate(), location: CLLocation(latitude: 37.666325, longitude: -122.433674), recoginzedName: nil, milesToNext: nil),
