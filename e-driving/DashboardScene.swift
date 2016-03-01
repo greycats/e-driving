@@ -38,5 +38,8 @@ class DashboardViewController: UIViewController, ColorPalette, Overlayed {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		milesView.miles = 8.5
+		dateTicker.onDateChange = {[weak self] _ in
+			self?.milesView.miles = Double(random() % 200) / 10
+		}
 	}
 }
