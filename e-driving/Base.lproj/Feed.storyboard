@@ -223,7 +223,6 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-dl-t9r" customClass="AchievementsView" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="60" width="414" height="176"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVH-sR-xH6">
                                                 <rect key="frame" x="118.5" y="266" width="177" height="14"/>
@@ -303,6 +302,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="achievementsView" destination="fWx-dl-t9r" id="2vy-hW-rCf"/>
                         <outlet property="dateTicker" destination="fbA-fd-jhQ" id="QzX-RL-Fnr"/>
                         <outlet property="routeView" destination="9tI-W9-Nmy" id="B9S-Xb-Xgb"/>
                     </connections>

@@ -12,6 +12,7 @@ import CoreLocation
 class ActivityViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var dateTicker: DateTicker!
+	@IBOutlet weak var achievementsView: AchievementsView!
 
 	override func viewDidLoad() {
 		applyTheme(.Dark)
@@ -23,5 +24,6 @@ class ActivityViewController: UIViewController, ColorPalette {
 		]
 
 		dateTicker.date = NSDate()
+		achievementsView.achievements = [Achievement.PerfectDriver, Achievement.SmoothnessLevel(2), Achievement.CalmnessLevel]
 	}
 }

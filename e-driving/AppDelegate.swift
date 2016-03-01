@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			BITHockeyManager.sharedHockeyManager().startManager()
 			BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
 		}
-		print(String(Achievement.Hours(1)))
 		return true
 	}
 
