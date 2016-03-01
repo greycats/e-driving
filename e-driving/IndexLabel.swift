@@ -31,6 +31,17 @@ class IndexLabel: NibView, ColorPalette {
 		numberLabel?.text = value
 	}
 
+	var healthy: Bool = false
+	@IBInspectable var thumbsUp: Bool = false {
+		didSet { updateThumb() }
+	}
+	@IBOutlet weak var thumbView: UIImageView! {
+		didSet { updateThumb() }
+	}
+	private func updateThumb() {
+		thumbView?.hidden = !thumbsUp
+	}
+
 	@IBInspectable var showAlert: Bool = false {
 		didSet { updateAlert() }
 	}
@@ -41,14 +52,69 @@ class IndexLabel: NibView, ColorPalette {
 		alertView?.hidden = !showAlert
 	}
 
-	func applyTheme(theme: Theme) {
-		switch theme {
-		case .Dark:
-			numberLabel.textColor = UIColor(hexRGB: 0xECF0F1)
-			titleLabel.textColor = UIColor(white: 1, alpha: 0.5)
-		case .Light:
-//			titleLabel.textColor = UIColor(hexRGB: 0xECF0F1)
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .SupplymentText:
+			titleLabel.textColor = color
+		case .MainText:
+			if !thumbsUp && !showAlert && !healthy {
+				numberLabel.textColor = color
+			}
+		case .Highlight:
+			if thumbsUp || healthy {
+				numberLabel.textColor = color
+			}
+		case .Alert:
+			if showAlert {
+				numberLabel.textColor = color
+			}
+		default:
 			break
+		}
+	}
+}
+
+enum CarIndexState {
+	case Normal
+	case Alert
+	case Good
+}
+
+struct CarIndex {
+	let title: String
+	let value: Double
+	let state: CarIndexState
+	let highlight: Bool
+	init(title: String, value: Double, state: CarIndexState = .Normal, highlight: Bool = false) {
+		self.title = title
+		self.value = value
+		self.state = state
+		self.highlight = highlight
+	}
+}
+
+extension UIView {
+	func stack(index: CarIndex...) {
+		let labels = index.map { _ in IndexLabel() }
+		horizontalStack(labels, marginX: 13, equalWidth: false)
+		labels.apply(index)
+		labels.forEach { $0.applyTheme(.Dark) }
+	}
+}
+
+extension CollectionType where Generator.Element == IndexLabel, Index == Int {
+	func apply(index: [CarIndex]) {
+		let formatter = NSNumberFormatter()
+		formatter.maximumFractionDigits = 1
+		formatter.groupingSize = 3
+
+		index.enumerate().forEach { i, index in
+			let label = self[i]
+			label.titleLabel.text = index.title.uppercaseString
+			label.numberLabel.text = formatter.stringFromNumber(index.value)
+			label.showAlert = index.state == .Alert
+			label.thumbsUp = index.state == .Good
+			label.healthy = index.state == .Normal
 		}
 	}
 }

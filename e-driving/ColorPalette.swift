@@ -20,6 +20,7 @@ enum ColorCategory {
 	case Line
 	case SupplymentText
 	case Highlight
+	case Alert
 }
 
 protocol ColorPalette {
@@ -63,14 +64,16 @@ private let Dark: [ColorCategory: UIColor] = [
 	.Foreground: UIColor(hexRGB: 0x072E86),
 	.MainText: UIColor(hexRGB: 0xFFFFFF),
 	.SupplymentText: UIColor(hexRGB: 0x8396C0),
-	.Highlight: UIColor(hexRGB: 0x50D5C2)
+	.Highlight: UIColor(hexRGB: 0x2CBC69),
+	.Alert: UIColor(hexRGB: 0xFF3B30),
 ]
 
 private let DarkOverlay: [ColorCategory: UIColor] = [
 	.Foreground: UIColor(hexa: 0x3F98FF, hexb: 0x0E2A4B),
 	.MainText: UIColor(hexa: 0x3F98FF, hexb: 0xFFFFFF),
-	.SupplymentText: UIColor(hexa: 0x3F98FF, hexb: 0x8396C0),
-	.Highlight: UIColor(hexa: 0x3F98FF, hexb: 0x50D5C2)
+	.SupplymentText: UIColor(white: 1, alpha: 0.5),
+	.Highlight: UIColor(hexa: 0x3F98FF, hexb: 0x2CBC69),
+	.Alert: UIColor(hexa: 0x3F98FF, hexb: 0xFF3B30),
 ]
 
 extension ColorPalette {

@@ -34,64 +34,9 @@
                                             </view>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2TA-6R-EkF">
                                                 <rect key="frame" x="37" y="325" width="340.5" height="88"/>
-                                                <subviews>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcj-rh-oSl" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="88"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                                <string key="value">MILES
-PER GALLON</string>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="31.2"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzl-Jn-YC9" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="118.5" y="0.0" width="48" height="88"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                                <string key="value">HARD
-BRAKES</string>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="4"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6U6-vv-ePK" userLabel="accele" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="210.5" y="0.0" width="47" height="88"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                                <string key="value">HARD
-ACCELE</string>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="5"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKx-Cb-vdi" userLabel="speed" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="301.5" y="0.0" width="39" height="88"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="key">
-                                                                <string key="value">OVER
-SPEED</string>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="23"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showAlert" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Gzl-Jn-YC9" firstAttribute="top" secondItem="2TA-6R-EkF" secondAttribute="top" id="0M5-Fv-fVD"/>
-                                                    <constraint firstItem="Gzl-Jn-YC9" firstAttribute="leading" secondItem="Wcj-rh-oSl" secondAttribute="trailing" constant="43" id="1h8-tz-oCc"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mKx-Cb-vdi" secondAttribute="bottom" id="5wN-4C-IUO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Wcj-rh-oSl" secondAttribute="bottom" id="DiQ-eE-kN1"/>
-                                                    <constraint firstItem="Wcj-rh-oSl" firstAttribute="top" secondItem="2TA-6R-EkF" secondAttribute="top" id="O6d-mQ-s7N"/>
-                                                    <constraint firstItem="6U6-vv-ePK" firstAttribute="leading" secondItem="Gzl-Jn-YC9" secondAttribute="trailing" constant="44" id="b7R-yw-o9J"/>
-                                                    <constraint firstItem="Wcj-rh-oSl" firstAttribute="leading" secondItem="2TA-6R-EkF" secondAttribute="leading" id="c69-pM-dJW"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6U6-vv-ePK" secondAttribute="bottom" id="ciS-cS-Ysx"/>
+                                                    <constraint firstAttribute="width" constant="340.5" placeholder="YES" id="CPu-Xn-Scz"/>
                                                     <constraint firstAttribute="height" constant="88" id="cnl-WO-vgB"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mKx-Cb-vdi" secondAttribute="trailing" id="m5q-MP-HEz"/>
-                                                    <constraint firstItem="mKx-Cb-vdi" firstAttribute="leading" secondItem="6U6-vv-ePK" secondAttribute="trailing" constant="44" id="ocG-3m-zoH"/>
-                                                    <constraint firstItem="6U6-vv-ePK" firstAttribute="top" secondItem="2TA-6R-EkF" secondAttribute="top" id="pOz-LE-Mon"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Gzl-Jn-YC9" secondAttribute="bottom" id="qMz-8F-cyM"/>
-                                                    <constraint firstItem="mKx-Cb-vdi" firstAttribute="top" secondItem="2TA-6R-EkF" secondAttribute="top" id="zWV-ne-Ugh"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -184,12 +129,8 @@ SPEED</string>
                     <size key="freeformSize" width="414" height="1041"/>
                     <connections>
                         <outlet property="experienceView" destination="vvh-2S-mkU" id="2Mg-ZJ-jOU"/>
-                        <outlet property="hardAcceleLabel" destination="6U6-vv-ePK" id="q0M-Rm-TKy"/>
-                        <outlet property="hardBrakesLabel" destination="Gzl-Jn-YC9" id="qK8-Ad-fxK"/>
-                        <outlet property="indicesView" destination="2TA-6R-EkF" id="cAJ-lj-sMY"/>
-                        <outlet property="milesPerGallonLabel" destination="Wcj-rh-oSl" id="oNe-2X-T4V"/>
+                        <outlet property="indicesView" destination="2TA-6R-EkF" id="tz7-Hh-s1u"/>
                         <outlet property="milesView" destination="M6N-NU-xa5" id="QMR-JZ-82A"/>
-                        <outlet property="overSpeedLabel" destination="mKx-Cb-vdi" id="IM0-nP-Bpx"/>
                         <outlet property="routeView" destination="723-cb-znw" id="nOA-Nh-fbB"/>
                         <outlet property="scrollView" destination="GlL-wq-ITb" id="sOo-Qy-7IE"/>
                     </connections>

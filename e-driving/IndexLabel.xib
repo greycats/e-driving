@@ -17,6 +17,7 @@
             <connections>
                 <outlet property="alertView" destination="a6S-c9-o6f" id="5qa-Mo-qXm"/>
                 <outlet property="numberLabel" destination="abZ-t4-hVI" id="OiR-XU-sSd"/>
+                <outlet property="thumbView" destination="dt4-xo-bKe" id="RZm-7X-uSm"/>
                 <outlet property="titleLabel" destination="huY-EY-lAB" id="rjy-9q-qdf"/>
             </connections>
         </placeholder>
@@ -38,13 +39,18 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-c9-o6f">
+                    <rect key="frame" x="75" y="1" width="21" height="21"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-xo-bKe">
                     <rect key="frame" x="75" y="1.5" width="21" height="21"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="dt4-xo-bKe" firstAttribute="centerX" secondItem="a6S-c9-o6f" secondAttribute="centerX" id="K4x-CL-ilc"/>
                 <constraint firstItem="abZ-t4-hVI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="Keo-mx-PUQ"/>
                 <constraint firstAttribute="bottom" secondItem="huY-EY-lAB" secondAttribute="bottom" priority="750" id="LcH-Y1-EEx"/>
+                <constraint firstItem="dt4-xo-bKe" firstAttribute="centerY" secondItem="a6S-c9-o6f" secondAttribute="centerY" id="dbC-ng-eGK"/>
                 <constraint firstItem="huY-EY-lAB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pJi-IZ-zLb"/>
                 <constraint firstItem="a6S-c9-o6f" firstAttribute="centerX" secondItem="abZ-t4-hVI" secondAttribute="trailing" id="pga-PY-ysD"/>
                 <constraint firstItem="abZ-t4-hVI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="tVS-jJ-I2O"/>
@@ -62,5 +68,6 @@
     </objects>
     <resources>
         <image name="alert" width="21" height="21"/>
+        <image name="thumb" width="21" height="21"/>
     </resources>
 </document>
