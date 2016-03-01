@@ -5,7 +5,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </mutableArray>
         <mutableArray key="SFUIText-Regular.otf">
+            <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
@@ -204,22 +208,73 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7R3-O6-HYc" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="514" width="414" height="72"/>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB1-0d-g4B">
+                                        <rect key="frame" x="0.0" y="586" width="414" height="300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEEKLY ACHIEVEMENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-5v-NnE">
+                                                <rect key="frame" x="112" y="30" width="190" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="190" id="YcK-q9-VLY"/>
+                                                    <constraint firstAttribute="height" constant="16" id="ttB-2E-M1I"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-dl-t9r" customClass="AchievementsView" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60" width="414" height="176"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVH-sR-xH6">
+                                                <rect key="frame" x="118.5" y="266" width="177" height="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="i3z-yP-mfP"/>
+                                                    <constraint firstAttribute="height" constant="14" id="qWK-fL-aDm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
+                                                <state key="normal" title="See more">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fWx-dl-t9r" secondAttribute="trailing" id="1SL-Gk-X07"/>
+                                            <constraint firstItem="IVH-sR-xH6" firstAttribute="top" secondItem="fWx-dl-t9r" secondAttribute="bottom" constant="30" id="Edh-Cx-FXF"/>
+                                            <constraint firstAttribute="height" constant="300" id="MTd-qO-BUv"/>
+                                            <constraint firstAttribute="bottom" secondItem="IVH-sR-xH6" secondAttribute="bottom" constant="20" id="MpI-QV-tO3"/>
+                                            <constraint firstItem="fWx-dl-t9r" firstAttribute="top" secondItem="2ig-5v-NnE" secondAttribute="top" constant="30" id="ThR-U2-s4w"/>
+                                            <constraint firstItem="2ig-5v-NnE" firstAttribute="top" secondItem="XB1-0d-g4B" secondAttribute="top" constant="30" id="bKk-zz-ycV"/>
+                                            <constraint firstItem="IVH-sR-xH6" firstAttribute="centerX" secondItem="XB1-0d-g4B" secondAttribute="centerX" id="mCP-eg-KAt"/>
+                                            <constraint firstItem="fWx-dl-t9r" firstAttribute="leading" secondItem="XB1-0d-g4B" secondAttribute="leading" id="q2L-bQ-tAw"/>
+                                            <constraint firstItem="2ig-5v-NnE" firstAttribute="centerX" secondItem="XB1-0d-g4B" secondAttribute="centerX" id="tdb-kE-W9O"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9tI-W9-Nmy" firstAttribute="bottom" secondItem="7R3-O6-HYc" secondAttribute="top" id="41B-vP-MkA"/>
                                     <constraint firstItem="TGw-Uc-4f6" firstAttribute="top" secondItem="NFx-uL-see" secondAttribute="top" id="7Kn-Vc-z5e"/>
                                     <constraint firstAttribute="trailing" secondItem="zrt-XX-CgZ" secondAttribute="trailing" id="7Tt-X9-auG"/>
                                     <constraint firstAttribute="trailing" secondItem="9tI-W9-Nmy" secondAttribute="trailing" id="8k3-J3-S2U"/>
+                                    <constraint firstAttribute="trailing" secondItem="XB1-0d-g4B" secondAttribute="trailing" id="8lL-JK-fFM"/>
                                     <constraint firstAttribute="trailing" secondItem="TGw-Uc-4f6" secondAttribute="trailing" id="9rI-Ws-XJK"/>
                                     <constraint firstItem="7R3-O6-HYc" firstAttribute="leading" secondItem="NFx-uL-see" secondAttribute="leading" id="Cy8-Wr-8eF"/>
                                     <constraint firstItem="9tI-W9-Nmy" firstAttribute="leading" secondItem="NFx-uL-see" secondAttribute="leading" id="QeO-DI-hpp"/>
+                                    <constraint firstItem="XB1-0d-g4B" firstAttribute="leading" secondItem="NFx-uL-see" secondAttribute="leading" id="RCr-pW-nym"/>
                                     <constraint firstItem="zrt-XX-CgZ" firstAttribute="leading" secondItem="NFx-uL-see" secondAttribute="leading" id="VFw-E8-mII"/>
+                                    <constraint firstItem="XB1-0d-g4B" firstAttribute="top" secondItem="7R3-O6-HYc" secondAttribute="bottom" id="aX9-XQ-gGg"/>
                                     <constraint firstItem="9tI-W9-Nmy" firstAttribute="top" secondItem="zrt-XX-CgZ" secondAttribute="bottom" id="bHg-US-u5a"/>
                                     <constraint firstAttribute="bottom" secondItem="7R3-O6-HYc" secondAttribute="bottom" id="bnr-7h-f7h"/>
                                     <constraint firstItem="zrt-XX-CgZ" firstAttribute="top" secondItem="TGw-Uc-4f6" secondAttribute="bottom" id="h3x-I9-Bxv"/>
                                     <constraint firstAttribute="trailing" secondItem="7R3-O6-HYc" secondAttribute="trailing" id="hq1-Wv-UNT"/>
                                     <constraint firstItem="TGw-Uc-4f6" firstAttribute="leading" secondItem="NFx-uL-see" secondAttribute="leading" id="mVn-hX-kgQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XB1-0d-g4B" secondAttribute="bottom" id="vUP-7W-CHh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bnr-7h-f7h"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
