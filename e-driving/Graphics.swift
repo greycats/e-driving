@@ -243,6 +243,33 @@ class AlertIcon: UIView {
 	}
 }
 
+class ActivityLine: UIView {
+	override func drawRect(rect: CGRect) {
+		let path = UIBezierPath()
+		let r: CGFloat = rect.size.width / 7 / 2
+		let x0: CGFloat = -r
+		let numbers: [CGFloat] = [49.59, 85.37, 37.8, 1.98, 55.67, 1.84, 36]
+		var y: CGFloat = rect.size.height + 30
+		var x = x0
+		path.moveToPoint(CGPoint(x: x, y: y))
+		tintColor.setStroke()
+
+		for number in numbers {
+			let l = UIBezierPath()
+			l.moveToPoint(CGPoint(x: x, y: y))
+			l.addLineToPoint(CGPoint(x: x, y: rect.size.height))
+			l.stroke()
+			x += r * 2
+			path.addCurveToPoint(CGPoint(x: x, y: number), controlPoint1: CGPoint(x: x - r, y: y), controlPoint2: CGPoint(x: x - r, y: number))
+			y = number
+
+		}
+		tintColor.setStroke()
+		path.lineWidth = 2
+		path.stroke()
+	}
+}
+
 @IBDesignable
 class Ripple: UIView {
 	let animation = Animation()
