@@ -4,3 +4,4 @@ use_frameworks!
 
 pod 'Greycats', '~> 2.4.2'
 pod 'HockeySDK'
+pod 'FontAwesome.swift'

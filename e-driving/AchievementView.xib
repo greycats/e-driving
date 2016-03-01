@@ -3,15 +3,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="SFUIText-Semibold.otf">
-            <string>SFUIText-Semibold</string>
-        </mutableArray>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementView" customModule="e_driving" customModuleProvider="target">
             <connections>
-                <outlet property="captionLabel" destination="W0F-8b-vYL" id="LTy-09-nau"/>
+                <outlet property="captionLabel" destination="q5S-Kh-dew" id="yLu-hn-ZSe"/>
                 <outlet property="imageView" destination="Njh-U9-22C" id="rGW-Wo-ti6"/>
             </connections>
         </placeholder>
@@ -32,27 +27,43 @@
                         </mask>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-8b-vYL">
-                    <rect key="frame" x="0.0" y="142" width="156" height="44"/>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5S-Kh-dew" customClass="GradientLabel" customModule="e_driving" customModuleProvider="target">
+                    <rect key="frame" x="15" y="142" width="127" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="XWv-l8-0II"/>
+                        <constraint firstAttribute="height" constant="44" id="E3g-AV-gKx"/>
+                        <constraint firstAttribute="width" constant="127" id="vtg-Nt-n6t"/>
                     </constraints>
-                    <string key="text">PERFECT
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                            <color key="value" red="0.22745098039215686" green="0.4823529411764706" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                            <color key="value" red="0.0" green="0.82352941180000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc1">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="loc2">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text">
+                            <string key="value">PERFECT
 DRIVER</string>
-                    <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="16"/>
-                    <color key="textColor" red="0.22745098039215686" green="0.4823529411764706" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <constraints>
-                <constraint firstItem="W0F-8b-vYL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Vz-Fm-aY0"/>
+                <constraint firstItem="q5S-Kh-dew" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-84" id="44Q-dU-p75"/>
                 <constraint firstItem="Njh-U9-22C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="636-zO-mlz"/>
+                <constraint firstItem="q5S-Kh-dew" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="B3T-7q-IIW"/>
+                <constraint firstAttribute="bottom" secondItem="q5S-Kh-dew" secondAttribute="bottom" id="B4I-8K-FV1"/>
                 <constraint firstAttribute="bottom" secondItem="Njh-U9-22C" secondAttribute="bottom" constant="32" id="DYy-Zc-Pgg"/>
-                <constraint firstAttribute="trailing" secondItem="W0F-8b-vYL" secondAttribute="trailing" id="F4k-je-B5f"/>
-                <constraint firstItem="W0F-8b-vYL" firstAttribute="top" secondItem="Njh-U9-22C" secondAttribute="bottom" id="RYu-Ud-Eha"/>
+                <constraint firstItem="q5S-Kh-dew" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IBU-HZ-72J"/>
                 <constraint firstItem="Njh-U9-22C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nP8-CT-ddB"/>
-                <constraint firstAttribute="bottom" secondItem="W0F-8b-vYL" secondAttribute="bottom" id="nPM-Rc-li3"/>
                 <constraint firstAttribute="trailing" secondItem="Njh-U9-22C" secondAttribute="trailing" constant="28" id="s6b-UT-isr"/>
+                <constraint firstItem="q5S-Kh-dew" firstAttribute="top" secondItem="Njh-U9-22C" secondAttribute="bottom" id="wvp-pG-FTv"/>
+                <constraint firstAttribute="trailing" secondItem="q5S-Kh-dew" secondAttribute="trailing" id="xcP-Nj-dRZ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -61,6 +72,9 @@ DRIVER</string>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="DYy-Zc-Pgg"/>
+                    <exclude reference="44Q-dU-p75"/>
+                    <exclude reference="B3T-7q-IIW"/>
+                    <exclude reference="xcP-Nj-dRZ"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="239" y="258"/>
