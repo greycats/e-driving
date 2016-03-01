@@ -38,17 +38,24 @@ class ClockView: UIView, ColorPalette {
 
 	@IBInspectable var needleSize: CGSize = CGSize(width: 1.15, height: 5.57) {
 		didSet {
-			let circleSize = bounds.size
-			let startPoint = CGPoint(x: -needleSize.width / 2, y: -circleSize.height / 2)
-			origin = CGPoint(x: circleSize.width / 2, y: -startPoint.y)
-			let cornerRadius = needleSize.width / 2
-			paths = (0..<needleCount).map { _ in
-				UIBezierPath(roundedRect: CGRect(origin: startPoint, size: needleSize), cornerRadius: cornerRadius)
-			}
+			generatePaths()
+		}
+	}
+
+	func generatePaths() {
+		let circleSize = bounds.size
+		let startPoint = CGPoint(x: -needleSize.width / 2, y: -circleSize.height / 2)
+		let cornerRadius = needleSize.width / 2
+		origin = CGPoint(x: circleSize.width / 2, y: -startPoint.y)
+		paths = (0..<needleCount).map { _ in
+			UIBezierPath(roundedRect: CGRect(origin: startPoint, size: needleSize), cornerRadius: cornerRadius)
 		}
 	}
 
 	override func drawRect(rect: CGRect) {
+		if paths.count == 0 {
+			generatePaths()
+		}
 		let context = UIGraphicsGetCurrentContext()
 		CGContextSaveGState(context)
 		CGContextTranslateCTM(context, origin.x, origin.y)

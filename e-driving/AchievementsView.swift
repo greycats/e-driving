@@ -10,37 +10,41 @@ import Greycats
 
 @IBDesignable
 class GradientLabel: GradientView {
-	private var attributedText: NSAttributedString!
+	private var attributedText: [NSAttributedString]!
 	@IBInspectable var fontName: String = "SFUIText-Semibold" { didSet { updateText() } }
 	@IBInspectable var text: String! { didSet { updateText() } }
 
 	func updateText() {
-		attributedText = NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont(name: fontName, size: 16)!])
+		attributedText = text.componentsSeparatedByString("\n").map {
+			NSAttributedString(string: $0, attributes: [NSFontAttributeName: UIFont(name: fontName, size: 16)!])
+		}
 		setNeedsDisplay()
 	}
 
 	override func drawRect(rect: CGRect) {
-		let context = UIGraphicsGetCurrentContext()
-		backgroundColor = UIColor.clearColor()
-		CGContextSaveGState(context)
-		let line = CTLineCreateWithAttributedString(attributedText)
-		let trect = CTLineGetBoundsWithOptions(line, .UseGlyphPathBounds)
+		guard let context = UIGraphicsGetCurrentContext() else { return }
 		let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [color1.CGColor, color2.CGColor], [0, 1])
 
-		CGContextRestoreGState(context)
 		CGContextSaveGState(context)
-		CGContextTranslateCTM(context, 0.0, rect.size.height)
-		CGContextScaleCTM(context, 1.0, -1.0)
-		CGContextSetTextPosition(context, (rect.size.width - trect.size.width) / 2, (rect.size.height - trect.size.height) / 2)
-		CGContextSetTextDrawingMode(context, .Clip)
-		CTLineDraw(line, context!)
+
+		attributedText.enumerate().forEach { i, text in
+			CGContextRestoreGState(context)
+			CGContextSaveGState(context)
+			CGContextTranslateCTM(context, 0.0, rect.size.height)
+			CGContextScaleCTM(context, 1.0, -1.0)
+			let line = CTLineCreateWithAttributedString(text)
+			let trect = CTLineGetBoundsWithOptions(line, .UseGlyphPathBounds)
+			CGContextSetTextPosition(context, (rect.size.width - trect.size.width) / 2, rect.size.height - CGFloat(i + 1) * 22)
+			CGContextSetTextDrawingMode(context, .Clip)
+			CTLineDraw(line, context)
+			CGContextDrawLinearGradient(context, gradient,
+				CGPointMake(rect.size.width * loc1.x, rect.size.height * loc1.y),
+				CGPointMake(rect.size.width * loc2.x, rect.size.height * loc2.y),
+				[.DrawsBeforeStartLocation, .DrawsAfterEndLocation])
+		}
 		if !CGContextIsPathEmpty(context) {
 			CGContextClip(context)
 		}
-		CGContextDrawLinearGradient(context, gradient,
-			CGPointMake(rect.size.width * loc1.x, rect.size.height * loc1.y),
-			CGPointMake(rect.size.width * loc2.x, rect.size.height * loc2.y),
-			[.DrawsBeforeStartLocation, .DrawsAfterEndLocation])
 		CGContextRestoreGState(context)
 	}
 }
