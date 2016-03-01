@@ -45,7 +45,7 @@ class IndexLabel: NibView, ColorPalette {
 	@IBInspectable var showAlert: Bool = false {
 		didSet { updateAlert() }
 	}
-	@IBOutlet weak var alertView: UIImageView! {
+	@IBOutlet weak var alertView: AlertIcon! {
 		didSet { updateAlert() }
 	}
 	private func updateAlert() {
@@ -54,6 +54,11 @@ class IndexLabel: NibView, ColorPalette {
 
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
+		case .Alert:
+			alertView.tintColor = color
+			if showAlert {
+				numberLabel.textColor = color
+			}
 		case .SupplymentText:
 			titleLabel.textColor = color
 		case .MainText:
@@ -62,10 +67,6 @@ class IndexLabel: NibView, ColorPalette {
 			}
 		case .Highlight:
 			if thumbsUp || healthy {
-				numberLabel.textColor = color
-			}
-		case .Alert:
-			if showAlert {
 				numberLabel.textColor = color
 			}
 		default:

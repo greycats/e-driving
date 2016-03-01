@@ -45,6 +45,7 @@
                                             <constraint firstAttribute="bottom" secondItem="2TA-6R-EkF" secondAttribute="bottom" id="W2x-cV-FJg"/>
                                             <constraint firstItem="2TA-6R-EkF" firstAttribute="centerX" secondItem="RU7-Pe-24n" secondAttribute="centerX" id="WUB-Xi-P0R"/>
                                             <constraint firstItem="2TA-6R-EkF" firstAttribute="top" secondItem="M6N-NU-xa5" secondAttribute="bottom" constant="45" id="sZx-Bg-g0z"/>
+                                            <constraint firstItem="2TA-6R-EkF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RU7-Pe-24n" secondAttribute="leading" constant="10" id="vUf-CJ-UCw"/>
                                             <constraint firstItem="M6N-NU-xa5" firstAttribute="top" secondItem="RU7-Pe-24n" secondAttribute="top" constant="100" id="x8P-SS-Km3"/>
                                         </constraints>
                                     </view>

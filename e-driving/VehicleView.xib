@@ -45,10 +45,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL9-sR-Xvd" customClass="AlertIcon" customModule="e_driving" customModuleProvider="target">
-                    <rect key="frame" x="120.5" y="87.5" width="21" height="21"/>
+                    <rect key="frame" x="119.5" y="86.5" width="23" height="23"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="KyA-va-eFW"/>
-                        <constraint firstAttribute="width" constant="21" id="MSj-dH-c0u"/>
+                        <constraint firstAttribute="height" constant="23" id="KyA-va-eFW"/>
+                        <constraint firstAttribute="width" constant="23" id="MSj-dH-c0u"/>
                     </constraints>
                 </view>
             </subviews>
