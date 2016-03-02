@@ -25,16 +25,21 @@ class MechanicCell: UITableViewCell, TableViewDataNibCell {
 
 	var mechanic: MechanicInfo! {
 		didSet {
-			nameLabel.text = mechanic.name
+			nameLabel.text = mechanic.name.uppercaseString
 			addressLabel.text = mechanic.address
-			miles.text = "\(mechanic.miles) Miles"
+			let formatter = NSNumberFormatter()
+			formatter.minimumFractionDigits = 0
+			formatter.maximumFractionDigits = 1
+			formatter.groupingSize = 3
+			miles.text = "\(formatter.stringFromNumber(mechanic.miles)!) Miles"
 		}
 	}
 }
 
 class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
+	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var vehicleView: VehicleView!
-	@IBOutlet weak var findMechanic: ButtonView!
+	@IBOutlet weak var findButton: ButtonView!
 	@IBOutlet weak var indicesView: UIView!
 	@IBOutlet var indices: [IndexLabel]!
 	@IBOutlet weak var driverImage: UIImageView!
@@ -42,6 +47,8 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var milesView: MilesView!
 	@IBOutlet weak var mechanicsTableView: UITableView!
 	@IBOutlet weak var alertsView: UIView!
+
+	@IBOutlet weak var map: UIImageView!
 	let mechanics = TableViewDataNib<MechanicInfo, MechanicCell>(title: nil)
 		.onRender { $0.mechanic = $1 }
 
@@ -82,5 +89,10 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 
 		connectTableView(mechanicsTableView, sections: [mechanics])
 		mechanicsTableView.tableFooterView = UIView()
+		findButton.buttonView.addTarget(self, action: "findAMechanic", forControlEvents: .TouchUpInside)
+	}
+
+	func findAMechanic() {
+		scrollView.scrollRectToVisible(mechanicsTableView.frame, animated: true)
 	}
 }
