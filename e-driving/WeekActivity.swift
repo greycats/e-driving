@@ -22,23 +22,24 @@ class ActivityLine: UIView {
 	var x0: CGFloat!
 	var numbers: [CGFloat]!
 	var thickness: CGFloat = 2
+	var glow: Bool = false
 
-	private var _weekOffset: Int = 20
-	var weekOffset: Int {
-		get { return _weekOffset }
-		set(value) {
-			if value <= 20 && value >= 0 {
-				_weekOffset = value
-				setNeedsDisplay()
-			}
+	var weekOffset: Int = 20 {
+		didSet { setNeedsDisplay() }
+	}
+
+	func currentY(offset: Int) -> CGFloat {
+		let p0 = numbers[weekOffset * 4 + offset / 2]
+		if offset % 2 == 1 {
+			let p1 = numbers[weekOffset * 4 + offset / 2 + 1]
+			return translateY((p0 + p1) / 2)
+		} else {
+			return translateY(p0)
 		}
 	}
 
-	var glow: Bool = false
-
-	func currentY(offset: Int) -> CGFloat {
-		let number = numbers[weekOffset * 4 + offset / 2]
-		return bounds.size.height * (0.1 + 0.7 * number)
+	func translateY(number: CGFloat) -> CGFloat {
+		return bounds.size.height * (0.8 - 0.8 * number)
 	}
 
 	override func drawRect(rect: CGRect) {
@@ -49,44 +50,59 @@ class ActivityLine: UIView {
 		var sim = true
 		let start = weekOffset * 4
 		let subset = numbers[start..<start + 5]
-		print(start)
 		if start > 0 {
 			y = numbers[start - 1]
 		} else {
 			y = rect.size.height + 30
 		}
 
-		path.moveToPoint(CGPoint(x: x, y: y))
+		path.moveToPoint(CGPoint(x: x - step * 2, y: rect.size.height + 30))
+		path.addLineToPoint(CGPoint(x: x, y: y))
 		for number in subset {
 			let oldX = x
 			let oldY = y
 			x += step * 2
-			y = rect.size.height * (0.1 + 0.7 * number) // 10% ~ 80%
+			y = translateY(number)
 			path.addCurveToPoint(CGPoint(x: x, y: y), controlPoint1: CGPoint(x: sim ? oldX : oldX + r, y: oldY), controlPoint2: CGPoint(x: x - r, y: y))
 			sim = false
 		}
 
+		path.addLineToPoint(CGPoint(x: x + step * 2, y: rect.size.height + 30))
+		path.closePath()
+
 		let context = UIGraphicsGetCurrentContext()
+		CGContextSaveGState(context)
 		CGContextSetStrokeColorWithColor(context, tintColor.CGColor)
+		CGContextSetFillColorWithColor(context, tintColor.CGColor)
 		if glow {
 			CGContextSetShadowWithColor(context, .zero, 20, tintColor.colorWithAlphaComponent(0.8).CGColor)
 		}
 		CGContextAddPath(context, path.CGPath)
 		CGContextSetLineWidth(context, thickness)
 		CGContextDrawPath(context, .Stroke)
+
+		if glow {
+			CGContextAddPath(context, path.CGPath)
+			CGContextClip(context)
+			let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [UIColor(white: 0, alpha: 0.3).CGColor, UIColor.clearColor().CGColor], [0, 1])
+			CGContextDrawLinearGradient(context, gradient,
+				CGPointMake(rect.size.width * 0.5, rect.size.height * 0),
+				CGPointMake(rect.size.width * 0.5, rect.size.height * 1),
+				[.DrawsBeforeStartLocation, .DrawsAfterEndLocation])
+		}
+		CGContextRestoreGState(context)
 	}
 }
 
 private func gen_line(count: Int) -> [CGFloat] {
 	srand48(Int(arc4random()))
-	return (0..<count).map { _ in 1 - CGFloat(drand48()) }
+	return (0..<count).map { _ in CGFloat(drand48()) }
 }
 
 @IBDesignable
 class WeekActivity: NibView {
 	@IBOutlet weak var activitiesView: UIView!
 	@IBOutlet weak var lineLeft: NSLayoutConstraint!
-	@IBOutlet weak var lineTop: NSLayoutConstraint!
 	@IBOutlet weak var line: UIView!
 
 	var step: CGFloat!
@@ -104,15 +120,16 @@ class WeekActivity: NibView {
 
 	func setDay(day: NSDate) throws {
 		let components = Calendar.components(.Day, fromDate: NSDate(), toDate: day, options: [.MatchFirst])
-		let weeks = Int(ceil(Float(components.day) / 7))
+		let weeks = Int(ceil(Float(components.day) / 7)) + 20
 		for view in activitiesView.subviews {
 			if let view = view as? ActivityLine {
-				if weeks > 0 || weeks < -20 {
+				if weeks > -20 || weeks < 0 {
 					throw ActivityError.ReachEnd
 				}
-				view.weekOffset = weeks + 20
+				view.weekOffset = weeks
 			}
 		}
+		onWeekdayChange.forEach { $0(weekday) }
 	}
 
 	func addDemoLine(color: UIColor = UIColor(hexRGB: 0x65D2FD), thickness: CGFloat = 3, glow: Bool = true) -> ActivityLine {
@@ -146,11 +163,7 @@ class WeekActivity: NibView {
 		attachAvatar(avatar, line: line)
 		layoutIfNeeded()
 
-		var num = Calendar.component(.Weekday, fromDate: NSDate())
-		if num % 2 == 1 {
-			num -= 1
-		}
-		weekday = num
+		weekday = Calendar.component(.Weekday, fromDate: NSDate())
 		fixLineLeft()
 		onWeekdayChange.forEach { $0(weekday) }
 	}
@@ -162,6 +175,7 @@ class WeekActivity: NibView {
 		addConstraint(leading)
 		let top = NSLayoutConstraint(item: avatar, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .Top, multiplier: 1, constant: 0)
 		addConstraint(top)
+		addConstraint(NSLayoutConstraint(item: self.line, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: avatar, attribute: .Bottom, multiplier: 1, constant: 14))
 		onWeekdayChange.append {[weak line] weekday in
 			if let y = line?.currentY(weekday) {
 				top.constant = y
@@ -188,11 +202,7 @@ class WeekActivity: NibView {
 		switch gesture.state {
 		case .Changed:
 			let x = gesture.locationInView(activitiesView).x
-			var num = Int(max(0, floor((x - x0) / step)))
-			if num % 2 == 1 {
-				num -= 1
-			}
-			weekday = num
+			weekday = Int(max(0, floor((x - x0) / step)))
 		default:
 			break
 		}

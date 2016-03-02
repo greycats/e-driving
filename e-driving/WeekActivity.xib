@@ -20,7 +20,6 @@
                 <outlet property="activitiesView" destination="BDK-RE-WTI" id="ScT-va-ovl"/>
                 <outlet property="line" destination="5J6-DJ-bx3" id="IKU-fl-FeU"/>
                 <outlet property="lineLeft" destination="EmZ-W3-SpU" id="cAO-bd-Vdb"/>
-                <outlet property="lineTop" destination="k7F-Xc-1YA" id="k2E-8x-gIc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,17 +31,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="573.5"/>
                     <subviews>
                         <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J6-DJ-bx3" userLabel="line">
-                            <rect key="frame" x="308" y="139" width="1" height="429.5"/>
+                            <rect key="frame" x="308" y="278.5" width="1" height="290"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="Rcw-U9-qgv"/>
+                                <constraint firstAttribute="height" priority="250" constant="290" id="xpf-Eq-a5b"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="5J6-DJ-bx3" firstAttribute="leading" secondItem="BDK-RE-WTI" secondAttribute="leading" constant="308" id="EmZ-W3-SpU"/>
-                        <constraint firstItem="5J6-DJ-bx3" firstAttribute="top" secondItem="BDK-RE-WTI" secondAttribute="top" constant="139" id="k7F-Xc-1YA"/>
                         <constraint firstAttribute="bottom" secondItem="5J6-DJ-bx3" secondAttribute="bottom" constant="5" id="ujz-qg-vtJ"/>
                     </constraints>
                 </view>
