@@ -61,7 +61,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 	private func updateAlertBefore() {
 		alertBeforeView?.hidden = !showAlertBefore
 	}
-	
+
 	func syncingWillStart() {
 		titleLabel.text = "RATING"
 		numberLabel.text = "TBD"
@@ -77,17 +77,13 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 		numberLabel.alpha = 1
 		titleLabel.alpha = 1
 	}
-	
+
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
 		case .Alert:
 			alertView.tintColor = color
-			if showAlert {
-				numberLabel.textColor = color
-			}
-		case .AlertBefore:
 			alertBeforeView.tintColor = color
-			if showAlertBefore {
+			if showAlert || showAlertBefore {
 				numberLabel.textColor = color
 			}
 		case .SupplymentText:
@@ -114,13 +110,24 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 				formatter.groupingSize = 3
 				value = formatter.stringFromNumber(number)!
 			}
-			
+
 			titleLabel.text = index.title.uppercaseString
 			numberLabel.text = value
-			showAlert = index.state == .Alert
-			showAlertBefore = index.state == .AlertBefore
-			thumbsUp = index.state == .Nice
-			healthy = index.state == .Good
+			switch index.state {
+			case .Alert(let floating):
+				switch floating {
+				case .FloatLeft:
+					showAlertBefore = true
+				case .FloatRight:
+					showAlert = true
+				}
+			case .Good:
+				healthy = true
+			case .Nice:
+				thumbsUp = true
+			default:
+				break
+			}
 			applyTheme(.Dark)
 		}
 	}

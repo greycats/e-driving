@@ -21,7 +21,6 @@ enum ColorCategory {
 	case SupplymentText
 	case Highlight
 	case Alert
-	case AlertBefore
 	case Warning
 }
 
@@ -68,7 +67,6 @@ private let Dark: [ColorCategory: UIColor] = [
 	.SupplymentText: UIColor(hexRGB: 0x8396C0),
 	.Highlight: UIColor(hexRGB: 0x2CBC69),
 	.Alert: UIColor(hexRGB: 0xFF3B30),
-	.AlertBefore: UIColor(hexRGB: 0xFF3B30),
 	.Warning: UIColor(hexRGB: 0xF5A623)
 ]
 
@@ -78,7 +76,6 @@ private let DarkOverlay: [ColorCategory: UIColor] = [
 	.SupplymentText: UIColor(white: 1, alpha: 0.5),
 	.Highlight: UIColor(hexa: 0x3F98FF, hexb: 0x2CBC69),
 	.Alert: UIColor(hexa: 0x3F98FF, hexb: 0xFF3B30),
-	.AlertBefore: UIColor(hexa: 0x3F98FF, hexb: 0xFF3B30),
 	.Warning: UIColor(hexa: 0x3F98FF, hexb: 0xF5A623)
 ]
 

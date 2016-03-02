@@ -61,7 +61,7 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 			CarIndex(title: "MODEL", value: "320i"),
 			CarIndex(title: "YEAR", value: "2013"),
 			CarIndex(title: "MILES", value: "3200"),
-			CarIndex(title: "LAST DAY SERVICE", value: "JAN 15, 2016", state: .AlertBefore)
+			CarIndex(title: "LAST DAY SERVICE", value: "JAN 15, 2016", state: .Alert(floating: .FloatLeft))
 			])
 		for subview in indicesView.subviews {
 			if let subview = subview as? ColorPalette {

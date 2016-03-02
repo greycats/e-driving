@@ -8,10 +8,13 @@
 
 import UIKit
 
+enum Floating {
+	case FloatLeft
+	case FloatRight
+}
 enum CarIndexState {
 	case Normal
-	case Alert
-	case AlertBefore
+	case Alert(floating: Floating)
 	case Good
 	case Nice
 }
