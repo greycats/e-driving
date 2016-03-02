@@ -52,12 +52,25 @@
                                                             </mask>
                                                         </variation>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" image="GoodDriver" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-MH-3DN">
-                                                        <rect key="frame" x="112" y="6" width="301.5" height="1"/>
+                                                    <view alpha="0.93000000000000005" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuY-PB-ffz">
+                                                        <rect key="frame" x="112.5" y="5.5" width="301.5" height="1"/>
+                                                        <color key="backgroundColor" red="0.396078431372549" green="0.82352941176470584" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="VzB-7a-52O"/>
+                                                            <constraint firstAttribute="height" constant="1" id="obv-eg-MHQ"/>
                                                         </constraints>
-                                                    </imageView>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                <point key="value" x="0.0" y="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.33000000000000002"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="to3-tn-Oja" customClass="WeekActivity" customModule="e_driving" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="12" width="414" height="295"/>
                                                         <constraints>
@@ -72,15 +85,15 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Vrt-MH-3DN" firstAttribute="leading" secondItem="jKL-6e-jbI" secondAttribute="trailing" constant="20" id="5DC-Eh-MTG"/>
+                                                    <constraint firstItem="vuY-PB-ffz" firstAttribute="centerY" secondItem="jKL-6e-jbI" secondAttribute="centerY" id="0fh-uB-ubM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vuY-PB-ffz" secondAttribute="trailing" id="7yX-76-vTr"/>
                                                     <constraint firstItem="to3-tn-Oja" firstAttribute="top" secondItem="jKL-6e-jbI" secondAttribute="bottom" id="CzW-oA-TVa"/>
                                                     <constraint firstItem="to3-tn-Oja" firstAttribute="leading" secondItem="pvp-Ky-DQZ" secondAttribute="leading" id="Ibi-DI-aca"/>
                                                     <constraint firstItem="jKL-6e-jbI" firstAttribute="top" secondItem="pvp-Ky-DQZ" secondAttribute="top" id="QFb-4X-31N"/>
-                                                    <constraint firstItem="Vrt-MH-3DN" firstAttribute="top" secondItem="pvp-Ky-DQZ" secondAttribute="top" constant="6" id="fOz-IU-rLJ"/>
+                                                    <constraint firstItem="vuY-PB-ffz" firstAttribute="leading" secondItem="jKL-6e-jbI" secondAttribute="trailing" constant="20" id="btd-lS-k7B"/>
                                                     <constraint firstItem="jKL-6e-jbI" firstAttribute="leading" secondItem="pvp-Ky-DQZ" secondAttribute="leading" constant="10" id="gWk-J6-MUp"/>
                                                     <constraint firstAttribute="trailing" secondItem="to3-tn-Oja" secondAttribute="trailing" id="l7v-xO-jO5"/>
                                                     <constraint firstAttribute="bottom" secondItem="to3-tn-Oja" secondAttribute="bottom" id="lIc-gp-C9f"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Vrt-MH-3DN" secondAttribute="trailing" id="uq5-Hh-CrK"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -212,7 +225,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GoodDriver" width="294" height="21"/>
         <image name="gear" width="22" height="22"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>

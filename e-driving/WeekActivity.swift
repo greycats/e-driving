@@ -21,6 +21,7 @@ class ActivityLine: UIView {
 	var r: CGFloat!
 	var x0: CGFloat!
 	var numbers: [CGFloat]!
+	var thickness: CGFloat = 2
 
 	private var _weekOffset: Int = 20
 	var weekOffset: Int {
@@ -32,6 +33,8 @@ class ActivityLine: UIView {
 			}
 		}
 	}
+
+	var glow: Bool = false
 
 	override func drawRect(rect: CGRect) {
 		let path = UIBezierPath()
@@ -52,13 +55,19 @@ class ActivityLine: UIView {
 			let oldX = x
 			let oldY = y
 			x += step * 2
-			y = rect.size.height * number
+			y = rect.size.height * (0.1 + 0.7 * number) // 10% ~ 80%
 			path.addCurveToPoint(CGPoint(x: x, y: y), controlPoint1: CGPoint(x: sim ? oldX : oldX + r, y: oldY), controlPoint2: CGPoint(x: x - r, y: y))
 			sim = false
 		}
-		tintColor.setStroke()
-		path.lineWidth = 2
-		path.stroke()
+
+		let context = UIGraphicsGetCurrentContext()
+		CGContextSetStrokeColorWithColor(context, tintColor.CGColor)
+		if glow {
+			CGContextSetShadowWithColor(context, .zero, 20, tintColor.colorWithAlphaComponent(0.8).CGColor)
+		}
+		CGContextAddPath(context, path.CGPath)
+		CGContextSetLineWidth(context, thickness)
+		CGContextDrawPath(context, .Stroke)
 	}
 }
 
@@ -97,15 +106,18 @@ class WeekActivity: NibView {
 		}
 	}
 
-	func addDemoLine(color: UIColor) {
+	func addDemoLine(color: UIColor = UIColor(hexRGB: 0x65D2FD), thickness: CGFloat = 3, glow: Bool = true) -> ActivityLine {
 		let activityLine = ActivityLine()
 		activityLine.x0 = x0
 		activityLine.step = step
 		activityLine.numbers = gen_line(100)
-		activityLine.opaque = false
+		activityLine.thickness = thickness
 		activityLine.tintColor = color
+		activityLine.opaque = false
+		activityLine.glow = glow
 		activitiesView.addSubview(activityLine)
 		activityLine.fullDimension()
+		return activityLine
 	}
 
 	override func setup() {
@@ -119,9 +131,9 @@ class WeekActivity: NibView {
 
 		//TODO - this is a demo
 		(0...1).forEach { _ in
-			addDemoLine(UIColor(hexRGB: 0x05297B))
+			addDemoLine(UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
 		}
-		addDemoLine(UIColor(hexRGB: 0x65D2FD))
+		addDemoLine()
 	}
 
 	private func panAnimate(closure: (() -> ())?) {
