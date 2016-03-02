@@ -16,6 +16,9 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var driverImage: UIImageView!
 	@IBOutlet weak var driverName: UILabel!
 	@IBOutlet weak var milesView: MilesView!
+	@IBOutlet weak var mechanicsTableView: UITableView!
+	
+	var mechanicsArray: [MechanicInfo] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -38,5 +41,46 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 		driverImage.image = UIImage(named: "LocNgo")
 		driverName.text = "Loc Ngo"
 		milesView.miles = 8.5
+		
+		mechanicsArray = [MechanicInfo(name: "CYNTHIA'S AUTO", address: "698 East Blvd, Odessa, NC", miles: 8),
+		MechanicInfo(name: "WANDA'S AUTO", address: "647 12th Ct, Fremont, GA", miles: 15),
+		MechanicInfo(name: "Beverly's Dojo", address: "950 Oak Ave, Fairfie, SC", miles: 18),
+		MechanicInfo(name: "Patrick's Supplies", address: "1330 Forest Dr, Cleveland, AL", miles: 21)]
+		
+		mechanicsTableView.registerNib(UINib(nibName: "MechanicCell", bundle: nil), forCellReuseIdentifier: "MechanicCell")
 	}
+	
+	
+	// MARK: - tableview
+	
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return mechanicsArray.count
+	}
+	
+	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return 80
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCellWithIdentifier("MechanicCell", forIndexPath: indexPath) as! MechanicCell
+		cell.nameLabel.text = mechanicsArray[indexPath.row].name 
+		cell.addressLabel.text = mechanicsArray[indexPath.row].address 
+		cell.miles.text = String(mechanicsArray[indexPath.row].miles)
+		return cell
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	}
+}
+
+
+struct MechanicInfo {
+	let name: String
+	let address: String
+	let miles: Double
 }

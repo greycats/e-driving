@@ -201,10 +201,10 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-Gj-mHS" userLabel="MechanicList">
-                                        <rect key="frame" x="0.0" y="1671" width="600" height="396"/>
+                                        <rect key="frame" x="0.0" y="1671" width="600" height="316"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEAREST MECHANICS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPb-XD-H10">
-                                                <rect key="frame" x="212" y="50" width="176" height="16"/>
+                                                <rect key="frame" x="212" y="30" width="176" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="176" id="0EQ-DF-vhK"/>
                                                     <constraint firstAttribute="height" constant="16" id="Yas-1i-6sn"/>
@@ -214,19 +214,23 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agr-Ob-rkr">
-                                                <rect key="frame" x="20" y="96" width="560" height="300"/>
+                                                <rect key="frame" x="20" y="66" width="560" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="DQO-hi-uux"/>
+                                                    <constraint firstAttribute="height" constant="250" id="DQO-hi-uux"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Q16-mX-tzg" id="RNL-nJ-xbm"/>
+                                                    <outlet property="delegate" destination="Q16-mX-tzg" id="pO7-uy-O5t"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="agr-Ob-rkr" firstAttribute="top" secondItem="kPb-XD-H10" secondAttribute="bottom" constant="30" id="1FG-Fq-tJ3"/>
+                                            <constraint firstItem="agr-Ob-rkr" firstAttribute="top" secondItem="kPb-XD-H10" secondAttribute="bottom" constant="20" id="1FG-Fq-tJ3"/>
                                             <constraint firstAttribute="height" constant="400" id="FNC-1M-erb"/>
                                             <constraint firstItem="kPb-XD-H10" firstAttribute="centerX" secondItem="ODU-Gj-mHS" secondAttribute="centerX" id="Hm7-DK-qBQ"/>
-                                            <constraint firstItem="kPb-XD-H10" firstAttribute="top" secondItem="ODU-Gj-mHS" secondAttribute="top" constant="50" id="WiV-DZ-jD3"/>
+                                            <constraint firstItem="kPb-XD-H10" firstAttribute="top" secondItem="ODU-Gj-mHS" secondAttribute="top" constant="30" id="WiV-DZ-jD3"/>
                                             <constraint firstAttribute="trailing" secondItem="agr-Ob-rkr" secondAttribute="trailing" constant="20" id="Ze8-0n-anG"/>
                                             <constraint firstItem="agr-Ob-rkr" firstAttribute="leading" secondItem="ODU-Gj-mHS" secondAttribute="leading" constant="20" id="Zjj-c1-EF3"/>
                                             <constraint firstAttribute="bottom" secondItem="agr-Ob-rkr" secondAttribute="bottom" id="oFP-3S-Stk"/>
@@ -299,6 +303,7 @@
                         <outlet property="driverName" destination="LxL-cy-NWw" id="5mb-dM-saq"/>
                         <outlet property="findMechanic" destination="KEK-28-zHx" id="Dad-HK-CJf"/>
                         <outlet property="indicesView" destination="MBc-br-oPQ" id="iGb-8e-zhT"/>
+                        <outlet property="mechanicsTableView" destination="agr-Ob-rkr" id="oAQ-4d-8eg"/>
                         <outlet property="milesView" destination="3ZW-9k-KBs" id="OIq-jN-AeU"/>
                         <outlet property="vehicleView" destination="gcY-1J-Z8K" id="Eem-tW-bOF"/>
                         <outletCollection property="indices" destination="bDf-hF-92u" collectionClass="NSMutableArray" id="6H3-v3-w7K"/>
