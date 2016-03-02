@@ -108,7 +108,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-6O-kDV">
                                                 <rect key="frame" x="0.0" y="246" width="600" height="150"/>
-                                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="14F-wz-w3t"/>
                                                 </constraints>
