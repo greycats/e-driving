@@ -101,6 +101,7 @@ class MenuCell: UITableViewCell, TableViewDataNibCell {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var selectedMark: GradientView!
 
+	@IBOutlet weak var markLeft: NSLayoutConstraint!
 	var name: String! {
 		didSet {
 			nameLabel.attributedText = NSAttributedString(string: name.uppercaseString, attributes: [
@@ -112,8 +113,9 @@ class MenuCell: UITableViewCell, TableViewDataNibCell {
 	}
 
 	override func setSelected(selected: Bool, animated: Bool) {
+		markLeft.constant = selected ? 0 : -4
 		UIView.animateWithDuration(0.25) {
-			self.selectedMark.alpha = selected ? 1 : 0
+			self.layoutIfNeeded()
 			self.nameLabel.alpha = selected ? 1 : 0.5
 		}
 	}

@@ -24,7 +24,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nff-JB-IgV" customClass="GradientView" customModule="Greycats">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nff-JB-IgV" customClass="GradientView" customModule="Greycats">
                         <rect key="frame" x="0.0" y="25" width="4" height="22.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="4" id="49E-Y9-OdV"/>
@@ -51,22 +51,15 @@
                     <constraint firstItem="nff-JB-IgV" firstAttribute="leading" secondItem="Aqj-O2-1xE" secondAttribute="leading" id="TmC-FM-cQx"/>
                     <constraint firstItem="iDX-Yi-73d" firstAttribute="centerY" secondItem="Aqj-O2-1xE" secondAttribute="centerY" id="Xgz-Vb-aQx"/>
                     <constraint firstItem="nff-JB-IgV" firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" id="bgX-qH-eOA"/>
-                    <constraint firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" constant="48" id="bng-BN-DXf"/>
                     <constraint firstItem="iDX-Yi-73d" firstAttribute="leading" secondItem="Aqj-O2-1xE" secondAttribute="leading" constant="30" id="h0g-rU-eXb"/>
                     <constraint firstAttribute="bottom" secondItem="iDX-Yi-73d" secondAttribute="bottom" constant="25" id="jhX-hv-Yiq"/>
                     <constraint firstItem="nff-JB-IgV" firstAttribute="top" secondItem="iDX-Yi-73d" secondAttribute="top" id="mkD-2O-REj"/>
-                    <constraint firstItem="iDX-Yi-73d" firstAttribute="top" secondItem="Aqj-O2-1xE" secondAttribute="top" id="ndd-vg-aMU"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="bng-BN-DXf"/>
-                        <exclude reference="ndd-vg-aMU"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="markLeft" destination="TmC-FM-cQx" id="wZs-JM-lNc"/>
                 <outlet property="nameLabel" destination="iDX-Yi-73d" id="iMf-38-0gk"/>
                 <outlet property="selectedMark" destination="nff-JB-IgV" id="vgd-sr-53h"/>
             </connections>
