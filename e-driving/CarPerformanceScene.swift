@@ -37,49 +37,94 @@ class MechanicCell: UITableViewCell, TableViewDataNibCell {
 	}
 }
 
-class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
-	@IBOutlet weak var scrollView: UIScrollView!
+@IBDesignable
+class PerformanceView: NibView, ColorPalette {
 	@IBOutlet weak var vehicleView: VehicleView!
 	@IBOutlet weak var findButton: ButtonView!
-	@IBOutlet weak var indicesView: UIView!
-	@IBOutlet var indices: [IndexLabel]!
+	@IBOutlet weak var alertsView: UIView!
+
+	var alerts: [CarAlert] = [] {
+		didSet {
+			let views = alerts.map { AlertInfoView(alert: $0) }
+			alertsView |< views
+		}
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		findButton.setColor(color, category: category)
+		vehicleView.setColor(color, category: category)
+		for view in alertsView.subviews {
+			if let view = view as? ColorPalette {
+				view.setColor(color, category: category)
+			}
+		}
+	}
+}
+
+@IBDesignable
+class CarInfoView: NibView, ColorPalette {
 	@IBOutlet weak var driverImage: UIImageView!
 	@IBOutlet weak var driverName: UILabel!
 	@IBOutlet weak var milesView: MilesView!
-	@IBOutlet weak var mechanicsTableView: UITableView!
-	@IBOutlet weak var alertsView: UIView!
-
-	@IBOutlet weak var map: UIImageView!
-	let mechanics = TableViewDataNib<MechanicInfo, MechanicCell>(title: nil)
-		.onRender { $0.mechanic = $1 }
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		applyTheme(.Dark)
-		let alerts = [
-			CarAlert(reason: .LowOil, error: "change in 20 miles", suggestion: "Needs Replacement"),
-			CarAlert(reason: .LowGas, error: "20 miles left", suggestion: "Find Nearest Station"),
-			CarAlert(reason: .EngineCheck, error: "20 miles left", suggestion: "Engine Maintenance")
-		]
-		let views = alerts.map { AlertInfoView(alert: $0) }
-		alertsView |< views
-
-		indices.apply([
-			CarIndex(title: "BRAND", value: "BMW"),
-			CarIndex(title: "MODEL", value: "320i"),
-			CarIndex(title: "YEAR", value: "2013"),
-			CarIndex(title: "MILES", value: 3200),
-			CarIndex(title: "LAST DAY SERVICE", value: NSDate(), state: .Alert(.Left))
-			])
+	@IBOutlet weak var indicesView: UIView!
+	@IBOutlet var indices: [IndexLabel]!
+	func apply(indices: CarIndex...) {
+		self.indices.apply(indices)
+	}
+	func applyTheme(theme: Theme) {
+		milesView.applyTheme(theme)
 		for subview in indicesView.subviews {
 			if let subview = subview as? ColorPalette {
 				subview.applyTheme(.Dark)
 			}
 		}
+	}
+}
 
-		driverImage.image = UIImage(named: "LocNgo")
-		driverName.text = "Loc Ngo"
-		milesView.miles = 8.5
+class MechanicHeader: NibView {
+	@IBOutlet weak var label: UILabel!
+
+	convenience init(text: String) {
+		self.init()
+		backgroundColor = UIColor.whiteColor()
+		label.text = text.uppercaseString
+	}
+}
+
+class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
+	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var performanceView: PerformanceView!
+	@IBOutlet weak var infoView: CarInfoView!
+	@IBOutlet weak var headerView: UIView!
+
+	@IBOutlet weak var map: UIImageView!
+	let mechanics = TableViewDataNib<MechanicInfo, MechanicCell>(title: "nearest machanics")
+		.onRender { $0.mechanic = $1 }
+		.onHeader { MechanicHeader(text: $0) }
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		applyTheme(.Dark)
+		let size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+		tableView.tableHeaderView = headerView
+		tableView.tableHeaderView?.frame = CGRect(origin: .zero, size: size)
+		let alerts = [
+			CarAlert(reason: .LowOil, error: "change in 20 miles", suggestion: "Needs Replacement"),
+			CarAlert(reason: .LowGas, error: "20 miles left", suggestion: "Find Nearest Station"),
+			CarAlert(reason: .EngineCheck, error: "20 miles left", suggestion: "Engine Maintenance")
+		]
+		performanceView.alerts = alerts
+
+		infoView.apply(
+			CarIndex(title: "BRAND", value: "BMW"),
+			CarIndex(title: "MODEL", value: "320i"),
+			CarIndex(title: "YEAR", value: "2013"),
+			CarIndex(title: "MILES", value: 3200),
+			CarIndex(title: "LAST DAY SERVICE", value: NSDate(), state: .Alert(.Left))
+			)
+		infoView.driverImage.image = UIImage(named: "LocNgo")
+		infoView.driverName.text = "Loc Ngo"
+		infoView.milesView.miles = 8.5
 
 		mechanics.source = [
 			MechanicInfo(name: "CYNTHIA'S AUTO", address: "698 East Blvd, Odessa, NC", miles: 8),
@@ -88,12 +133,11 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 			MechanicInfo(name: "Patrick's Supplies", address: "1330 Forest Dr, Cleveland, AL", miles: 21)
 		]
 
-		connectTableView(mechanicsTableView, sections: [mechanics])
-		mechanicsTableView.tableFooterView = UIView()
-		findButton.buttonView.addTarget(self, action: "findAMechanic", forControlEvents: .TouchUpInside)
+		connectTableView(tableView, sections: [mechanics])
+		performanceView.findButton.buttonView.addTarget(self, action: "findAMechanic", forControlEvents: .TouchUpInside)
 	}
 
 	func findAMechanic() {
-		scrollView.scrollRectToVisible(mechanicsTableView.frame, animated: true)
+		tableView.scrollRectToVisible(tableView.frame, animated: true)
 	}
 }

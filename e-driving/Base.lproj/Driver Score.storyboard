@@ -33,9 +33,9 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2TA-6R-EkF">
-                                                <rect key="frame" x="37" y="325" width="340.5" height="88"/>
+                                                <rect key="frame" x="207.5" y="325" width="0.0" height="88"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="340.5" placeholder="YES" id="CPu-Xn-Scz"/>
+                                                    <constraint firstAttribute="width" placeholder="YES" id="CPu-Xn-Scz"/>
                                                     <constraint firstAttribute="height" constant="88" id="cnl-WO-vgB"/>
                                                 </constraints>
                                             </view>

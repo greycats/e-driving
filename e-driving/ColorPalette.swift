@@ -109,7 +109,6 @@ extension ColorPalette {
 
 protocol Overlayed {
 }
-
 extension ColorPalette where Self: UIViewController {
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
