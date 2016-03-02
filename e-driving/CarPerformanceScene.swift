@@ -11,9 +11,25 @@ import UIKit
 class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var vehicleView: VehicleView!
 	@IBOutlet weak var findMechanic: ButtonView!
+	@IBOutlet weak var indicesView: UIView!
+	@IBOutlet var indices: [IndexLabel]!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		applyTheme(.Dark)
+		
+		indices.apply([
+			CarIndex(title: "BRAND", value: "BMW"),
+			CarIndex(title: "MODEL", value: "320i"),
+			CarIndex(title: "YEAR", value: "2013"),
+			CarIndex(title: "MILES", value: "3200"),
+			CarIndex(title: "LAST DAY SERVICE", value: "JAN 15, 2016", state: .AlertBefore)
+			])
+		for subview in indicesView.subviews {
+			if let subview = subview as? ColorPalette {
+				subview.applyTheme(.Dark)
+			}
+		}
 	}
 }

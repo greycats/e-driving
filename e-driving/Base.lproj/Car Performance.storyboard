@@ -2,7 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q16-mX-tzg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--VEHICLE DIAGNOSIS-->
         <scene sceneID="ETV-aZ-YBg">
@@ -34,21 +40,122 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apW-K3-TPT" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1008" width="600" height="72"/>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-nw-1Qd" userLabel="Information">
+                                        <rect key="frame" x="0.0" y="1080" width="600" height="396"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-XO-dhj">
+                                                <rect key="frame" x="245" y="0.0" width="110" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="C4a-Qe-6J9"/>
+                                                    <constraint firstAttribute="width" constant="110" id="JZ5-4O-X7L"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="14"/>
+                                                <color key="textColor" red="0.396078431372549" green="0.82352941176470584" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-br-oPQ" userLabel="indices">
+                                                <rect key="frame" x="0.0" y="46" width="600" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDf-hF-92u" userLabel="brand" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="84" y="0.0" width="72" height="74.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="BRAND"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="BMW"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzT-lD-eRu" userLabel="model" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="268.5" y="0.0" width="63.5" height="74.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="MODEL"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="320i"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPe-11-EQ6" userLabel="year" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="444" y="0.0" width="72.5" height="74.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="YEAR"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="2013"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUR-eW-1qK" userLabel="miles" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="79" y="109.5" width="82.5" height="74.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="MILES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="3,200"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-tj-ZAS" userLabel="service" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="299" y="109.5" width="182" height="74.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="key" value="LAST DAY SERVICE"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="value" value="JAN 15, 2016"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="IPe-11-EQ6" firstAttribute="centerX" secondItem="MBc-br-oPQ" secondAttribute="centerX" multiplier="1.6" id="1a5-zc-cVE"/>
+                                                    <constraint firstItem="IPe-11-EQ6" firstAttribute="top" secondItem="PzT-lD-eRu" secondAttribute="top" id="6K8-ya-QQf"/>
+                                                    <constraint firstItem="gD3-tj-ZAS" firstAttribute="centerX" secondItem="MBc-br-oPQ" secondAttribute="centerX" multiplier="1.3" id="7e3-Gv-ZwQ"/>
+                                                    <constraint firstItem="gD3-tj-ZAS" firstAttribute="top" secondItem="IUR-eW-1qK" secondAttribute="top" id="90J-WS-4W7"/>
+                                                    <constraint firstItem="bDf-hF-92u" firstAttribute="centerX" secondItem="MBc-br-oPQ" secondAttribute="centerX" multiplier="0.4" id="Aiy-hW-XhW"/>
+                                                    <constraint firstItem="PzT-lD-eRu" firstAttribute="centerX" secondItem="MBc-br-oPQ" secondAttribute="centerX" id="JMF-I2-qcK"/>
+                                                    <constraint firstAttribute="height" constant="200" id="SbK-Ew-jYh"/>
+                                                    <constraint firstItem="IUR-eW-1qK" firstAttribute="top" secondItem="bDf-hF-92u" secondAttribute="bottom" constant="35" id="X14-5v-mEE"/>
+                                                    <constraint firstItem="bDf-hF-92u" firstAttribute="top" secondItem="MBc-br-oPQ" secondAttribute="top" id="gLC-Ei-nOV"/>
+                                                    <constraint firstItem="IUR-eW-1qK" firstAttribute="centerX" secondItem="bDf-hF-92u" secondAttribute="centerX" id="utL-gg-mOr"/>
+                                                    <constraint firstItem="PzT-lD-eRu" firstAttribute="top" secondItem="bDf-hF-92u" secondAttribute="top" id="y70-2D-lOp"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-6O-kDV">
+                                                <rect key="frame" x="0.0" y="246" width="600" height="150"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="14F-wz-w3t"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mQ7-6O-kDV" firstAttribute="top" secondItem="MBc-br-oPQ" secondAttribute="bottom" id="4vj-vS-f4b"/>
+                                            <constraint firstAttribute="trailing" secondItem="mQ7-6O-kDV" secondAttribute="trailing" id="919-2f-dTw"/>
+                                            <constraint firstItem="mQ7-6O-kDV" firstAttribute="leading" secondItem="6JV-nw-1Qd" secondAttribute="leading" id="Axt-pi-nEE"/>
+                                            <constraint firstItem="axQ-XO-dhj" firstAttribute="top" secondItem="6JV-nw-1Qd" secondAttribute="top" id="KML-x3-VrB"/>
+                                            <constraint firstItem="MBc-br-oPQ" firstAttribute="leading" secondItem="6JV-nw-1Qd" secondAttribute="leading" id="NPU-jx-qVV"/>
+                                            <constraint firstItem="axQ-XO-dhj" firstAttribute="bottom" secondItem="MBc-br-oPQ" secondAttribute="top" constant="-30" id="Tb6-fN-jDv"/>
+                                            <constraint firstAttribute="trailing" secondItem="MBc-br-oPQ" secondAttribute="trailing" id="XoV-Lf-mhE"/>
+                                            <constraint firstItem="axQ-XO-dhj" firstAttribute="centerX" secondItem="6JV-nw-1Qd" secondAttribute="centerX" id="cU3-Os-5fY"/>
+                                            <constraint firstAttribute="height" constant="328" id="rHH-K4-Nv6"/>
+                                            <constraint firstAttribute="bottom" secondItem="mQ7-6O-kDV" secondAttribute="bottom" id="zAh-6g-69R"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rHH-K4-Nv6"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hxe-yB-LCm" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" constant="25" id="0vf-fk-iAv"/>
                                     <constraint firstAttribute="trailing" secondItem="KEK-28-zHx" secondAttribute="trailing" id="3mK-fg-BMo"/>
                                     <constraint firstAttribute="trailing" secondItem="apW-K3-TPT" secondAttribute="trailing" id="I29-kD-0e8"/>
+                                    <constraint firstItem="6JV-nw-1Qd" firstAttribute="top" secondItem="apW-K3-TPT" secondAttribute="bottom" id="Laa-53-pYV"/>
                                     <constraint firstAttribute="bottom" secondItem="apW-K3-TPT" secondAttribute="bottom" constant="500" id="Slb-eF-kUq"/>
+                                    <constraint firstAttribute="trailing" secondItem="6JV-nw-1Qd" secondAttribute="trailing" id="Uyc-bA-mEM"/>
                                     <constraint firstItem="KEK-28-zHx" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="Zei-yz-aYq"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="leading" secondItem="hxe-yB-LCm" secondAttribute="trailing" constant="21" id="bfM-Tt-7bM"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="e1X-bB-s9X"/>
                                     <constraint firstAttribute="trailing" secondItem="gcY-1J-Z8K" secondAttribute="trailing" constant="17" id="ezv-ft-IMD"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="bottom" secondItem="KEK-28-zHx" secondAttribute="top" id="f1Z-Wk-uv3"/>
+                                    <constraint firstItem="6JV-nw-1Qd" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="hV8-et-d3q"/>
+                                    <constraint firstAttribute="bottom" secondItem="6JV-nw-1Qd" secondAttribute="bottom" constant="300" id="mYD-XD-PQY"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="top" secondItem="KEK-28-zHx" secondAttribute="bottom" id="oU2-6k-UPl"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="top" secondItem="8JF-bH-xqH" secondAttribute="top" constant="30" id="v1g-nV-HZo"/>
                                     <constraint firstItem="hxe-yB-LCm" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="wCn-4l-Bqc"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Slb-eF-kUq"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -74,7 +181,13 @@
                     <size key="freeformSize" width="600" height="2000"/>
                     <connections>
                         <outlet property="findMechanic" destination="KEK-28-zHx" id="Dad-HK-CJf"/>
+                        <outlet property="indicesView" destination="MBc-br-oPQ" id="iGb-8e-zhT"/>
                         <outlet property="vehicleView" destination="gcY-1J-Z8K" id="Eem-tW-bOF"/>
+                        <outletCollection property="indices" destination="bDf-hF-92u" collectionClass="NSMutableArray" id="6H3-v3-w7K"/>
+                        <outletCollection property="indices" destination="PzT-lD-eRu" collectionClass="NSMutableArray" id="oSB-Ec-6qU"/>
+                        <outletCollection property="indices" destination="IPe-11-EQ6" collectionClass="NSMutableArray" id="vEd-e7-ZiX"/>
+                        <outletCollection property="indices" destination="IUR-eW-1qK" collectionClass="NSMutableArray" id="XZT-bc-072"/>
+                        <outletCollection property="indices" destination="gD3-tj-ZAS" collectionClass="NSMutableArray" id="WGC-Ho-V1D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHy-y5-FjH" sceneMemberID="firstResponder"/>
