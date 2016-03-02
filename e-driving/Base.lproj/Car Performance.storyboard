@@ -170,6 +170,7 @@
                                             <constraint firstItem="mQ7-6O-kDV" firstAttribute="top" secondItem="MBc-br-oPQ" secondAttribute="bottom" constant="20" id="4vj-vS-f4b"/>
                                             <constraint firstAttribute="trailing" secondItem="mQ7-6O-kDV" secondAttribute="trailing" id="919-2f-dTw"/>
                                             <constraint firstItem="mQ7-6O-kDV" firstAttribute="leading" secondItem="6JV-nw-1Qd" secondAttribute="leading" id="Axt-pi-nEE"/>
+                                            <constraint firstAttribute="bottom" secondItem="mQ7-6O-kDV" secondAttribute="bottom" id="GDZ-Zo-IiQ"/>
                                             <constraint firstItem="axQ-XO-dhj" firstAttribute="top" secondItem="6JV-nw-1Qd" secondAttribute="top" id="KML-x3-VrB"/>
                                             <constraint firstItem="MBc-br-oPQ" firstAttribute="leading" secondItem="6JV-nw-1Qd" secondAttribute="leading" id="NPU-jx-qVV"/>
                                             <constraint firstItem="axQ-XO-dhj" firstAttribute="bottom" secondItem="MBc-br-oPQ" secondAttribute="top" constant="-30" id="Tb6-fN-jDv"/>
@@ -186,13 +187,22 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="rHH-K4-Nv6"/>
+                                                <exclude reference="zAh-6g-69R"/>
                                             </mask>
                                         </variation>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PerformanceMap" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-mE-cm2">
+                                        <rect key="frame" x="0.0" y="1456" width="600" height="215"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="215" id="CjY-D9-Pbc"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hxe-yB-LCm" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" constant="25" id="0vf-fk-iAv"/>
                                     <constraint firstAttribute="trailing" secondItem="KEK-28-zHx" secondAttribute="trailing" id="3mK-fg-BMo"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMF-mE-cm2" secondAttribute="trailing" id="D0x-gh-O14"/>
+                                    <constraint firstAttribute="bottom" secondItem="JMF-mE-cm2" secondAttribute="bottom" constant="300" id="Fne-P9-Jon"/>
                                     <constraint firstAttribute="trailing" secondItem="apW-K3-TPT" secondAttribute="trailing" id="I29-kD-0e8"/>
                                     <constraint firstItem="6JV-nw-1Qd" firstAttribute="top" secondItem="apW-K3-TPT" secondAttribute="bottom" id="Laa-53-pYV"/>
                                     <constraint firstAttribute="bottom" secondItem="apW-K3-TPT" secondAttribute="bottom" constant="500" id="Slb-eF-kUq"/>
@@ -203,6 +213,8 @@
                                     <constraint firstAttribute="trailing" secondItem="gcY-1J-Z8K" secondAttribute="trailing" constant="17" id="ezv-ft-IMD"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="bottom" secondItem="KEK-28-zHx" secondAttribute="top" id="f1Z-Wk-uv3"/>
                                     <constraint firstItem="6JV-nw-1Qd" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="hV8-et-d3q"/>
+                                    <constraint firstItem="JMF-mE-cm2" firstAttribute="top" secondItem="6JV-nw-1Qd" secondAttribute="bottom" constant="30" id="hli-zU-VyR"/>
+                                    <constraint firstItem="JMF-mE-cm2" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="kfI-pD-E0O"/>
                                     <constraint firstAttribute="bottom" secondItem="6JV-nw-1Qd" secondAttribute="bottom" constant="300" id="mYD-XD-PQY"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="top" secondItem="KEK-28-zHx" secondAttribute="bottom" id="oU2-6k-UPl"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="top" secondItem="8JF-bH-xqH" secondAttribute="top" constant="30" id="v1g-nV-HZo"/>
@@ -211,6 +223,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Slb-eF-kUq"/>
+                                        <exclude reference="mYD-XD-PQY"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -257,6 +270,7 @@
     </scenes>
     <resources>
         <image name="Group 6" width="180" height="277"/>
+        <image name="PerformanceMap" width="414" height="215"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
 </document>
