@@ -36,6 +36,11 @@ class ActivityLine: UIView {
 
 	var glow: Bool = false
 
+	func currentY(offset: Int) -> CGFloat {
+		let number = numbers[weekOffset * 4 + offset / 2]
+		return bounds.size.height * (0.1 + 0.7 * number)
+	}
+
 	override func drawRect(rect: CGRect) {
 		let path = UIBezierPath()
 		let simulate0: CGFloat = x0 - step * 2
@@ -44,6 +49,7 @@ class ActivityLine: UIView {
 		var sim = true
 		let start = weekOffset * 4
 		let subset = numbers[start..<start + 5]
+		print(start)
 		if start > 0 {
 			y = numbers[start - 1]
 		} else {
@@ -89,9 +95,12 @@ class WeekActivity: NibView {
 		didSet {
 			if oldValue != weekday {
 				fixLineLeft()
+				onWeekdayChange.forEach { $0(weekday) }
 			}
 		}
 	}
+
+	var onWeekdayChange: [(Int) -> ()] = []
 
 	func setDay(day: NSDate) throws {
 		let components = Calendar.components(.Day, fromDate: NSDate(), toDate: day, options: [.MatchFirst])
@@ -125,15 +134,39 @@ class WeekActivity: NibView {
 		activitiesView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
 		step = (bounds.width - 40) / 7
 		x0 = 20 + step / 2
-		layoutIfNeeded()
-		weekday = Calendar.component(.Weekday, fromDate: NSDate())
-		fixLineLeft()
 
 		//TODO - this is a demo
-		(0...1).forEach { _ in
-			addDemoLine(UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
+		(0...1).forEach { i in
+			let line = addDemoLine(UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
+			let avatar = UIImageView(image: UIImage(named: "avatar\(i)"))
+			attachAvatar(avatar, line: line)
 		}
-		addDemoLine()
+		let line = addDemoLine()
+		let avatar = UIImageView(image: UIImage(named: "avatar2"))
+		attachAvatar(avatar, line: line)
+		layoutIfNeeded()
+
+		var num = Calendar.component(.Weekday, fromDate: NSDate())
+		if num % 2 == 1 {
+			num -= 1
+		}
+		weekday = num
+		fixLineLeft()
+		onWeekdayChange.forEach { $0(weekday) }
+	}
+
+	func attachAvatar(avatar: UIImageView, line: ActivityLine) {
+		avatar.translatesAutoresizingMaskIntoConstraints = false
+		activitiesView.addSubview(avatar)
+		let leading = NSLayoutConstraint(item: avatar, attribute: .CenterX, relatedBy: .Equal, toItem: self.line, attribute: .CenterX, multiplier: 1, constant: 0)
+		addConstraint(leading)
+		let top = NSLayoutConstraint(item: avatar, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .Top, multiplier: 1, constant: 0)
+		addConstraint(top)
+		onWeekdayChange.append {[weak line] weekday in
+			if let y = line?.currentY(weekday) {
+				top.constant = y
+			}
+		}
 	}
 
 	private func panAnimate(closure: (() -> ())?) {
@@ -155,8 +188,11 @@ class WeekActivity: NibView {
 		switch gesture.state {
 		case .Changed:
 			let x = gesture.locationInView(activitiesView).x
-			let num = max(0, floor((x - x0) / step))
-			weekday = Int(num)
+			var num = Int(max(0, floor((x - x0) / step)))
+			if num % 2 == 1 {
+				num -= 1
+			}
+			weekday = num
 		default:
 			break
 		}
