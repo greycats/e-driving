@@ -10,8 +10,8 @@ import Greycats
 
 @IBDesignable
 class VehicleView: NibView, ColorPalette {
-	@IBOutlet var alerts: [AlertIcon]!
-	@IBOutlet var warnings: [AlertIcon]!
+	@IBOutlet var alerts: [UIView]!
+	@IBOutlet var warnings: [UIView]!
 
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {

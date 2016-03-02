@@ -69,35 +69,35 @@
                                                 <rect key="frame" x="0.0" y="46" width="600" height="200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDf-hF-92u" userLabel="brand" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="84" y="0.0" width="72" height="74.5"/>
+                                                        <rect key="frame" x="82.5" y="0.0" width="75" height="74.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="BRAND"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="value" value="BMW"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzT-lD-eRu" userLabel="model" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="268" y="0.0" width="63.5" height="74.5"/>
+                                                        <rect key="frame" x="266" y="0.0" width="67.5" height="74.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="MODEL"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="value" value="320i"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPe-11-EQ6" userLabel="year" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="444" y="0.0" width="72.5" height="74.5"/>
+                                                        <rect key="frame" x="442" y="0.0" width="76.5" height="74.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="YEAR"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="value" value="2013"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUR-eW-1qK" userLabel="miles" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="109" width="82.5" height="74.5"/>
+                                                        <rect key="frame" x="76.5" y="109" width="87.5" height="74.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="MILES"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="value" value="3,200"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-tj-ZAS" userLabel="service" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="299" y="109" width="182" height="74.5"/>
+                                                        <rect key="frame" x="293" y="109" width="194" height="74.5"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="LAST DAY SERVICE"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="value" value="JAN 15, 2016"/>

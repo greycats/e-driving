@@ -8,37 +8,54 @@
 
 import UIKit
 
-enum Floating {
-	case FloatLeft
-	case FloatRight
+enum Position {
+	case Left
+	case TopRight
 }
 enum CarIndexState {
 	case Normal
-	case Alert(floating: Floating)
+	case Alert(Position)
 	case Good
 	case Nice
 }
-
+protocol CarIndexValue {
+	var indexString: String? { get }
+}
 struct CarIndex {
 	let title: String
-	let value: String
+	var value: CarIndexValue
 	let state: CarIndexState
 	let highlight: Bool
-	init(title: String, value: String, state: CarIndexState = .Normal, highlight: Bool = false) {
+	init<T: CarIndexValue>(title: String, value: T, state: CarIndexState = .Normal, highlight: Bool = false) {
 		self.title = title
 		self.value = value
 		self.state = state
 		self.highlight = highlight
 	}
+	var indexString: String? { return value.indexString }
+}
+
+extension String: CarIndexValue {
+	var indexString: String? { return self }
+}
+extension Double: CarIndexValue {
+	var indexString: String? {
+		let formatter = NSNumberFormatter()
+		formatter.minimumFractionDigits = 0
+		formatter.maximumFractionDigits = 1
+		formatter.groupingSeparator = ","
+		formatter.groupingSize = 3
+		formatter.usesGroupingSeparator = true
+		return formatter.stringFromNumber(self)
+	}
+}
+extension NSDate: CarIndexValue {
+	var indexString: String? {
+		return IndexFormat.format(self)
+	}
 }
 
 extension UIView {
-	func stack(index: CarIndex...) -> [IndexLabel] {
-		let labels = index.map { _ in IndexLabel() }
-		horizontalStack(labels, marginX: 13, equalWidth: false)
-		labels.apply(index)
-		return labels
-	}
 	func stack(times times: Int) -> [IndexLabel] {
 		let labels = (0..<times).map { _ in IndexLabel() }
 		horizontalStack(labels, marginX: 13, equalWidth: false)

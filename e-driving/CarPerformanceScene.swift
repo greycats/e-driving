@@ -31,6 +31,7 @@ class MechanicCell: UITableViewCell, TableViewDataNibCell {
 			formatter.minimumFractionDigits = 0
 			formatter.maximumFractionDigits = 1
 			formatter.groupingSize = 3
+			formatter.usesGroupingSeparator = true
 			miles.text = "\(formatter.stringFromNumber(mechanic.miles)!) Miles"
 		}
 	}
@@ -67,8 +68,8 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 			CarIndex(title: "BRAND", value: "BMW"),
 			CarIndex(title: "MODEL", value: "320i"),
 			CarIndex(title: "YEAR", value: "2013"),
-			CarIndex(title: "MILES", value: "3200"),
-			CarIndex(title: "LAST DAY SERVICE", value: "JAN 15, 2016", state: .Alert(floating: .FloatLeft))
+			CarIndex(title: "MILES", value: 3200),
+			CarIndex(title: "LAST DAY SERVICE", value: NSDate(), state: .Alert(.Left))
 			])
 		for subview in indicesView.subviews {
 			if let subview = subview as? ColorPalette {

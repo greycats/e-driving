@@ -35,7 +35,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 	@IBInspectable var thumbsUp: Bool = false {
 		didSet { updateThumb() }
 	}
-	@IBOutlet weak var thumbView: UIImageView! {
+	@IBOutlet weak var thumbView: UIView! {
 		didSet { updateThumb() }
 	}
 	private func updateThumb() {
@@ -45,7 +45,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 	@IBInspectable var showAlert: Bool = false {
 		didSet { updateAlert() }
 	}
-	@IBOutlet weak var alertView: AlertIcon! {
+	@IBOutlet weak var alertView: UIView! {
 		didSet { updateAlert() }
 	}
 	private func updateAlert() {
@@ -55,7 +55,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 	@IBInspectable var showAlertBefore: Bool = false {
 		didSet { updateAlertBefore() }
 	}
-	@IBOutlet weak var alertBeforeView: AlertIcon! {
+	@IBOutlet weak var alertBeforeView: UIView! {
 		didSet { updateAlertBefore() }
 	}
 	private func updateAlertBefore() {
@@ -93,6 +93,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 				numberLabel.textColor = color
 			}
 		case .Highlight:
+			thumbView.tintColor = color
 			if thumbsUp || healthy {
 				numberLabel.textColor = color
 			}
@@ -103,22 +104,14 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 
 	var index: CarIndex! {
 		didSet {
-			var value = index.value
-			if let number = Double(index.value) {
-				let formatter = NSNumberFormatter()
-				formatter.maximumFractionDigits = 1
-				formatter.groupingSize = 3
-				value = formatter.stringFromNumber(number)!
-			}
-
 			titleLabel.text = index.title.uppercaseString
-			numberLabel.text = value
+			numberLabel.text = index.indexString
 			switch index.state {
-			case .Alert(let floating):
-				switch floating {
-				case .FloatLeft:
+			case .Alert(let pos):
+				switch pos {
+				case .Left:
 					showAlertBefore = true
-				case .FloatRight:
+				case .TopRight:
 					showAlert = true
 				}
 			case .Good:

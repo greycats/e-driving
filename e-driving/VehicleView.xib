@@ -24,7 +24,7 @@
                         <constraint firstAttribute="width" secondItem="llL-9g-8bf" secondAttribute="height" multiplier="85:209" id="kSw-Qf-c6D"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poo-Rg-Qor" customClass="AlertIcon" customModule="e_driving" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poo-Rg-Qor" customClass="FontAwesomeIcon" customModule="e_driving" customModuleProvider="target">
                     <rect key="frame" x="69" y="21" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="32" id="Ij7-wT-FYc"/>
@@ -32,9 +32,10 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="appliesRipple" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="code" value="fa-exclamation-triangle"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IP-ju-zO7" customClass="AlertIcon" customModule="e_driving" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IP-ju-zO7" customClass="FontAwesomeIcon" customModule="e_driving" customModuleProvider="target">
                     <rect key="frame" x="2" y="346" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="32" id="TXj-av-WUX"/>
@@ -42,14 +43,18 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="appliesRipple" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="code" value="fa-exclamation-triangle"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL9-sR-Xvd" customClass="AlertIcon" customModule="e_driving" customModuleProvider="target">
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL9-sR-Xvd" customClass="FontAwesomeIcon" customModule="e_driving" customModuleProvider="target">
                     <rect key="frame" x="119" y="86" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="KyA-va-eFW"/>
                         <constraint firstAttribute="width" constant="23" id="MSj-dH-c0u"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="code" value="fa-exclamation-triangle"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.070588235289999995" green="0.26274509800000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>

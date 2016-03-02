@@ -203,7 +203,8 @@ class DashLine: UIView, ColorPalette {
 import FontAwesome_swift
 
 @IBDesignable
-class AlertIcon: UIView {
+class FontAwesomeIcon: UIView {
+	@IBInspectable var code: String? { didSet { setNeedsDisplay() } }
 	@IBInspectable var appliesRipple: Bool = false {
 		didSet {
 			if appliesRipple {
@@ -227,19 +228,20 @@ class AlertIcon: UIView {
 	}
 
 	override func drawRect(rect: CGRect) {
-		let context = UIGraphicsGetCurrentContext()
-		CGContextSaveGState(context)
-		CGContextSetFillColorWithColor(context, tintColor.CGColor)
-		CGContextFillEllipseInRect(context, rect)
-		CGContextRestoreGState(context)
-		let labelStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
-		labelStyle.alignment = .Left
+		if let code = code, text = String.fontAwesomeIconWithCode(code) {
+			let context = UIGraphicsGetCurrentContext()
+			CGContextSaveGState(context)
+			CGContextSetFillColorWithColor(context, tintColor.CGColor)
+			CGContextFillEllipseInRect(context, rect)
+			CGContextRestoreGState(context)
+			let labelStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+			labelStyle.alignment = .Left
 
-		let font = UIFont.fontAwesomeOfSize(rect.width * 0.52)
-		let labelFontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: labelStyle]
-		let text = String.fontAwesomeIconWithName(.ExclamationTriangle)
-		let size = text.sizeWithAttributes(labelFontAttributes)
-		text.drawInRect(CGRect(origin: CGPoint(x: (rect.width - size.width) / 2, y: (rect.height - 2 * size.height + font.capHeight) / 2), size: size), withAttributes: labelFontAttributes)
+			let font = UIFont.fontAwesomeOfSize(rect.width * 0.52)
+			let labelFontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: labelStyle]
+			let size = text.sizeWithAttributes(labelFontAttributes)
+			text.drawInRect(CGRect(origin: CGPoint(x: (rect.width - size.width) / 2, y: (rect.height - 2 * size.height + font.capHeight) / 2), size: size), withAttributes: labelFontAttributes)
+		}
 	}
 }
 
