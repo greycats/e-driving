@@ -52,6 +52,16 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 		alertView?.hidden = !showAlert
 	}
 
+	@IBInspectable var showAlertBefore: Bool = false {
+		didSet { updateAlertBefore() }
+	}
+	@IBOutlet weak var alertBeforeView: AlertIcon! {
+		didSet { updateAlertBefore() }
+	}
+	private func updateAlertBefore() {
+		alertBeforeView?.hidden = !showAlertBefore
+	}
+	
 	func syncingWillStart() {
 		titleLabel.text = "RATING"
 		numberLabel.text = "TBD"
@@ -75,10 +85,15 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 			if showAlert {
 				numberLabel.textColor = color
 			}
+		case .AlertBefore:
+			alertBeforeView.tintColor = color
+			if showAlertBefore {
+				numberLabel.textColor = color
+			}
 		case .SupplymentText:
 			titleLabel.textColor = color
 		case .MainText:
-			if !thumbsUp && !showAlert && !healthy {
+			if !thumbsUp && (!showAlert || !showAlertBefore) && !healthy {
 				numberLabel.textColor = color
 			}
 		case .Highlight:
@@ -92,12 +107,18 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 
 	var index: CarIndex! {
 		didSet {
-			let formatter = NSNumberFormatter()
-			formatter.maximumFractionDigits = 1
-			formatter.groupingSize = 3
+			var value = index.value
+			if let number = Double(index.value) {
+				let formatter = NSNumberFormatter()
+				formatter.maximumFractionDigits = 1
+				formatter.groupingSize = 3
+				value = formatter.stringFromNumber(number)!
+			}
+			
 			titleLabel.text = index.title.uppercaseString
-			numberLabel.text = formatter.stringFromNumber(index.value)
+			numberLabel.text = value
 			showAlert = index.state == .Alert
+			showAlertBefore = index.state == .AlertBefore
 			thumbsUp = index.state == .Nice
 			healthy = index.state == .Good
 			applyTheme(.Dark)

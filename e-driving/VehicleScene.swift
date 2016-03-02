@@ -45,10 +45,10 @@ class VehicleViewController: UIViewController, ColorPalette, Overlayed {
 				self?.milesView.miles = 8.5
 				self?.experienceView.experience = 35
 				self?.indexLabels.apply([
-					CarIndex(title: "eco-friendly", value: 31.2, state: .Nice),
-					CarIndex(title: "smoothness", value: 89, state: .Good),
-					CarIndex(title: "calmness", value: 94, state: .Nice),
-					CarIndex(title: "safety", value: 68, state: .Alert)])
+					CarIndex(title: "eco-friendly", value: "31.2", state: .Nice),
+					CarIndex(title: "smoothness", value: "89", state: .Good),
+					CarIndex(title: "calmness", value: "94", state: .Nice),
+					CarIndex(title: "safety", value: "68", state: .Alert)])
 			}
 		}
 		milesView.startSync(completion)

@@ -11,16 +11,17 @@ import UIKit
 enum CarIndexState {
 	case Normal
 	case Alert
+	case AlertBefore
 	case Good
 	case Nice
 }
 
 struct CarIndex {
 	let title: String
-	let value: Double
+	let value: String
 	let state: CarIndexState
 	let highlight: Bool
-	init(title: String, value: Double, state: CarIndexState = .Normal, highlight: Bool = false) {
+	init(title: String, value: String, state: CarIndexState = .Normal, highlight: Bool = false) {
 		self.title = title
 		self.value = value
 		self.state = state
