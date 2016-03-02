@@ -16,7 +16,7 @@
         <!--Activity-->
         <scene sceneID="Os7-h9-9l1">
             <objects>
-                <viewController storyboardIdentifier="Activity" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="CZQ-pf-AF9" customClass="ActivityViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="CZQ-pf-AF9" customClass="FeedViewController" customModule="e_driving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9P8-zd-REH"/>
                         <viewControllerLayoutGuide type="bottom" id="kn7-Z8-CTQ"/>
@@ -203,6 +203,7 @@
                         <outlet property="achievementsView" destination="fWx-dl-t9r" id="2vy-hW-rCf"/>
                         <outlet property="dateTicker" destination="fbA-fd-jhQ" id="QzX-RL-Fnr"/>
                         <outlet property="routeView" destination="9tI-W9-Nmy" id="B9S-Xb-Xgb"/>
+                        <outlet property="weekActivity" destination="to3-tn-Oja" id="s7Q-QM-cNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7H-ZZ-e2V" sceneMemberID="firstResponder"/>

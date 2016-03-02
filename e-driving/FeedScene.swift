@@ -1,5 +1,5 @@
 //
-//  ActivityScene.swift
+//  FeedScene.swift
 //  e-driving
 //
 //  Created by Rex Sheng on 2/26/16.
@@ -9,14 +9,14 @@
 import Greycats
 import CoreLocation
 
-class ActivityViewController: UIViewController, ColorPalette, Overlayed {
+class FeedViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var dateTicker: DateTicker!
 	@IBOutlet weak var achievementsView: AchievementsView!
+	@IBOutlet weak var weekActivity: WeekActivity!
 
 	override func viewDidLoad() {
 		applyTheme(.Dark)
-		dateTicker.userInteractionEnabled = false
 		routeView.route = [
 			RouteHistory(timestamp: NSDate(), location: CLLocation(latitude: 37.662438, longitude: -122.424233), recoginzedName: "Home", milesToNext: 6),
 			RouteHistory(timestamp: NSDate(), location: CLLocation(latitude: 37.666325, longitude: -122.433674), recoginzedName: nil, milesToNext: nil),
@@ -26,5 +26,8 @@ class ActivityViewController: UIViewController, ColorPalette, Overlayed {
 
 		dateTicker.date = NSDate()
 		achievementsView.achievements = [Achievement.PerfectDriver, Achievement.SmoothnessLevel(2), Achievement.CalmnessLevel]
+		dateTicker.onDateChange = {[weak self] day in
+			try self?.weekActivity.setDay(day)
+		}
 	}
 }

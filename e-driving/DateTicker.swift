@@ -54,14 +54,18 @@ class DateTicker: NibView, ColorPalette {
 	@IBOutlet weak var dateLabel: UILabel!
 
 	var basis: DateBasis = .Weekly
+	private var _date: NSDate!
 	var date: NSDate! {
-		didSet {
-			dateLabel.text = basis.formatDate(date)
-			onDateChange?(date)
+		get { return _date }
+		set(value) {
+			if let _ = try? onDateChange?(value) {
+				dateLabel.text = basis.formatDate(value)
+				_date = value
+			}
 		}
 	}
 
-	var onDateChange: ((NSDate) -> ())?
+	var onDateChange: ((NSDate) throws -> ())?
 
 	@IBAction func tapLeft(sender: UIControl) {
 		date = basis.previous(date)
