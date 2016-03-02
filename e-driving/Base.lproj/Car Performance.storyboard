@@ -146,10 +146,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-9k-KBs" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
-                                                        <rect key="frame" x="497" y="8" width="63" height="63"/>
+                                                        <rect key="frame" x="497" y="8.5" width="63" height="62"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="63" id="AAS-RR-yy8"/>
-                                                            <constraint firstAttribute="height" constant="63" id="cvs-7x-TOb"/>
+                                                            <constraint firstAttribute="width" constant="63" placeholder="YES" id="oF6-0N-Iv5"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
