@@ -123,7 +123,7 @@ class WeekActivity: NibView {
 		let weeks = Int(ceil(Float(components.day) / 7)) + 20
 		for view in activitiesView.subviews {
 			if let view = view as? ActivityLine {
-				if weeks > -20 || weeks < 0 {
+				if weeks > 20 || weeks < 0 {
 					throw ActivityError.ReachEnd
 				}
 				view.weekOffset = weeks
@@ -146,12 +146,9 @@ class WeekActivity: NibView {
 		return activityLine
 	}
 
-	override func setup() {
-		super.setup()
-		activitiesView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
+	func setupOnce() {
 		step = (bounds.width - 40) / 7
 		x0 = 20 + step / 2
-
 		//TODO - this is a demo
 		(0...1).forEach { i in
 			let line = addDemoLine(UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
@@ -162,10 +159,21 @@ class WeekActivity: NibView {
 		let avatar = UIImageView(image: UIImage(named: "avatar2"))
 		attachAvatar(avatar, line: line)
 		layoutIfNeeded()
-
 		weekday = Calendar.component(.Weekday, fromDate: NSDate())
 		fixLineLeft()
 		onWeekdayChange.forEach { $0(weekday) }
+	}
+
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		if x0 == nil {
+			setupOnce()
+		}
+	}
+
+	override func setup() {
+		super.setup()
+		activitiesView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
 	}
 
 	func attachAvatar(avatar: UIImageView, line: ActivityLine) {
