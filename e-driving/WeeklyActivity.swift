@@ -41,4 +41,61 @@ class WeekActivity: NibView {
 	@IBOutlet weak var lineLeft: NSLayoutConstraint!
 	@IBOutlet weak var lineTop: NSLayoutConstraint!
 	@IBOutlet weak var line: UIView!
+
+	override func setup() {
+		super.setup()
+		activitiesView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
+	}
+
+	private func panAnimate(closure: (() -> ())?) {
+		userInteractionEnabled = false
+		UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
+			self.layoutIfNeeded()
+			}, completion: { _ in
+				self.userInteractionEnabled = true
+				closure?()
+		})
+	}
+
+	func panReset() {
+		lineLeft.constant = 0
+		panAnimate(nil)
+	}
+
+	var step: CGFloat!
+	var x0: CGFloat!
+
+	var weekday: Int = 0 {
+		didSet {
+			if oldValue != weekday {
+				fixLineLeft()
+			}
+		}
+	}
+
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		weekday = Calendar.component(.Weekday, fromDate: NSDate())
+		fixLineLeft()
+	}
+
+	func fixLineLeft() {
+		if x0 == nil {
+			step = (bounds.width - 40) / 7
+			x0 = 20 + step / 2
+		}
+		lineLeft.constant = CGFloat(weekday) * step + x0
+		panAnimate(nil)
+	}
+
+	func pan(gesture: UIPanGestureRecognizer) {
+		switch gesture.state {
+		case .Changed:
+			let x = gesture.locationInView(activitiesView).x
+			let num = max(0, floor((x - x0) / step))
+			weekday = Int(num)
+		default:
+			break
+		}
+	}
 }

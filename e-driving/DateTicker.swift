@@ -8,7 +8,7 @@
 
 import Greycats
 
-private let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+let Calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
 enum DateBasis {
 	case Weekly
 	case Monthly
@@ -17,14 +17,14 @@ enum DateBasis {
 	func next(date: NSDate, options: NSCalendarOptions = [.MatchNextTime]) -> NSDate {
 		switch self {
 		case .Weekly:
-			let week = cal.component(.Weekday, fromDate: date)
-			return cal.nextDateAfterDate(date, matchingUnit: .Weekday, value: week, options: options)!
+			let week = Calendar.component(.Weekday, fromDate: date)
+			return Calendar.nextDateAfterDate(date, matchingUnit: .Weekday, value: week, options: options)!
 		case .Monthly:
-			let day = cal.component(.Day, fromDate: date)
-			return cal.nextDateAfterDate(date, matchingUnit: .Day, value: day, options: options)!
+			let day = Calendar.component(.Day, fromDate: date)
+			return Calendar.nextDateAfterDate(date, matchingUnit: .Day, value: day, options: options)!
 		case .Yearly:
-			let compo = cal.components([.Month, .Day], fromDate: date)
-			return cal.nextDateAfterDate(date, matchingComponents: compo, options: options)!
+			let compo = Calendar.components([.Month, .Day], fromDate: date)
+			return Calendar.nextDateAfterDate(date, matchingComponents: compo, options: options)!
 		}
 	}
 

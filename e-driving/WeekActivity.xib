@@ -47,10 +47,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROj-qP-S4w">
-                    <rect key="frame" x="0.0" y="578" width="600" height="14.5"/>
+                    <rect key="frame" x="20" y="578" width="560" height="14.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-kG-VJG" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="85" height="14.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="80.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-9i-rym" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="85" y="0.0" width="85" height="14.5"/>
+                            <rect key="frame" x="80.5" y="0.0" width="80" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -71,8 +71,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toi-9R-VhT" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="170" y="0.0" width="85.5" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toi-9R-VhT" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                            <rect key="frame" x="160.5" y="0.0" width="80.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -82,8 +82,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfJ-8I-vKf" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="255" y="0.0" width="86.5" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfJ-8I-vKf" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                            <rect key="frame" x="240.5" y="0.0" width="80" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -93,8 +93,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="THU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-v2-88p" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="341.5" y="0.0" width="86" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-v2-88p" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                            <rect key="frame" x="320.5" y="0.0" width="80" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -104,8 +104,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-Xx-CbB" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="427.5" y="0.0" width="86" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-Xx-CbB" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                            <rect key="frame" x="400.5" y="0.0" width="79.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-fL-9mL" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
-                            <rect key="frame" x="513.5" y="0.0" width="86.5" height="14.5"/>
+                            <rect key="frame" x="480" y="0.0" width="80" height="14.5"/>
                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -161,9 +161,9 @@
             </subviews>
             <color key="backgroundColor" red="0.070588235289999995" green="0.26274509800000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="ROj-qP-S4w" firstAttribute="leading" secondItem="aTU-tN-02J" secondAttribute="leading" id="Gnw-Mc-JqY"/>
+                <constraint firstItem="ROj-qP-S4w" firstAttribute="leading" secondItem="aTU-tN-02J" secondAttribute="leading" constant="20" id="Gnw-Mc-JqY"/>
                 <constraint firstAttribute="trailing" secondItem="BDK-RE-WTI" secondAttribute="trailing" id="JRC-ex-sYd"/>
-                <constraint firstAttribute="trailing" secondItem="ROj-qP-S4w" secondAttribute="trailing" id="QJt-gB-Fls"/>
+                <constraint firstAttribute="trailing" secondItem="ROj-qP-S4w" secondAttribute="trailing" constant="20" id="QJt-gB-Fls"/>
                 <constraint firstAttribute="bottom" secondItem="ROj-qP-S4w" secondAttribute="bottom" constant="7" id="bva-uK-jL2"/>
                 <constraint firstItem="BDK-RE-WTI" firstAttribute="top" secondItem="aTU-tN-02J" secondAttribute="top" id="kHc-p5-09B"/>
                 <constraint firstItem="BDK-RE-WTI" firstAttribute="leading" secondItem="aTU-tN-02J" secondAttribute="leading" id="pQH-nF-D8V"/>

@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="584" y="1085"/>
         </scene>
-        <!--Driver Score-->
+        <!--Feed-->
         <scene sceneID="SmL-kz-3Yr">
             <objects>
-                <viewControllerPlaceholder storyboardName="Driver Score" id="0tL-nn-bd6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Feed" id="0tL-nn-bd6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="K9j-78-PUH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqa-6A-2MM" userLabel="First Responder" sceneMemberID="firstResponder"/>

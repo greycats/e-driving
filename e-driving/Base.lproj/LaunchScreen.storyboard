@@ -15,7 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Page 1" translatesAutoresizingMaskIntoConstraints="NO" id="h5M-Ql-2yH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fid-tM-kFa">
+                                <rect key="frame" x="177" y="304.5" width="246" height="109"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.027450980392156862" green="0.1803921568627451" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h5M-Ql-2yH" secondAttribute="trailing" id="Be1-X9-nVW"/>
+                            <constraint firstItem="h5M-Ql-2yH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Qy5-nV-Fbb"/>
+                            <constraint firstItem="h5M-Ql-2yH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="pwb-O4-8np"/>
+                            <constraint firstItem="fid-tM-kFa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qlp-Xp-hzp"/>
+                            <constraint firstItem="fid-tM-kFa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="59" id="uZl-K8-qo0"/>
+                            <constraint firstAttribute="bottom" secondItem="h5M-Ql-2yH" secondAttribute="bottom" id="x7P-PS-S7b"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +39,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="246" height="109"/>
+        <image name="Page 1" width="414" height="736"/>
+    </resources>
 </document>
