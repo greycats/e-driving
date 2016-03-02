@@ -19,36 +19,45 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JF-bH-xqH">
                                 <rect key="frame" x="0.0" y="64" width="600" height="1892"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 6" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-yB-LCm">
-                                        <rect key="frame" x="25" y="330" width="180" height="277"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcY-1J-Z8K" customClass="VehicleView" customModule="e_driving" customModuleProvider="target">
-                                        <rect key="frame" x="226" y="30" width="357" height="878"/>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5eN-qH-A51">
+                                        <rect key="frame" x="25" y="239" width="367" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" placeholder="YES" id="DSh-9h-CAk"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-28-zHx" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcY-1J-Z8K" customClass="VehicleView" customModule="e_driving" customModuleProvider="target">
+                                        <rect key="frame" x="413" y="30" width="170" height="418"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-28-zHx" customClass="ButtonView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="908" width="600" height="100"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Find a mechanic"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apW-K3-TPT" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apW-K3-TPT" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1008" width="600" height="72"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hxe-yB-LCm" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" constant="25" id="0vf-fk-iAv"/>
                                     <constraint firstAttribute="trailing" secondItem="KEK-28-zHx" secondAttribute="trailing" id="3mK-fg-BMo"/>
+                                    <constraint firstItem="5eN-qH-A51" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" constant="25" id="6kc-S2-6TA"/>
                                     <constraint firstAttribute="trailing" secondItem="apW-K3-TPT" secondAttribute="trailing" id="I29-kD-0e8"/>
                                     <constraint firstAttribute="bottom" secondItem="apW-K3-TPT" secondAttribute="bottom" constant="500" id="Slb-eF-kUq"/>
+                                    <constraint firstItem="5eN-qH-A51" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="YQf-Vh-fra"/>
+                                    <constraint firstItem="gcY-1J-Z8K" firstAttribute="leading" secondItem="5eN-qH-A51" secondAttribute="trailing" constant="21" id="Z5t-zp-9Hv"/>
                                     <constraint firstItem="KEK-28-zHx" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="Zei-yz-aYq"/>
-                                    <constraint firstItem="gcY-1J-Z8K" firstAttribute="leading" secondItem="hxe-yB-LCm" secondAttribute="trailing" constant="21" id="bfM-Tt-7bM"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="e1X-bB-s9X"/>
                                     <constraint firstAttribute="trailing" secondItem="gcY-1J-Z8K" secondAttribute="trailing" constant="17" id="ezv-ft-IMD"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="bottom" secondItem="KEK-28-zHx" secondAttribute="top" id="f1Z-Wk-uv3"/>
+                                    <constraint firstItem="5eN-qH-A51" firstAttribute="centerY" secondItem="8JF-bH-xqH" secondAttribute="centerY" id="flD-Z9-sqX"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="top" secondItem="KEK-28-zHx" secondAttribute="bottom" id="oU2-6k-UPl"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="top" secondItem="8JF-bH-xqH" secondAttribute="top" constant="30" id="v1g-nV-HZo"/>
-                                    <constraint firstItem="hxe-yB-LCm" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="wCn-4l-Bqc"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="flD-Z9-sqX"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -73,6 +82,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="2000"/>
                     <connections>
+                        <outlet property="alertsView" destination="5eN-qH-A51" id="Qwq-vI-zgR"/>
                         <outlet property="findMechanic" destination="KEK-28-zHx" id="Dad-HK-CJf"/>
                         <outlet property="vehicleView" destination="gcY-1J-Z8K" id="Eem-tW-bOF"/>
                     </connections>
@@ -83,7 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 6" width="180" height="277"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
 </document>
