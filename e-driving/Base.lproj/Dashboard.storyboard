@@ -135,7 +135,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="3,200"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-wB-jSJ" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-wB-jSJ" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="83" y="127" width="75" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="OVER SPEED"/>
@@ -149,7 +149,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="376"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-gn-YE0" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-gn-YE0" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="257" y="127" width="85.5" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="HARD BRAKES"/>
@@ -163,7 +163,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="6.5"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-cK-Q7d" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-cK-Q7d" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
                                                 <rect key="frame" x="438" y="127" width="84.5" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="HARD ACCELE"/>
