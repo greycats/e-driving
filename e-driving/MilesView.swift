@@ -107,6 +107,7 @@ class MilesView: StyledView, ColorPalette, LabelSyncing {
 		formatter.minimumFractionDigits = 0
 		formatter.maximumFractionDigits = 1
 		formatter.minimumIntegerDigits = 1
+		self.animation?.stop()
 		let animation = Animation()
 		animation.start {[weak self] time in
 			if time <= t {
