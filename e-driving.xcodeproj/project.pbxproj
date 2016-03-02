@@ -61,6 +61,8 @@
 		CFC154D21C847D5300B78F18 /* CarPerformanceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC154D11C847D5300B78F18 /* CarPerformanceScene.swift */; };
 		CFC154D41C847E9000B78F18 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC154D31C847E9000B78F18 /* Divider.swift */; };
 		CFC154D61C847EBC00B78F18 /* DividerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154D51C847EBC00B78F18 /* DividerView.xib */; };
+		CFDAFBD61C867D610071D0E9 /* WeekActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */; };
+		CFDAFBD81C867F2A0071D0E9 /* WeeklyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAFBD71C867F2A0071D0E9 /* WeeklyActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		CFC154D11C847D5300B78F18 /* CarPerformanceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPerformanceScene.swift; sourceTree = "<group>"; };
 		CFC154D31C847E9000B78F18 /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		CFC154D51C847EBC00B78F18 /* DividerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DividerView.xib; sourceTree = "<group>"; };
+		CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekActivity.xib; sourceTree = "<group>"; };
+		CFDAFBD71C867F2A0071D0E9 /* WeeklyActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +261,9 @@
 				B53106CF1C80454500690145 /* AchievementView.xib */,
 				B5CAD01E1C82A253002D80EB /* AchievementsView.swift */,
 				CF97042C1C7FEE220035CECE /* RouteView.swift */,
+				CFDAFBD71C867F2A0071D0E9 /* WeeklyActivity.swift */,
 				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
+				CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */,
 				CF9704331C8052070035CECE /* ActivityScene.swift */,
 			);
 			name = "Activity Scene";
@@ -392,6 +398,7 @@
 				B5307F921C7EE6E300F04AC3 /* BebasNeueLight.otf in Resources */,
 				CFA34D891C83E8B000B2D869 /* DateTicker.xib in Resources */,
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
+				CFDAFBD61C867D610071D0E9 /* WeekActivity.xib in Resources */,
 				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
 				B53106D01C80454500690145 /* AchievementView.xib in Resources */,
 				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
@@ -478,6 +485,7 @@
 				CFC154D21C847D5300B78F18 /* CarPerformanceScene.swift in Sources */,
 				CFA34D801C83E0F800B2D869 /* DashboardScene.swift in Sources */,
 				CFA34D7D1C83D69700B2D869 /* Achievement.swift in Sources */,
+				CFDAFBD81C867F2A0071D0E9 /* WeeklyActivity.swift in Sources */,
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,

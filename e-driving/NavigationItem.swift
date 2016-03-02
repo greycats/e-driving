@@ -30,15 +30,32 @@ class NavigationItem: UINavigationItem {
 	}
 
 	func resetTitleView() {
-		let view = UILabel()
-		if let title = title?.uppercaseString {
-			view.attributedText = NSAttributedString(string: title, attributes: [
-				NSFontAttributeName: UIFont(name: "SFUIText-Regular", size: 16)!,
-				NSForegroundColorAttributeName: UIColor.whiteColor(),
-				NSKernAttributeName: 1]
-			)
-		}
+		let view = KernLabel()
+		view.font = UIFont(name: "SFUIText-Regular", size: 16)
+		view.textColor = .whiteColor()
+		view.kern = 1
+		view.text = title?.uppercaseString
 		view.sizeToFit()
 		titleView = view
+	}
+}
+
+@IBDesignable
+class KernLabel: UILabel {
+	@IBInspectable var kern: Int = 0 {
+		didSet { updateAttributedText() }
+	}
+	override var text: String? {
+		didSet { updateAttributedText() }
+	}
+	
+	func updateAttributedText() {
+		if let text = text {
+			attributedText = NSAttributedString(string: text, attributes: [
+				NSFontAttributeName: font,
+				NSForegroundColorAttributeName: textColor,
+				NSKernAttributeName: kern
+				])
+		}
 	}
 }

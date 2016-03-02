@@ -100,17 +100,7 @@ class MenuCell: UITableViewCell, TableViewDataNibCell {
 	static var nibName = "MenuCell"
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var selectedMark: GradientView!
-
 	@IBOutlet weak var markLeft: NSLayoutConstraint!
-	var name: String! {
-		didSet {
-			nameLabel.attributedText = NSAttributedString(string: name.uppercaseString, attributes: [
-				NSKernAttributeName: 2,
-				NSForegroundColorAttributeName: nameLabel.textColor,
-				NSFontAttributeName: nameLabel.font
-				])
-		}
-	}
 
 	override func setSelected(selected: Bool, animated: Bool) {
 		markLeft.constant = selected ? 0 : -4
@@ -125,7 +115,7 @@ class MenuViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var experienceView: ExperienceView!
 
-	let menu = TableViewDataNib<String, MenuCell>(title: nil).keepSelection().onRender { $0.name = $1 }
+	let menu = TableViewDataNib<String, MenuCell>(title: nil).keepSelection().onRender { $0.nameLabel.text = $1.uppercaseString }
 
 	var rootViewController: RootViewController? {
 		return parentViewController as? RootViewController
