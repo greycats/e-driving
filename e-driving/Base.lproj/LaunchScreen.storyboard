@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fid-tM-kFa">
-                                <rect key="frame" x="177" y="304.5" width="246" height="109"/>
+                                <rect key="frame" x="177" y="270" width="246" height="109"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.027450980392156862" green="0.1803921568627451" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,7 +30,7 @@
                             <constraint firstItem="h5M-Ql-2yH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Qy5-nV-Fbb"/>
                             <constraint firstItem="h5M-Ql-2yH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="pwb-O4-8np"/>
                             <constraint firstItem="fid-tM-kFa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qlp-Xp-hzp"/>
-                            <constraint firstItem="fid-tM-kFa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="59" id="uZl-K8-qo0"/>
+                            <constraint firstItem="fid-tM-kFa" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-30" id="uZl-K8-qo0"/>
                             <constraint firstAttribute="bottom" secondItem="h5M-Ql-2yH" secondAttribute="bottom" id="x7P-PS-S7b"/>
                         </constraints>
                     </view>
