@@ -8,7 +8,6 @@
 
 import Greycats
 
-
 struct CarAlert {
 	enum Reason {
 		case LowOil

@@ -7,7 +7,6 @@
         <mutableArray key="SFUIText-Regular.otf">
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
-            <string>SFUIText-Regular</string>
         </mutableArray>
         <mutableArray key="SFUIText-Semibold.otf">
             <string>SFUIText-Semibold</string>
@@ -16,24 +15,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r7p-HF-nLY" customClass="MechanicCell" customModule="e_driving" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="r7p-HF-nLY" customClass="MechanicCell" customModule="e_driving" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="81"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7p-HF-nLY" id="UP1-JL-mvZ">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="80.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYNTHIA'S AUTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpm-oL-n7K" userLabel="Name">
-                        <rect key="frame" x="10" y="20" width="103" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CYNTHIA'S AUTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpm-oL-n7K" userLabel="Name" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                        <rect key="frame" x="25" y="20" width="365" height="14.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="FIO-9f-lAV"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
                         <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="kern">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="698 East Blvd, Odessa, NC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9s-gL-Lj8" userLabel="Address">
-                        <rect key="frame" x="10" y="34" width="214.5" height="30.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="698 East Blvd, Odessa, NC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9s-gL-Lj8" userLabel="Address">
+                        <rect key="frame" x="25" y="34" width="229" height="21.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="One-tm-v1v"/>
                         </constraints>
@@ -46,54 +50,49 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdj-CQ-xEa" userLabel="Miles">
-                        <rect key="frame" x="224.5" y="38.5" width="36" height="21.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="36" id="ikr-ms-ZNN"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
-                        <color key="textColor" red="0.062745098040000002" green="0.57254901960000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-AT-Jvy" userLabel="MilesLabel">
-                        <rect key="frame" x="265" y="38.5" width="44.5" height="21.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Miles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-AT-Jvy" userLabel="MilesLabel">
+                        <rect key="frame" x="259" y="34" width="112" height="21.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44.5" id="UfW-RG-RlM"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
                         <color key="textColor" red="0.062745098039215685" green="0.5725490196078431" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UfW-RG-RlM"/>
+                            </mask>
+                        </variation>
                     </label>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1X-2w-XNz">
+                        <rect key="frame" x="25" y="78" width="365" height="2"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="5eM-M4-Q1Y"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Vpm-oL-n7K" firstAttribute="leading" secondItem="UP1-JL-mvZ" secondAttribute="leading" constant="10" id="0uf-sf-BVp"/>
-                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="leading" secondItem="pdj-CQ-xEa" secondAttribute="trailing" constant="5" id="3mY-3l-oyN"/>
-                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="centerY" secondItem="pdj-CQ-xEa" secondAttribute="centerY" id="JSh-ea-dhy"/>
+                    <constraint firstItem="Vpm-oL-n7K" firstAttribute="leading" secondItem="UP1-JL-mvZ" secondAttribute="leading" constant="25" id="0uf-sf-BVp"/>
+                    <constraint firstItem="Vpm-oL-n7K" firstAttribute="trailing" secondItem="a7p-AT-Jvy" secondAttribute="trailing" constant="19" id="A5e-PC-bpE"/>
+                    <constraint firstItem="d1X-2w-XNz" firstAttribute="leading" secondItem="Vpm-oL-n7K" secondAttribute="leading" id="ACG-ac-jKS"/>
+                    <constraint firstItem="d1X-2w-XNz" firstAttribute="trailing" secondItem="Vpm-oL-n7K" secondAttribute="trailing" id="L8L-5e-UXV"/>
                     <constraint firstItem="Vpm-oL-n7K" firstAttribute="top" secondItem="UP1-JL-mvZ" secondAttribute="top" constant="20" id="Sac-1W-OuF"/>
                     <constraint firstItem="z9s-gL-Lj8" firstAttribute="leading" secondItem="Vpm-oL-n7K" secondAttribute="leading" id="bOv-Kj-aSI"/>
                     <constraint firstItem="z9s-gL-Lj8" firstAttribute="top" secondItem="Vpm-oL-n7K" secondAttribute="bottom" id="cv4-DM-iM6"/>
-                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="centerY" secondItem="pdj-CQ-xEa" secondAttribute="centerY" id="daY-dx-igp"/>
-                    <constraint firstItem="z9s-gL-Lj8" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pdj-CQ-xEa" secondAttribute="leading" id="efj-nr-omC"/>
                     <constraint firstItem="a7p-AT-Jvy" firstAttribute="centerY" secondItem="z9s-gL-Lj8" secondAttribute="centerY" id="fk2-pc-cct"/>
-                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="centerY" secondItem="pdj-CQ-xEa" secondAttribute="centerY" id="fvZ-Qp-XKF"/>
-                    <constraint firstAttribute="bottom" secondItem="z9s-gL-Lj8" secondAttribute="bottom" constant="15" id="hab-v0-i5X"/>
-                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="leading" secondItem="pdj-CQ-xEa" secondAttribute="leading" id="hbV-bM-15v"/>
-                    <constraint firstAttribute="trailing" secondItem="a7p-AT-Jvy" secondAttribute="trailing" constant="10" id="j05-Gu-tAa"/>
+                    <constraint firstAttribute="bottom" secondItem="z9s-gL-Lj8" secondAttribute="bottom" constant="25" id="hab-v0-i5X"/>
+                    <constraint firstAttribute="trailing" secondItem="Vpm-oL-n7K" secondAttribute="trailing" constant="25" id="o7K-CO-ahM"/>
+                    <constraint firstAttribute="bottom" secondItem="d1X-2w-XNz" secondAttribute="bottom" id="scf-oS-I1d"/>
+                    <constraint firstItem="a7p-AT-Jvy" firstAttribute="leading" secondItem="z9s-gL-Lj8" secondAttribute="trailing" constant="5" id="yg3-DH-byx"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="daY-dx-igp"/>
-                        <exclude reference="fvZ-Qp-XKF"/>
-                        <exclude reference="hbV-bM-15v"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressLabel" destination="z9s-gL-Lj8" id="DGm-NP-Aio"/>
-                <outlet property="miles" destination="pdj-CQ-xEa" id="eE0-bl-hDy"/>
+                <outlet property="miles" destination="a7p-AT-Jvy" id="k6m-IH-0Dl"/>
                 <outlet property="nameLabel" destination="Vpm-oL-n7K" id="pvB-B8-c3c"/>
             </connections>
-            <point key="canvasLocation" x="470" y="193"/>
+            <point key="canvasLocation" x="517.5" y="193.5"/>
         </tableViewCell>
     </objects>
 </document>

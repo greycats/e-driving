@@ -26,7 +26,6 @@
 		B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084CF1C7FC2DC0083B242 /* ButtonView.swift */; };
 		B55084D21C7FCB290083B242 /* PositionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55084D11C7FCB290083B242 /* PositionLabel.swift */; };
 		B56AE7351C86C345000E0F6A /* MechanicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56AE7341C86C345000E0F6A /* MechanicCell.xib */; };
-		B56AE7371C86CD9B000E0F6A /* MechanicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AE7361C86CD9B000E0F6A /* MechanicCell.swift */; };
 		B571573E1C7FECA900A905CB /* MilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B571573D1C7FECA900A905CB /* MilesView.xib */; };
 		B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAD01E1C82A253002D80EB /* AchievementsView.swift */; };
 		C1CAC8837F7630815E9A39A0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4040FFF439FA729D207C8 /* Pods.framework */; };
@@ -90,7 +89,6 @@
 		B55084CF1C7FC2DC0083B242 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		B55084D11C7FCB290083B242 /* PositionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionLabel.swift; sourceTree = "<group>"; };
 		B56AE7341C86C345000E0F6A /* MechanicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MechanicCell.xib; sourceTree = "<group>"; };
-		B56AE7361C86CD9B000E0F6A /* MechanicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanicCell.swift; sourceTree = "<group>"; };
 		B571573D1C7FECA900A905CB /* MilesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilesView.xib; sourceTree = "<group>"; };
 		B5CAD01E1C82A253002D80EB /* AchievementsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		BFB4040FFF439FA729D207C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,7 +305,6 @@
 				CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */,
 				CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */,
 				B56AE7341C86C345000E0F6A /* MechanicCell.xib */,
-				B56AE7361C86CD9B000E0F6A /* MechanicCell.swift */,
 			);
 			name = "Car Performance Scene";
 			sourceTree = "<group>";
@@ -504,7 +501,6 @@
 				CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */,
 				CF56A2431C7ECE2F002F9F5B /* MenuScene.swift in Sources */,
 				B53106CE1C7FF2CB00690145 /* MilesView.swift in Sources */,
-				B56AE7371C86CD9B000E0F6A /* MechanicCell.swift in Sources */,
 				CFA34D851C83E42700B2D869 /* RouteHistory.swift in Sources */,
 				CFBB91511C85A8FE00D2F0CA /* CarIndex.swift in Sources */,
 				CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */,

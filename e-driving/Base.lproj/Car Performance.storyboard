@@ -52,7 +52,7 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apW-K3-TPT" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1008" width="600" height="72"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-nw-1Qd" userLabel="Information">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-nw-1Qd" userLabel="Information">
                                         <rect key="frame" x="0.0" y="1080" width="600" height="346"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-XO-dhj">
@@ -197,13 +197,13 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PerformanceMap" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-mE-cm2">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PerformanceMap" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-mE-cm2">
                                         <rect key="frame" x="0.0" y="1456" width="600" height="215"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="215" id="CjY-D9-Pbc"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-Gj-mHS" userLabel="MechanicList">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-Gj-mHS" userLabel="MechanicList">
                                         <rect key="frame" x="0.0" y="1671" width="600" height="316"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEAREST MECHANICS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPb-XD-H10">
@@ -216,16 +216,13 @@
                                                 <color key="textColor" red="0.40784313725490196" green="0.41568627450980389" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agr-Ob-rkr">
-                                                <rect key="frame" x="20" y="66" width="560" height="250"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agr-Ob-rkr">
+                                                <rect key="frame" x="0.0" y="66" width="600" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="DQO-hi-uux"/>
                                                 </constraints>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="Q16-mX-tzg" id="RNL-nJ-xbm"/>
-                                                    <outlet property="delegate" destination="Q16-mX-tzg" id="pO7-uy-O5t"/>
-                                                </connections>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,8 +231,8 @@
                                             <constraint firstAttribute="height" constant="400" id="FNC-1M-erb"/>
                                             <constraint firstItem="kPb-XD-H10" firstAttribute="centerX" secondItem="ODU-Gj-mHS" secondAttribute="centerX" id="Hm7-DK-qBQ"/>
                                             <constraint firstItem="kPb-XD-H10" firstAttribute="top" secondItem="ODU-Gj-mHS" secondAttribute="top" constant="30" id="WiV-DZ-jD3"/>
-                                            <constraint firstAttribute="trailing" secondItem="agr-Ob-rkr" secondAttribute="trailing" constant="20" id="Ze8-0n-anG"/>
-                                            <constraint firstItem="agr-Ob-rkr" firstAttribute="leading" secondItem="ODU-Gj-mHS" secondAttribute="leading" constant="20" id="Zjj-c1-EF3"/>
+                                            <constraint firstAttribute="trailing" secondItem="agr-Ob-rkr" secondAttribute="trailing" id="Ze8-0n-anG"/>
+                                            <constraint firstItem="agr-Ob-rkr" firstAttribute="leading" secondItem="ODU-Gj-mHS" secondAttribute="leading" id="Zjj-c1-EF3"/>
                                             <constraint firstAttribute="bottom" secondItem="agr-Ob-rkr" secondAttribute="bottom" id="oFP-3S-Stk"/>
                                         </constraints>
                                         <variation key="default">
@@ -255,10 +252,10 @@
                                     <constraint firstAttribute="trailing" secondItem="ODU-Gj-mHS" secondAttribute="trailing" id="KRe-6X-g5V"/>
                                     <constraint firstItem="6JV-nw-1Qd" firstAttribute="top" secondItem="apW-K3-TPT" secondAttribute="bottom" id="Laa-53-pYV"/>
                                     <constraint firstAttribute="bottom" secondItem="apW-K3-TPT" secondAttribute="bottom" constant="500" id="Slb-eF-kUq"/>
-                                    <constraint firstItem="5eN-qH-A51" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="YQf-Vh-fra"/>
-                                    <constraint firstItem="gcY-1J-Z8K" firstAttribute="leading" secondItem="5eN-qH-A51" secondAttribute="trailing" constant="21" id="Z5t-zp-9Hv"/>
                                     <constraint firstItem="ODU-Gj-mHS" firstAttribute="top" secondItem="JMF-mE-cm2" secondAttribute="bottom" id="T4n-bC-DgS"/>
                                     <constraint firstAttribute="trailing" secondItem="6JV-nw-1Qd" secondAttribute="trailing" id="Uyc-bA-mEM"/>
+                                    <constraint firstItem="5eN-qH-A51" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="YQf-Vh-fra"/>
+                                    <constraint firstItem="gcY-1J-Z8K" firstAttribute="leading" secondItem="5eN-qH-A51" secondAttribute="trailing" constant="21" id="Z5t-zp-9Hv"/>
                                     <constraint firstItem="KEK-28-zHx" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="Zei-yz-aYq"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="e1X-bB-s9X"/>
                                     <constraint firstAttribute="trailing" secondItem="gcY-1J-Z8K" secondAttribute="trailing" constant="17" id="ezv-ft-IMD"/>
@@ -270,7 +267,7 @@
                                     <constraint firstAttribute="bottom" secondItem="6JV-nw-1Qd" secondAttribute="bottom" constant="300" id="mYD-XD-PQY"/>
                                     <constraint firstItem="apW-K3-TPT" firstAttribute="top" secondItem="KEK-28-zHx" secondAttribute="bottom" id="oU2-6k-UPl"/>
                                     <constraint firstItem="gcY-1J-Z8K" firstAttribute="top" secondItem="8JF-bH-xqH" secondAttribute="top" constant="30" id="v1g-nV-HZo"/>
-                                    <constraint firstItem="hxe-yB-LCm" firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="wCn-4l-Bqc"/>
+                                    <constraint firstAttribute="centerY" secondItem="gcY-1J-Z8K" secondAttribute="centerY" id="wCn-4l-Bqc"/>
                                     <constraint firstItem="ODU-Gj-mHS" firstAttribute="leading" secondItem="8JF-bH-xqH" secondAttribute="leading" id="zY7-08-jYV"/>
                                 </constraints>
                                 <variation key="default">
@@ -325,7 +322,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 6" width="180" height="277"/>
         <image name="PerformanceMap" width="414" height="215"/>
         <image name="hamburger" width="20" height="15"/>
     </resources>
