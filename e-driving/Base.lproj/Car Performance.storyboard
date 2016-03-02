@@ -8,6 +8,12 @@
         <mutableArray key="SFUIText-Medium.otf">
             <string>SFUIText-Medium</string>
         </mutableArray>
+        <mutableArray key="SFUIText-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+        <mutableArray key="SFUIText-Semibold.otf">
+            <string>SFUIText-Semibold</string>
+        </mutableArray>
     </customFonts>
     <scenes>
         <!--VEHICLE DIAGNOSIS-->
@@ -41,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="1008" width="600" height="72"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-nw-1Qd" userLabel="Information">
-                                        <rect key="frame" x="0.0" y="1080" width="600" height="396"/>
+                                        <rect key="frame" x="0.0" y="1080" width="600" height="346"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-XO-dhj">
                                                 <rect key="frame" x="245" y="0.0" width="110" height="16"/>
@@ -106,15 +112,62 @@
                                                     <constraint firstItem="PzT-lD-eRu" firstAttribute="top" secondItem="bDf-hF-92u" secondAttribute="top" id="y70-2D-lOp"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-6O-kDV">
-                                                <rect key="frame" x="0.0" y="246" width="600" height="150"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-6O-kDV" userLabel="Driver">
+                                                <rect key="frame" x="0.0" y="266" width="600" height="80"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQ0-eY-j6V">
+                                                        <rect key="frame" x="40" y="5" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="fnN-H4-Uo3"/>
+                                                            <constraint firstAttribute="width" constant="70" id="oZu-h9-lM2"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRIVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plk-55-Ga7">
+                                                        <rect key="frame" x="130" y="22.5" width="45" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loc Ngo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxL-cy-NWw">
+                                                        <rect key="frame" x="130" y="39" width="71" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-9k-KBs" customClass="MilesView" customModule="e_driving" customModuleProvider="target">
+                                                        <rect key="frame" x="497" y="8.5" width="63" height="63"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="63" id="AAS-RR-yy8"/>
+                                                            <constraint firstAttribute="height" constant="63" id="cvs-7x-TOb"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="plk-55-Ga7" firstAttribute="leading" secondItem="uQ0-eY-j6V" secondAttribute="trailing" constant="20" id="05W-CU-9Pm"/>
                                                     <constraint firstAttribute="height" constant="150" id="14F-wz-w3t"/>
+                                                    <constraint firstItem="LxL-cy-NWw" firstAttribute="leading" secondItem="plk-55-Ga7" secondAttribute="leading" id="9fb-vd-ANp"/>
+                                                    <constraint firstItem="uQ0-eY-j6V" firstAttribute="top" secondItem="mQ7-6O-kDV" secondAttribute="top" constant="5" id="ByY-Os-0iR"/>
+                                                    <constraint firstItem="LxL-cy-NWw" firstAttribute="centerY" secondItem="uQ0-eY-j6V" secondAttribute="centerY" multiplier="1.25" id="HHe-Bg-I0q"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uQ0-eY-j6V" secondAttribute="bottom" constant="5" id="MHI-r5-9Tr"/>
+                                                    <constraint firstItem="3ZW-9k-KBs" firstAttribute="centerY" secondItem="uQ0-eY-j6V" secondAttribute="centerY" id="X8i-hC-9P2"/>
+                                                    <constraint firstItem="plk-55-Ga7" firstAttribute="centerY" secondItem="uQ0-eY-j6V" secondAttribute="centerY" multiplier="0.75" id="dko-HL-LMa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3ZW-9k-KBs" secondAttribute="trailing" constant="40" id="occ-nV-kAq"/>
+                                                    <constraint firstItem="uQ0-eY-j6V" firstAttribute="leading" secondItem="mQ7-6O-kDV" secondAttribute="leading" constant="40" id="pqT-FR-2eX"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="14F-wz-w3t"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="mQ7-6O-kDV" firstAttribute="top" secondItem="MBc-br-oPQ" secondAttribute="bottom" id="4vj-vS-f4b"/>
+                                            <constraint firstItem="mQ7-6O-kDV" firstAttribute="top" secondItem="MBc-br-oPQ" secondAttribute="bottom" constant="20" id="4vj-vS-f4b"/>
                                             <constraint firstAttribute="trailing" secondItem="mQ7-6O-kDV" secondAttribute="trailing" id="919-2f-dTw"/>
                                             <constraint firstItem="mQ7-6O-kDV" firstAttribute="leading" secondItem="6JV-nw-1Qd" secondAttribute="leading" id="Axt-pi-nEE"/>
                                             <constraint firstItem="axQ-XO-dhj" firstAttribute="top" secondItem="6JV-nw-1Qd" secondAttribute="top" id="KML-x3-VrB"/>
@@ -125,6 +178,11 @@
                                             <constraint firstAttribute="height" constant="328" id="rHH-K4-Nv6"/>
                                             <constraint firstAttribute="bottom" secondItem="mQ7-6O-kDV" secondAttribute="bottom" id="zAh-6g-69R"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="rHH-K4-Nv6"/>
@@ -179,8 +237,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="2000"/>
                     <connections>
+                        <outlet property="driverImage" destination="uQ0-eY-j6V" id="zcF-Lz-JDb"/>
+                        <outlet property="driverName" destination="LxL-cy-NWw" id="5mb-dM-saq"/>
                         <outlet property="findMechanic" destination="KEK-28-zHx" id="Dad-HK-CJf"/>
                         <outlet property="indicesView" destination="MBc-br-oPQ" id="iGb-8e-zhT"/>
+                        <outlet property="milesView" destination="3ZW-9k-KBs" id="OIq-jN-AeU"/>
                         <outlet property="vehicleView" destination="gcY-1J-Z8K" id="Eem-tW-bOF"/>
                         <outletCollection property="indices" destination="bDf-hF-92u" collectionClass="NSMutableArray" id="6H3-v3-w7K"/>
                         <outletCollection property="indices" destination="PzT-lD-eRu" collectionClass="NSMutableArray" id="oSB-Ec-6qU"/>

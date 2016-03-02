@@ -13,6 +13,9 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 	@IBOutlet weak var findMechanic: ButtonView!
 	@IBOutlet weak var indicesView: UIView!
 	@IBOutlet var indices: [IndexLabel]!
+	@IBOutlet weak var driverImage: UIImageView!
+	@IBOutlet weak var driverName: UILabel!
+	@IBOutlet weak var milesView: MilesView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,5 +34,9 @@ class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
 				subview.applyTheme(.Dark)
 			}
 		}
+		
+		driverImage.image = UIImage(named: "LocNgo")
+		driverName.text = "Loc Ngo"
+		milesView.miles = 8.5
 	}
 }
