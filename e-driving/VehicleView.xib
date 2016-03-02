@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="170" height="418"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vehicle" translatesAutoresizingMaskIntoConstraints="NO" id="llL-9g-8bf">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="vehicle" translatesAutoresizingMaskIntoConstraints="NO" id="llL-9g-8bf">
                     <rect key="frame" x="0.0" y="0.0" width="170" height="418"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="llL-9g-8bf" secondAttribute="height" multiplier="85:209" id="kSw-Qf-c6D"/>
@@ -45,7 +45,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL9-sR-Xvd" customClass="AlertIcon" customModule="e_driving" customModuleProvider="target">
-                    <rect key="frame" x="119.5" y="86.5" width="23" height="23"/>
+                    <rect key="frame" x="119" y="86" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="KyA-va-eFW"/>
                         <constraint firstAttribute="width" constant="23" id="MSj-dH-c0u"/>
