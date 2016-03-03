@@ -78,6 +78,8 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 		titleLabel.alpha = 1
 	}
 
+	var defaultTextColor: UIColor?
+
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
 		case .Alert:
@@ -92,6 +94,7 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 			if !thumbsUp && (!showAlert || !showAlertBefore) && !healthy {
 				numberLabel.textColor = color
 			}
+			defaultTextColor = color
 		case .Highlight:
 			thumbView.tintColor = color
 			if thumbsUp || healthy {
@@ -121,7 +124,14 @@ class IndexLabel: NibView, ColorPalette, Syncing {
 			default:
 				break
 			}
-			applyTheme(.Dark)
+			if showAlert || showAlertBefore {
+				numberLabel.textColor = alertView.tintColor
+			} else if thumbsUp || healthy {
+				numberLabel.textColor = thumbView.tintColor
+			} else {
+				numberLabel.textColor = defaultTextColor
+			}
+
 		}
 	}
 }
