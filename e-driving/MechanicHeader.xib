@@ -35,8 +35,8 @@
                     </userDefinedRuntimeAttributes>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="amZ-xX-xDy"/>
                             <exclude reference="QUR-sx-MHk"/>
+                            <exclude reference="amZ-xX-xDy"/>
                         </mask>
                     </variation>
                 </label>

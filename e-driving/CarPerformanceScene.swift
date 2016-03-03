@@ -82,6 +82,7 @@ class CarPerformanceViewController: UIViewController, ColorPalette {
 		.onRender { $0.mechanic = $1 }
 		.onHeader { MechanicHeader(text: $0) }
 
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		let size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
@@ -111,10 +112,8 @@ class CarPerformanceViewController: UIViewController, ColorPalette {
 			MechanicInfo(name: "Patrick's Supplies", address: "1330 Forest Dr, Cleveland, AL", miles: 21)
 		]
 		connectTableView(tableView, sections: [mechanics])
-		performanceView.findButton.buttonView.addTarget(self, action: "findAMechanic", forControlEvents: .TouchUpInside)
-	}
-
-	func findAMechanic() {
-		tableView.scrollRectToVisible(tableView.frame, animated: true)
+		performanceView.findButton.onClick {[weak self] in
+			self?.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: .Top, animated: true)
+		}
 	}
 }

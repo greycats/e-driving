@@ -301,16 +301,16 @@
 		CFC154C71C841F0B00B78F18 /* Car Performance Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */,
+				CFC154D11C847D5300B78F18 /* CarPerformanceScene.swift */,
 				CF56A25D1C7F169C002F9F5B /* VehicleView.swift */,
+				CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */,
+				CF9CC31F1C87285900186A58 /* CarInfoView.xib */,
+				B56AE7341C86C345000E0F6A /* MechanicCell.xib */,
+				CF9CC3211C873A5400186A58 /* MechanicHeader.xib */,
+				CF9CC31D1C87269600186A58 /* PerformanceView.xib */,
 				B5307F991C7EFB5900F04AC3 /* VehicleView.xib */,
 				CF56A2491C7ED64B002F9F5B /* Car Performance.storyboard */,
-				CF9CC31D1C87269600186A58 /* PerformanceView.xib */,
-				CFC154D11C847D5300B78F18 /* CarPerformanceScene.swift */,
-				CF9CC31F1C87285900186A58 /* CarInfoView.xib */,
-				CF9CC3211C873A5400186A58 /* MechanicHeader.xib */,
-				CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */,
-				CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */,
-				B56AE7341C86C345000E0F6A /* MechanicCell.xib */,
 			);
 			name = "Car Performance Scene";
 			sourceTree = "<group>";

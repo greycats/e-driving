@@ -28,4 +28,15 @@ class ButtonView: NibView, ColorPalette {
 			break
 		}
 	}
+
+	private var closure: (() -> ())?
+	func onClick(closure: () -> ()) {
+		self.closure = closure
+		buttonView.removeTarget(self, action: nil, forControlEvents: .TouchUpInside)
+		buttonView.addTarget(self, action: "click", forControlEvents: .TouchUpInside)
+	}
+
+	func click() {
+		closure?()
+	}
 }
