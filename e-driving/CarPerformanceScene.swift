@@ -48,16 +48,6 @@ class PerformanceView: NibView, ColorPalette {
 			alertsView |< views
 		}
 	}
-
-	func setColor(color: UIColor, category: ColorCategory) {
-		findButton.setColor(color, category: category)
-		vehicleView.setColor(color, category: category)
-		for view in alertsView.subviews {
-			if let view = view as? ColorPalette {
-				view.setColor(color, category: category)
-			}
-		}
-	}
 }
 
 class CarInfoView: NibView, ColorPalette {
@@ -68,14 +58,6 @@ class CarInfoView: NibView, ColorPalette {
 	@IBOutlet var indices: [IndexLabel]!
 	func apply(indices: CarIndex...) {
 		self.indices.apply(indices)
-	}
-	func applyTheme(theme: Theme) {
-		milesView.applyTheme(theme)
-		for subview in indicesView.subviews {
-			if let subview = subview as? ColorPalette {
-				subview.applyTheme(.Dark)
-			}
-		}
 	}
 }
 
@@ -102,7 +84,6 @@ class CarPerformanceViewController: UIViewController, ColorPalette {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		applyTheme(.Dark)
 		let size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
 		tableView.tableHeaderView = headerView
 		tableView.tableHeaderView?.frame = CGRect(origin: .zero, size: size)
@@ -112,7 +93,6 @@ class CarPerformanceViewController: UIViewController, ColorPalette {
 			CarAlert(reason: .EngineCheck, error: "20 miles left", suggestion: "Engine Maintenance")
 		]
 		performanceView.alerts = alerts
-
 		infoView.apply(
 			CarIndex(title: "BRAND", value: "BMW"),
 			CarIndex(title: "MODEL", value: "320i"),
@@ -130,7 +110,6 @@ class CarPerformanceViewController: UIViewController, ColorPalette {
 			MechanicInfo(name: "Beverly's Dojo", address: "950 Oak Ave, Fairfie, SC", miles: 18),
 			MechanicInfo(name: "Patrick's Supplies", address: "1330 Forest Dr, Cleveland, AL", miles: 21)
 		]
-
 		connectTableView(tableView, sections: [mechanics])
 		performanceView.findButton.buttonView.addTarget(self, action: "findAMechanic", forControlEvents: .TouchUpInside)
 	}

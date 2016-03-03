@@ -166,7 +166,7 @@ class AchievementView: NibView {
 		if let range = imageName.rangeOfString("(") {
 			imageName = imageName.substringToIndex(range.startIndex)
 		}
-		imageView.image = UIImage(named: imageName.cc_capitalizedString)
+		imageView.image = UIImage(named: imageName.cc_snakecaseString)
 	}
 }
 

@@ -84,6 +84,12 @@ class RootViewController: UIViewController, UINavigationControllerDelegate, Colo
 	@IBAction func navigateBack(sender: AnyObject) {
 		childNavigationController?.popViewControllerAnimated(true)
 	}
+
+	func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+		if let vc = viewController as? ColorPalette {
+			vc.applyTheme(.Dark)
+		}
+	}
 }
 
 extension UIViewController {

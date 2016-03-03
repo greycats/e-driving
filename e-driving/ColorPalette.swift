@@ -70,9 +70,6 @@ private let Dark: [ColorCategory: UIColor] = [
 ]
 
 extension ColorPalette {
-	func setColor(color: UIColor, category: ColorCategory) {
-	}
-
 	private func _applyTheme(theme: Theme) {
 		switch theme {
 		case .Light:
@@ -93,6 +90,30 @@ extension ColorPalette {
 	}
 }
 
+private var themeKey: Void?
+
+extension ColorPalette where Self: UIView {
+	func setColor(color: UIColor, category: ColorCategory) {
+	}
+
+	func applyTheme(theme: Theme) {
+		_deepApplyTheme(theme)
+		_applyTheme(theme)
+	}
+}
+
+extension UIView {
+	private func _deepApplyTheme(theme: Theme) {
+		for v in subviews {
+			if let v = v as? ColorPalette {
+				v.applyTheme(theme)
+			} else {
+				v._deepApplyTheme(theme)
+			}
+		}
+	}
+}
+
 extension ColorPalette where Self: UIViewController {
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {
@@ -102,5 +123,10 @@ extension ColorPalette where Self: UIViewController {
 		default:
 			break
 		}
+	}
+
+	func applyTheme(theme: Theme) {
+		view._deepApplyTheme(theme)
+		_applyTheme(theme)
 	}
 }

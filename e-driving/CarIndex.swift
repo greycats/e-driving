@@ -59,7 +59,6 @@ extension UIView {
 	func stack(times times: Int) -> [IndexLabel] {
 		let labels = (0..<times).map { _ in IndexLabel() }
 		horizontalStack(labels, marginX: 13, equalWidth: false)
-		labels.forEach { $0.applyTheme(.Dark) }
 		return labels
 	}
 }

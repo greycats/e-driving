@@ -121,8 +121,4 @@ class MilesView: StyledView, ColorPalette, LabelSyncing {
 		}
 		self.animation = animation
 	}
-
-	func applyTheme(theme: Theme) {
-		clockView.applyTheme(theme)
-	}
 }

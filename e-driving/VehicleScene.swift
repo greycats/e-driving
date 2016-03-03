@@ -21,13 +21,6 @@ class VehicleViewController: UIViewController, ColorPalette {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		applyTheme(.Dark)
-		for subview in scrollView.subviews {
-			if let subview = subview as? ColorPalette {
-				subview.applyTheme(.Dark)
-			}
-		}
-		
 		indexLabels = indicesView.stack(times: 4)
 		routeView.displayMiles = false
 		routeView.route = [

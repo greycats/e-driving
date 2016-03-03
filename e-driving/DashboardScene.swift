@@ -26,13 +26,7 @@ class DashboardViewController: UIViewController, ColorPalette {
 			CarIndex(title: "mpg", value: 30),
 			CarIndex(title: "hard accel", value: 27)
 			])
-		applyTheme(.Dark)
 		dateTicker.date = NSDate()
-		for subview in indicesView.subviews {
-			if let subview = subview as? ColorPalette {
-				subview.applyTheme(.Dark)
-			}
-		}
 	}
 
 	override func viewDidAppear(animated: Bool) {
