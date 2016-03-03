@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "929232949D57F8E708D8AC404B0335B8A7E38A8D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "929232949D57F8E708D8AC404B0335B8A7E38A8D" : 0,
+    "E39BB0B0E2BF257872D8181879ED276133E0AB8F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A3E13610-A077-477D-A36D-E0FDDB67564C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "929232949D57F8E708D8AC404B0335B8A7E38A8D" : "e-driving\/",
+    "E39BB0B0E2BF257872D8181879ED276133E0AB8F" : "Greycats.swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "e-driving",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "e-driving.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:greycats\/e-driving.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "929232949D57F8E708D8AC404B0335B8A7E38A8D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:greycats\/Greycats.swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E39BB0B0E2BF257872D8181879ED276133E0AB8F"
+    }
+  ]
+}

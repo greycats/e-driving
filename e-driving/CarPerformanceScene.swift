@@ -37,7 +37,6 @@ class MechanicCell: UITableViewCell, TableViewDataNibCell {
 	}
 }
 
-@IBDesignable
 class PerformanceView: NibView, ColorPalette {
 	@IBOutlet weak var vehicleView: VehicleView!
 	@IBOutlet weak var findButton: ButtonView!
@@ -61,7 +60,6 @@ class PerformanceView: NibView, ColorPalette {
 	}
 }
 
-@IBDesignable
 class CarInfoView: NibView, ColorPalette {
 	@IBOutlet weak var driverImage: UIImageView!
 	@IBOutlet weak var driverName: UILabel!

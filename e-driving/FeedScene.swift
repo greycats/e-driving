@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, ColorPalette, Overlayed {
 		]
 
 		dateTicker.date = NSDate()
-		achievementsView.achievements = [Achievement.PerfectDriver, Achievement.SmoothnessLevel(2), Achievement.CalmnessLevel]
+		achievementsView.achievements = [.PerfectDriver, .SafetyLevel(2), .CalmnessLevel(2)]
 		dateTicker.onDateChange = {[weak self] day in
 			try self?.weekActivity.setDay(day)
 		}

@@ -26,13 +26,19 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4E-iw-72D" customClass="PerformanceView" customModule="e_driving" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="1431"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" placeholder="YES" id="JzI-ml-MVv"/>
+                                            </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apW-K3-TPT" customClass="DividerView" customModule="e_driving" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="1431" width="600" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="1832"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-nw-1Qd" userLabel="Information" customClass="CarInfoView" customModule="e_driving" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="1503" width="600" height="329"/>
+                                            <rect key="frame" x="0.0" y="1832" width="600" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" placeholder="YES" id="STe-eS-QoP"/>
+                                            </constraints>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PerformanceMap" translatesAutoresizingMaskIntoConstraints="NO" id="JMF-mE-cm2">
                                             <rect key="frame" x="0.0" y="1877" width="600" height="215"/>

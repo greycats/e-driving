@@ -27,17 +27,9 @@ class AlertInfoView: NibView {
 
 	convenience init(alert: CarAlert) {
 		self.init(frame: .zero)
-		switch alert.reason {
-		case .LowGas:
-			icon.image = UIImage(named: "low_gas")
-			reasonLabel.text = "Low Gas"
-		case .LowOil:
-			icon.image = UIImage(named: "low_oil")
-			reasonLabel.text = "Low Oil"
-		case .EngineCheck:
-			icon.image = UIImage(named: "engine_check")
-			reasonLabel.text = "Engine Check"
-		}
+		let name = String(alert.reason)
+		icon.image = UIImage(named: name.cc_snakecaseString)
+		reasonLabel.text = name.cc_capitalizedString
 		errorLabel.text = alert.error.uppercaseString
 		suggestionLabel.text = alert.suggestion.capitalizedString
 	}
