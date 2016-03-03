@@ -24,6 +24,7 @@ class RootViewController: UIViewController, UINavigationControllerDelegate, Colo
 		case .Background:
 			view.backgroundColor = color
 			view.window?.backgroundColor = color
+			menuViewController?.view.backgroundColor = color
 		default:
 			break
 		}

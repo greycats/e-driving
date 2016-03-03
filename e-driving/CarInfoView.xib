@@ -35,7 +35,7 @@
             <rect key="frame" x="0.0" y="0.0" width="433" height="465"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-bx-nNs" customClass="KernLabel" customModule="e_driving" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-bx-nNs" customClass="KernLabel" customModule="Greycats">
                     <rect key="frame" x="162" y="0.0" width="109.5" height="17"/>
                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="14"/>
                     <color key="textColor" red="0.39607843139999999" green="0.82352941180000006" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>

@@ -87,6 +87,9 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-VQ-C9u" customClass="ExperienceView" customModule="e_driving" customModuleProvider="target">
                                 <rect key="frame" x="30" y="172" width="340" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" placeholder="YES" id="sQU-1v-6y0"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-C9-dZR">
                                 <rect key="frame" x="0.0" y="299" width="400" height="301"/>
@@ -95,7 +98,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="hdq-C9-dZR" secondAttribute="bottom" id="7qe-PB-OQW"/>
                             <constraint firstItem="hdq-C9-dZR" firstAttribute="top" secondItem="Sgf-VQ-C9u" secondAttribute="bottom" constant="90" id="Njd-a4-QPj"/>

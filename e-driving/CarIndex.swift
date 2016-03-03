@@ -8,25 +8,25 @@
 
 import UIKit
 
-enum Position {
-	case Left
-	case TopRight
-}
-enum CarIndexState {
-	case Normal
-	case Alert(Position)
-	case Good
-	case Nice
-}
 protocol CarIndexValue {
 	var indexString: String? { get }
 }
 struct CarIndex {
+	enum Position {
+		case Left
+		case TopRight
+	}
+	enum State {
+		case Normal
+		case Alert(Position)
+		case Good
+		case Nice
+	}
 	let title: String
 	var value: CarIndexValue
-	let state: CarIndexState
+	let state: State
 	let highlight: Bool
-	init<T: CarIndexValue>(title: String, value: T, state: CarIndexState = .Normal, highlight: Bool = false) {
+	init<T: CarIndexValue>(title: String, value: T, state: State = .Normal, highlight: Bool = false) {
 		self.title = title
 		self.value = value
 		self.state = state

@@ -29,27 +29,6 @@ protocol ColorPalette {
 	func applyTheme(theme: Theme)
 }
 
-extension UIColor {
-	public func overlay(color: UIColor) -> UIColor {
-		var ra: CGFloat = 0, ga: CGFloat = 0, ba: CGFloat = 0, aa: CGFloat = 0
-		var rb: CGFloat = 0, gb: CGFloat = 0, bb: CGFloat = 0, ab: CGFloat = 0
-		color.getRed(&ra, green: &ga, blue: &ba, alpha: &aa)
-		func blend(b: CGFloat, _ a: CGFloat) -> CGFloat {
-			if a < 0.5 {
-				return 2 * a * b
-			} else {
-				return 1 - 2 * (1 - a) * (1 - b)
-			}
-		}
-		getRed(&rb, green: &gb, blue: &bb, alpha: &ab)
-		let r = blend(ra, rb)
-		let g = blend(ga, gb)
-		let b = blend(ba, bb)
-		let a = blend(aa, ab)
-		return UIColor(red: r, green: g, blue: b, alpha: a)
-	}
-}
-
 private let Light: [ColorCategory: UIColor] = [
 	.Background: UIColor(hexRGB: 0x000000),
 	.Foreground: UIColor(hexRGB: 0xF7F7F7),

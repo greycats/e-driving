@@ -40,6 +40,7 @@ class PerformanceView: NibView {
 	}
 }
 
+@IBDesignable
 class VehicleView: NibView, ColorPalette {
 	@IBOutlet var alerts: [UIView]!
 	@IBOutlet var warnings: [UIView]!
