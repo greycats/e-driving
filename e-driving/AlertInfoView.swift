@@ -1,5 +1,5 @@
 //
-//  AlertInfoView.swift
+//  CarIssueView.swift
 //  e-driving
 //
 //  Created by Rex Sheng on 3/2/16.
@@ -8,30 +8,31 @@
 
 import Greycats
 
-struct CarAlert {
-	enum Reason {
-		case LowOil
-		case LowGas
-		case EngineCheck
-	}
-	let reason: Reason
-	let error: String
-	let suggestion: String
-}
-
-class AlertInfoView: NibView {
+class CarIssueView: NibView, ColorPalette {
 	@IBOutlet weak var reasonLabel: UILabel!
 	@IBOutlet weak var errorLabel: UILabel!
 	@IBOutlet weak var suggestionLabel: UILabel!
 	@IBOutlet weak var icon: UIImageView!
 
-	convenience init(alert: CarAlert) {
+	convenience init(issue: CarIssue) {
 		self.init(frame: .zero)
-		let name = String(alert.reason)
+		let name = String(issue.reason)
 		icon.image = UIImage(named: name.cc_snakecaseString)
 		reasonLabel.text = name.cc_capitalizedString
-		errorLabel.text = alert.error.uppercaseString
-		suggestionLabel.text = alert.suggestion.capitalizedString
+		errorLabel.text = issue.error.uppercaseString
+		suggestionLabel.text = issue.suggestion.capitalizedString
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Alert:
+			icon.tintColor = color
+			reasonLabel.textColor = color
+		case .MainText:
+			errorLabel.textColor = color
+			suggestionLabel.textColor = color
+		default:
+			break
+		}
 	}
 }
-

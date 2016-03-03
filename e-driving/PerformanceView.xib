@@ -6,8 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PerformanceView" customModule="e_driving" customModuleProvider="target">
             <connections>
-                <outlet property="alertsView" destination="Dgq-d5-3Ql" id="Ca1-5i-nrx"/>
                 <outlet property="findButton" destination="VCt-dJ-Nf9" id="Uya-Af-aGW"/>
+                <outlet property="issuesView" destination="Dgq-d5-3Ql" id="w9t-Z2-gzr"/>
                 <outlet property="vehicleView" destination="N68-gs-MuC" id="iJz-bv-mUZ"/>
             </connections>
         </placeholder>

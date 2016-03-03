@@ -45,7 +45,7 @@
 		CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A25D1C7F169C002F9F5B /* VehicleView.swift */; };
 		CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */; };
 		CF56A2651C7F18CC002F9F5B /* IndexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */; };
-		CF7FD9E01C86D82800A6F514 /* AlertInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */; };
+		CF7FD9E01C86D82800A6F514 /* CarIssueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7FD9DF1C86D82800A6F514 /* CarIssueView.xib */; };
 		CF7FD9E21C86D83300A6F514 /* AlertInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */; };
 		CF97042D1C7FEE220035CECE /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97042C1C7FEE220035CECE /* RouteView.swift */; };
 		CF9704321C804BB00035CECE /* PositionLabelCompact.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9704311C804BB00035CECE /* PositionLabelCompact.xib */; };
@@ -68,6 +68,9 @@
 		CFC154D61C847EBC00B78F18 /* DividerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFC154D51C847EBC00B78F18 /* DividerView.xib */; };
 		CFDAFBD61C867D610071D0E9 /* WeekActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */; };
 		CFDAFBD81C867F2A0071D0E9 /* WeekActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAFBD71C867F2A0071D0E9 /* WeekActivity.swift */; };
+		CFFD37C91C87FDD200CBB276 /* Mechanic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD37C81C87FDD200CBB276 /* Mechanic.swift */; };
+		CFFD37CB1C87FF1500CBB276 /* CarIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD37CA1C87FF1500CBB276 /* CarIssue.swift */; };
+		CFFD37CD1C8800CF00CBB276 /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD37CC1C8800CF00CBB276 /* CarInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,7 +116,7 @@
 		CF56A25D1C7F169C002F9F5B /* VehicleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		CF56A25F1C7F16DB002F9F5B /* VehicleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleScene.swift; sourceTree = "<group>"; };
 		CF56A2641C7F18CC002F9F5B /* IndexLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexLabel.swift; sourceTree = "<group>"; };
-		CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertInfoView.xib; sourceTree = "<group>"; };
+		CF7FD9DF1C86D82800A6F514 /* CarIssueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarIssueView.xib; sourceTree = "<group>"; };
 		CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertInfoView.swift; sourceTree = "<group>"; };
 		CF97042C1C7FEE220035CECE /* RouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		CF9704311C804BB00035CECE /* PositionLabelCompact.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionLabelCompact.xib; sourceTree = "<group>"; };
@@ -136,6 +139,9 @@
 		CFC154D51C847EBC00B78F18 /* DividerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DividerView.xib; sourceTree = "<group>"; };
 		CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekActivity.xib; sourceTree = "<group>"; };
 		CFDAFBD71C867F2A0071D0E9 /* WeekActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekActivity.swift; sourceTree = "<group>"; };
+		CFFD37C81C87FDD200CBB276 /* Mechanic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mechanic.swift; sourceTree = "<group>"; };
+		CFFD37CA1C87FF1500CBB276 /* CarIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarIssue.swift; sourceTree = "<group>"; };
+		CFFD37CC1C8800CF00CBB276 /* CarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,12 +224,12 @@
 				CF56A2391C7EC956002F9F5B /* Info.plist */,
 				CF56A22D1C7EC956002F9F5B /* AppDelegate.swift */,
 				CF56A2571C7ED9B8002F9F5B /* Graphics.swift */,
-				CFC154D01C84736300B78F18 /* Menu */,
 				CF56A2341C7EC956002F9F5B /* Assets.xcassets */,
-				CF9704301C801D180035CECE /* Feed Scene */,
 				CFC154C71C841F0B00B78F18 /* Car Performance Scene */,
 				CFA34D7E1C83E0DF00B2D869 /* Dashboard Scene */,
+				CF9704301C801D180035CECE /* Feed Scene */,
 				CF56A2361C7EC956002F9F5B /* LaunchScreen.storyboard */,
+				CFC154D01C84736300B78F18 /* Menu */,
 				CFA34D811C83E3B900B2D869 /* Models */,
 				CF56A2611C7F16FD002F9F5B /* Vehicle Scene */,
 				CF56A2661C7F18D8002F9F5B /* Views */,
@@ -289,6 +295,9 @@
 		CFA34D811C83E3B900B2D869 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CFFD37CA1C87FF1500CBB276 /* CarIssue.swift */,
+				CFFD37CC1C8800CF00CBB276 /* CarInfo.swift */,
+				CFFD37C81C87FDD200CBB276 /* Mechanic.swift */,
 				CFA34D841C83E42700B2D869 /* RouteHistory.swift */,
 				CFBB91501C85A8FE00D2F0CA /* CarIndex.swift */,
 				CFBB91521C85D5A900D2F0CA /* Syncing.swift */,
@@ -304,7 +313,7 @@
 				CF7FD9E11C86D83300A6F514 /* AlertInfoView.swift */,
 				CFC154D11C847D5300B78F18 /* CarPerformanceScene.swift */,
 				CF56A25D1C7F169C002F9F5B /* VehicleView.swift */,
-				CF7FD9DF1C86D82800A6F514 /* AlertInfoView.xib */,
+				CF7FD9DF1C86D82800A6F514 /* CarIssueView.xib */,
 				CF9CC31F1C87285900186A58 /* CarInfoView.xib */,
 				B56AE7341C86C345000E0F6A /* MechanicCell.xib */,
 				CF9CC3211C873A5400186A58 /* MechanicHeader.xib */,
@@ -418,7 +427,7 @@
 				CF56A2551C7ED69C002F9F5B /* Dashboard.storyboard in Resources */,
 				CFDAFBD61C867D610071D0E9 /* WeekActivity.xib in Resources */,
 				B5307F9C1C7EFF0D00F04AC3 /* PositionLabel.xib in Resources */,
-				CF7FD9E01C86D82800A6F514 /* AlertInfoView.xib in Resources */,
+				CF7FD9E01C86D82800A6F514 /* CarIssueView.xib in Resources */,
 				B53106D01C80454500690145 /* AchievementView.xib in Resources */,
 				B5307F901C7EE6E300F04AC3 /* BebasNeueBold.otf in Resources */,
 				B571573E1C7FECA900A905CB /* MilesView.xib in Resources */,
@@ -502,6 +511,7 @@
 				CF56A25E1C7F169C002F9F5B /* VehicleView.swift in Sources */,
 				CF9704341C8052070035CECE /* FeedScene.swift in Sources */,
 				CF56A2581C7ED9B8002F9F5B /* Graphics.swift in Sources */,
+				CFFD37CB1C87FF1500CBB276 /* CarIssue.swift in Sources */,
 				CF7FD9E21C86D83300A6F514 /* AlertInfoView.swift in Sources */,
 				CFC154D21C847D5300B78F18 /* CarPerformanceScene.swift in Sources */,
 				CFA34D801C83E0F800B2D869 /* DashboardScene.swift in Sources */,
@@ -514,7 +524,9 @@
 				CFC154CF1C84490900B78F18 /* ExperienceView.swift in Sources */,
 				CFA34D831C83E3ED00B2D869 /* Formatter.swift in Sources */,
 				B5CAD01F1C82A253002D80EB /* AchievementsView.swift in Sources */,
+				CFFD37C91C87FDD200CBB276 /* Mechanic.swift in Sources */,
 				CF0378E61C8400C6004AD39B /* ColorPalette.swift in Sources */,
+				CFFD37CD1C8800CF00CBB276 /* CarInfo.swift in Sources */,
 				CFC154D41C847E9000B78F18 /* Divider.swift in Sources */,
 				CF56A2601C7F16DB002F9F5B /* VehicleScene.swift in Sources */,
 				B55084D01C7FC2DC0083B242 /* ButtonView.swift in Sources */,
