@@ -13,12 +13,6 @@ enum ActivityError: ErrorType {
 }
 
 class ActivityLine: UIView {
-	var step: CGFloat! {
-		didSet {
-			r = step * 0.8
-		}
-	}
-	var r: CGFloat!
 	var x0: CGFloat!
 	var numbers: [CGFloat]!
 	var thickness: CGFloat = 2
@@ -43,6 +37,9 @@ class ActivityLine: UIView {
 	}
 
 	func createPath(rect: CGRect) -> UIBezierPath {
+		let step = (bounds.width - 40) / 7
+		let r = step * 0.8
+		let x0 = 20 + step / 2
 		let path = UIBezierPath()
 		let simulate0: CGFloat = x0 - step * 2
 		var x = simulate0
@@ -98,20 +95,14 @@ class ActivityLine: UIView {
 	}
 }
 
-private func gen_line(count: Int) -> [CGFloat] {
-	srand48(Int(arc4random()))
-	return (0..<count).map { _ in CGFloat(drand48()) }
-}
-
 @IBDesignable
 class WeekActivity: NibView {
 	@IBOutlet weak var activitiesView: UIView!
 	@IBOutlet weak var lineLeft: NSLayoutConstraint!
 	@IBOutlet weak var line: UIView!
 
-	var step: CGFloat!
-	var x0: CGFloat!
-	var weekday: Int = 0 {
+	private var x0: CGFloat!, step: CGFloat!
+	private var weekday: Int = 0 {
 		didSet {
 			if oldValue != weekday {
 				fixLineLeft()
@@ -120,7 +111,32 @@ class WeekActivity: NibView {
 		}
 	}
 
-	var onWeekdayChange: [(Int) -> ()] = []
+	private var onWeekdayChange: [(Int) -> ()] = []
+
+	private func addLine(data: [CGFloat], color: UIColor, thickness: CGFloat, glow: Bool) -> ActivityLine {
+		let activityLine = ActivityLine()
+		activityLine.x0 = x0
+		activityLine.numbers = data
+		activityLine.thickness = thickness
+		activityLine.tintColor = color
+		activityLine.opaque = false
+		activityLine.glow = glow
+		activitiesView.addSubview(activityLine)
+		activityLine.fullDimension()
+		return activityLine
+	}
+
+	func addSelfLine(data: [CGFloat], avatar: UIImage?) {
+		let line = addLine(data, color: UIColor(hexRGB: 0x65D2FD), thickness: 3, glow: true)
+		let avatar = UIImageView(image: avatar)
+		attachAvatar(avatar, line: line)
+	}
+
+	func addFriendLine(data: [CGFloat], avatar: UIImage?) {
+		let line = addLine(data, color: UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
+		let avatar = UIImageView(image: avatar)
+		attachAvatar(avatar, line: line)
+	}
 
 	func setDay(day: NSDate) throws {
 		let components = Calendar.components(.Day, fromDate: NSDate(), toDate: day, options: [.MatchFirst])
@@ -136,43 +152,13 @@ class WeekActivity: NibView {
 		onWeekdayChange.forEach { $0(weekday) }
 	}
 
-	func addDemoLine(color: UIColor = UIColor(hexRGB: 0x65D2FD), thickness: CGFloat = 3, glow: Bool = true) -> ActivityLine {
-		let activityLine = ActivityLine()
-		activityLine.x0 = x0
-		activityLine.step = step
-		activityLine.numbers = gen_line(100)
-		activityLine.thickness = thickness
-		activityLine.tintColor = color
-		activityLine.opaque = false
-		activityLine.glow = glow
-		activitiesView.addSubview(activityLine)
-		activityLine.fullDimension()
-		return activityLine
-	}
-
-	func setupOnce() {
+	override func layoutSubviews() {
+		super.layoutSubviews()
 		step = (bounds.width - 40) / 7
 		x0 = 20 + step / 2
-		//TODO - this is a demo
-		(0...1).forEach { i in
-			let line = addDemoLine(UIColor(hexRGB: 0x05297B), thickness: 2, glow: false)
-			let avatar = UIImageView(image: UIImage(named: "avatar\(i)"))
-			attachAvatar(avatar, line: line)
-		}
-		let line = addDemoLine()
-		let avatar = UIImageView(image: UIImage(named: "avatar2"))
-		attachAvatar(avatar, line: line)
 		layoutIfNeeded()
 		weekday = Calendar.component(.Weekday, fromDate: NSDate())
 		fixLineLeft()
-		onWeekdayChange.forEach { $0(weekday) }
-	}
-
-	override func layoutSubviews() {
-		super.layoutSubviews()
-		if x0 == nil {
-			setupOnce()
-		}
 	}
 
 	override func setup() {
@@ -180,7 +166,7 @@ class WeekActivity: NibView {
 		activitiesView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
 	}
 
-	func attachAvatar(avatar: UIImageView, line: ActivityLine) {
+	private func attachAvatar(avatar: UIImageView, line: ActivityLine) {
 		avatar.translatesAutoresizingMaskIntoConstraints = false
 		activitiesView.addSubview(avatar)
 		let leading = NSLayoutConstraint(item: avatar, attribute: .CenterX, relatedBy: .Equal, toItem: self.line, attribute: .CenterX, multiplier: 1, constant: 0)
@@ -188,6 +174,7 @@ class WeekActivity: NibView {
 		let top = NSLayoutConstraint(item: avatar, attribute: .CenterY, relatedBy: .Equal, toItem: line, attribute: .Top, multiplier: 1, constant: 0)
 		addConstraint(top)
 		addConstraint(NSLayoutConstraint(item: self.line, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: avatar, attribute: .Bottom, multiplier: 1, constant: 14))
+		top.constant = line.currentY(weekday)
 		onWeekdayChange.append {[weak line] weekday in
 			if let y = line?.currentY(weekday) {
 				top.constant = y
@@ -205,7 +192,7 @@ class WeekActivity: NibView {
 		})
 	}
 
-	func fixLineLeft() {
+	private func fixLineLeft() {
 		lineLeft.constant = CGFloat(weekday) * step + x0
 		panAnimate(nil)
 	}

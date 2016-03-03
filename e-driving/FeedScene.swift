@@ -9,6 +9,11 @@
 import Greycats
 import CoreLocation
 
+private func gen_line(count: Int) -> [CGFloat] {
+	srand48(Int(arc4random()))
+	return (0..<count).map { _ in CGFloat(drand48()) }
+}
+
 class FeedViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var dateTicker: DateTicker!
@@ -28,5 +33,12 @@ class FeedViewController: UIViewController, ColorPalette {
 		dateTicker.onDateChange = {[weak self] day in
 			try self?.weekActivity.setDay(day)
 		}
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		weekActivity.addFriendLine(gen_line(100), avatar: UIImage(named: "avatar0"))
+		weekActivity.addFriendLine(gen_line(100), avatar: UIImage(named: "avatar1"))
+		weekActivity.addSelfLine(gen_line(100), avatar: UIImage(named: "avatar2"))
 	}
 }

@@ -247,6 +247,8 @@
 		CF56A2661C7F18D8002F9F5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5CAD01E1C82A253002D80EB /* AchievementsView.swift */,
+				B53106CF1C80454500690145 /* AchievementView.xib */,
 				B55084CF1C7FC2DC0083B242 /* ButtonView.swift */,
 				B5307F971C7EF72400F04AC3 /* ButtonView.xib */,
 				CFA34D861C83E85D00B2D869 /* DateTicker.swift */,
@@ -268,13 +270,11 @@
 		CF9704301C801D180035CECE /* Feed Scene */ = {
 			isa = PBXGroup;
 			children = (
-				B5CAD01E1C82A253002D80EB /* AchievementsView.swift */,
-				B53106CF1C80454500690145 /* AchievementView.xib */,
-				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
 				CF9704331C8052070035CECE /* FeedScene.swift */,
 				CF97042C1C7FEE220035CECE /* RouteView.swift */,
 				CFDAFBD71C867F2A0071D0E9 /* WeekActivity.swift */,
 				CFDAFBD51C867D610071D0E9 /* WeekActivity.xib */,
+				CF56A2501C7ED67F002F9F5B /* Feed.storyboard */,
 			);
 			name = "Feed Scene";
 			sourceTree = "<group>";
