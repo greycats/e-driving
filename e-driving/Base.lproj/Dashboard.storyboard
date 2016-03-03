@@ -128,43 +128,43 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDH-ju-sOp" userLabel="indices">
                                         <rect key="frame" x="0.0" y="463" width="600" height="219.5"/>
                                         <subviews>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZX-4Y-LEi" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="76" y="20" width="87.5" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZX-4Y-LEi" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="49" y="20" width="141.5" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="MILES"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="3,200"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-wB-jSJ" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="83" y="127" width="75" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-wB-jSJ" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="75" y="127" width="91" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="OVER SPEED"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="13"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOa-3i-dWK" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="270" y="20" width="59" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOa-3i-dWK" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="243" y="20" width="113" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="HOURS"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="376"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-gn-YE0" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="257" y="127" width="85.5" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-gn-YE0" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="253" y="127" width="93.5" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="HARD BRAKES"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="69"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-Dw-2aS" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="456.5" y="20" width="48" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-Dw-2aS" userLabel="brakes" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="429.5" y="20" width="102" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="MPG"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="6.5"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-cK-Q7d" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
-                                                <rect key="frame" x="438" y="127" width="84.5" height="72.5"/>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-cK-Q7d" userLabel="gas" customClass="IndexLabel" customModule="e_driving" customModuleProvider="target">
+                                                <rect key="frame" x="433.5" y="127" width="93.5" height="72.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="key" value="HARD ACCELE"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="value" value="27"/>

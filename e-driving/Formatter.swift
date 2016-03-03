@@ -40,6 +40,7 @@ extension String {
 	var cc_snakecaseString: String {
 		return stringByReplacingOccurrencesOfString("(?!^)([A-Z])", withString: "_$1", options: .RegularExpressionSearch).lowercaseString
 	}
+
 	var cc_capitalizedString: String {
 		return stringByReplacingOccurrencesOfString("(?!^)([A-Z])", withString: " $1", options: .RegularExpressionSearch).capitalizedString
 	}

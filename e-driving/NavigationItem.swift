@@ -41,11 +41,11 @@ class NavigationItem: UINavigationItem {
 }
 
 @IBDesignable
-class KernLabel: UILabel {
-	@IBInspectable var kern: Int = 0 {
+public class KernLabel: UILabel {
+	@IBInspectable public var kern: Int = 0 {
 		didSet { updateAttributedText() }
 	}
-	override var text: String? {
+	public override var text: String? {
 		didSet { updateAttributedText() }
 	}
 	

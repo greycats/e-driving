@@ -28,7 +28,7 @@ class MechanicCell: UITableViewCell, TableViewDataNibCell {
 	}
 }
 
-class PerformanceView: NibView, ColorPalette {
+class PerformanceView: NibView {
 	@IBOutlet weak var vehicleView: VehicleView!
 	@IBOutlet weak var findButton: ButtonView!
 	@IBOutlet weak var issuesView: UIView!
@@ -36,6 +36,51 @@ class PerformanceView: NibView, ColorPalette {
 	var issues: [CarIssue] = [] {
 		didSet {
 			issuesView |< issues.map { CarIssueView(issue: $0) }
+		}
+	}
+}
+
+class VehicleView: NibView, ColorPalette {
+	@IBOutlet var alerts: [UIView]!
+	@IBOutlet var warnings: [UIView]!
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Alert:
+			alerts.forEach { $0.tintColor = color }
+		case .Warning:
+			warnings.forEach { $0.tintColor = color }
+		default:
+			break
+		}
+	}
+}
+
+class CarIssueView: NibView, ColorPalette {
+	@IBOutlet weak var reasonLabel: UILabel!
+	@IBOutlet weak var errorLabel: UILabel!
+	@IBOutlet weak var suggestionLabel: UILabel!
+	@IBOutlet weak var icon: UIImageView!
+
+	convenience init(issue: CarIssue) {
+		self.init(frame: .zero)
+		let name = String(issue.reason)
+		icon.image = UIImage(named: name.cc_snakecaseString)
+		reasonLabel.text = name.cc_capitalizedString
+		errorLabel.text = issue.error.uppercaseString
+		suggestionLabel.text = issue.suggestion.capitalizedString
+	}
+
+	func setColor(color: UIColor, category: ColorCategory) {
+		switch category {
+		case .Alert:
+			icon.tintColor = color
+			reasonLabel.textColor = color
+		case .MainText:
+			errorLabel.textColor = color
+			suggestionLabel.textColor = color
+		default:
+			break
 		}
 	}
 }
