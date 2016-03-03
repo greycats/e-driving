@@ -9,7 +9,7 @@
 import Greycats
 import CoreLocation
 
-class VehicleViewController: UIViewController, ColorPalette, Overlayed {
+class VehicleViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var milesView: MilesView!

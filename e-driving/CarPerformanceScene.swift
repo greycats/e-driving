@@ -89,7 +89,7 @@ class MechanicHeader: NibView {
 	}
 }
 
-class CarPerformanceViewController: UIViewController, ColorPalette, Overlayed {
+class CarPerformanceViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var performanceView: PerformanceView!
 	@IBOutlet weak var infoView: CarInfoView!

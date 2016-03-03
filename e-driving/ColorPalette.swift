@@ -30,14 +30,10 @@ protocol ColorPalette {
 }
 
 extension UIColor {
-	convenience init(hexa: Int, hexb: Int) {
-		let ff: CGFloat = 255.0
-		let ra = CGFloat((hexa & 0xff0000) >> 16) / ff
-		let ga = CGFloat((hexa & 0xff00) >> 8) / ff
-		let ba = CGFloat(hexa & 0xff) / ff
-		let rb = CGFloat((hexb & 0xff0000) >> 16) / ff
-		let gb = CGFloat((hexb & 0xff00) >> 8) / ff
-		let bb = CGFloat(hexb & 0xff) / ff
+	public func overlay(color: UIColor) -> UIColor {
+		var ra: CGFloat = 0, ga: CGFloat = 0, ba: CGFloat = 0, aa: CGFloat = 0
+		var rb: CGFloat = 0, gb: CGFloat = 0, bb: CGFloat = 0, ab: CGFloat = 0
+		color.getRed(&ra, green: &ga, blue: &ba, alpha: &aa)
 		func blend(b: CGFloat, _ a: CGFloat) -> CGFloat {
 			if a < 0.5 {
 				return 2 * a * b
@@ -45,10 +41,12 @@ extension UIColor {
 				return 1 - 2 * (1 - a) * (1 - b)
 			}
 		}
+		getRed(&rb, green: &gb, blue: &bb, alpha: &ab)
 		let r = blend(ra, rb)
 		let g = blend(ga, gb)
 		let b = blend(ba, bb)
-		self.init(red: r, green: g, blue: b, alpha: 1)
+		let a = blend(aa, ab)
+		return UIColor(red: r, green: g, blue: b, alpha: a)
 	}
 }
 
@@ -60,23 +58,15 @@ private let Light: [ColorCategory: UIColor] = [
 	.Highlight: UIColor(hexRGB: 0xE67E22)
 ]
 
+private let darkOverlayColor = UIColor(hexRGB: 0x3F98FF)
 private let Dark: [ColorCategory: UIColor] = [
 	.Background: UIColor(hexRGB: 0x000E31),
-	.Foreground: UIColor(hexRGB: 0x072E86),
+	.Foreground: UIColor(hexRGB: 0x0E2A4B).overlay(darkOverlayColor),
 	.MainText: UIColor(hexRGB: 0xFFFFFF),
 	.SupplymentText: UIColor(hexRGB: 0x8396C0),
-	.Highlight: UIColor(hexRGB: 0x2CBC69),
+	.Highlight: UIColor(hexRGB: 0x2ECC71),
 	.Alert: UIColor(hexRGB: 0xFF3B30),
 	.Warning: UIColor(hexRGB: 0xF5A623)
-]
-
-private let DarkOverlay: [ColorCategory: UIColor] = [
-	.Foreground: UIColor(hexa: 0x3F98FF, hexb: 0x0E2A4B),
-	.MainText: UIColor(hexa: 0x3F98FF, hexb: 0xFFFFFF),
-	.SupplymentText: UIColor(white: 1, alpha: 0.5),
-	.Highlight: UIColor(hexa: 0x3F98FF, hexb: 0x2CBC69),
-	.Alert: UIColor(hexa: 0x3F98FF, hexb: 0xFF3B30),
-	.Warning: UIColor(hexa: 0x3F98FF, hexb: 0xF5A623)
 ]
 
 extension ColorPalette {
@@ -88,11 +78,7 @@ extension ColorPalette {
 		case .Light:
 			Light.forEach { setColor($1, category: $0) }
 		case .Dark:
-			if self is Overlayed {
-				DarkOverlay.forEach { setColor($1, category: $0) }
-			} else {
-				Dark.forEach { setColor($1, category: $0) }
-			}
+			Dark.forEach { setColor($1, category: $0) }
 		}
 	}
 
@@ -107,8 +93,6 @@ extension ColorPalette {
 	}
 }
 
-protocol Overlayed {
-}
 extension ColorPalette where Self: UIViewController {
 	func setColor(color: UIColor, category: ColorCategory) {
 		switch category {

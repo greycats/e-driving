@@ -9,7 +9,7 @@
 import Greycats
 import CoreLocation
 
-class FeedViewController: UIViewController, ColorPalette, Overlayed {
+class FeedViewController: UIViewController, ColorPalette {
 	@IBOutlet weak var routeView: RouteView!
 	@IBOutlet weak var dateTicker: DateTicker!
 	@IBOutlet weak var achievementsView: AchievementsView!

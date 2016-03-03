@@ -42,7 +42,7 @@ class ActivityLine: UIView {
 		return bounds.size.height * (0.8 - 0.8 * number)
 	}
 
-	override func drawRect(rect: CGRect) {
+	func createPath(rect: CGRect) -> UIBezierPath {
 		let path = UIBezierPath()
 		let simulate0: CGFloat = x0 - step * 2
 		var x = simulate0
@@ -69,27 +69,31 @@ class ActivityLine: UIView {
 
 		path.addLineToPoint(CGPoint(x: x + step * 2, y: rect.size.height + 30))
 		path.closePath()
+		path.lineWidth = thickness
+		return path
+	}
+
+	override func drawRect(rect: CGRect) {
+		let path = createPath(rect)
 
 		let context = UIGraphicsGetCurrentContext()
-		CGContextSaveGState(context)
-		CGContextSetStrokeColorWithColor(context, tintColor.CGColor)
-		CGContextSetFillColorWithColor(context, tintColor.CGColor)
 		if glow {
-			CGContextSetShadowWithColor(context, .zero, 20, tintColor.colorWithAlphaComponent(0.8).CGColor)
-		}
-		CGContextAddPath(context, path.CGPath)
-		CGContextSetLineWidth(context, thickness)
-		CGContextDrawPath(context, .Stroke)
-
-		if glow {
-			CGContextAddPath(context, path.CGPath)
-			CGContextClip(context)
+			CGContextSaveGState(context)
+			path.addClip()
 			let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [UIColor(white: 0, alpha: 0.3).CGColor, UIColor.clearColor().CGColor], [0, 1])
 			CGContextDrawLinearGradient(context, gradient,
 				CGPointMake(rect.size.width * 0.5, rect.size.height * 0),
 				CGPointMake(rect.size.width * 0.5, rect.size.height * 1),
 				[.DrawsBeforeStartLocation, .DrawsAfterEndLocation])
+			CGContextRestoreGState(context)
 		}
+
+		CGContextSaveGState(context)
+		if glow {
+			CGContextSetShadowWithColor(context, .zero, 20, tintColor.colorWithAlphaComponent(0.8).CGColor)
+		}
+		tintColor.setStroke()
+		path.stroke()
 		CGContextRestoreGState(context)
 	}
 }
